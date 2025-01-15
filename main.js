@@ -43,22 +43,22 @@ const htmlBody = document.querySelector('html');
     const getHardware = function (){
         document.write("loading please wait...");
         
-        window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/hardwaresolution.html");
+        window.location.assign("https://www.benitapollosolutions.com/hardwaresolution.html");
     }
     
 const getSolution = function(){
-    document.write("loading please wait... study in the U.S.A U.K Canada Europe");
-    window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationstudy.html");
+    document.write("loading please wait... study in the U.S.A | U.K | Canada | Europe");
+    window.location.assign("https://www.benitapollosolutions.com/educationstudy.html");
 }
 
 const openSuite = function(){
     document.write("loading please wait...");
-    window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/educationsolution.html");
+    window.location.assign("https://www.benitapollosolutions.com/educationsolution.html");
   }
   
   const openCalSys = function (){
       document.write("loading please wait...");
-       window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/getdemo.html")
+       window.location.assign("https://www.benitapollosolutions.com/getdemo.html")
   }
   
  const Subscribe = function (){
@@ -100,10 +100,10 @@ let notfound;
               localStorage.searchresults = inventory[count];
               if(localStorage.searchresults === "Ga-South Clientele"){
                   document.write("loading... please wait");
-                  window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/basbusiness.html");
+                  window.location.assign("https://www.benitapollosolutions.com/basbusiness.html");
               }
               else{
-           document.write("loading... please wait"); window.location.assign("https://eduqii-blip.github.io/benitapollosolutions/searchresult.html");
+           document.write("loading... please wait"); window.location.assign("https://www.benitapollosolutions.com/searchresult.html");
            }
           }
       }else{
