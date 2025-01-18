@@ -9,6 +9,7 @@ const htmlBody = document.querySelector('html');
  //   let visionbanner =  document.querySelector('#visionbanner');
     let settingscontrolsa = document.querySelector('#settingscontrolsa');
     let settingscontrolsb = document.querySelector("#settingscontrolsb");
+    let contentfirst = document.querySelector("content-first");
     if(typeof(Storage) !== "undefined"){
               if(counter % 2 == 0){
     htmlBody.setAttribute('data-bs-theme', 'dark');
@@ -16,12 +17,13 @@ const htmlBody = document.querySelector('html');
     themehelper.classList.add("bg-primary");
    /* visionbanner.classList.remove("text-bg-primary")
     visionbanner.classList.add("text-bg-dark");*/
-    settingscontrolsa.classList.remove("text-bg-light");
-    settingscontrolsa.classList.add("text-bg-secondary");
-    settingscontrolsb.classList.remove("text-bg-light");
-    settingscontrolsb.classList.add("text-bg-secondary");
+    settingscontrolsa.classList.remove("text-bg-light"); settingscontrolsa.classList.add("text-bg-secondary");
+    settingscontrolsb.classList.remove("text-bg-light"); settingscontrolsb.classList.add("text-bg-secondary");
     searchbtn.classList.remove("btn-primary");
-    searchbtn.classList.add("btn-success")
+    searchbtn.classList.add("btn-success");
+   
+    contentfirst.classList.remove("text-bg-light");
+    contentfirst.classList.add("text-bg-secondary");
     //alert("i just changed the theme");
     }else{
         htmlBody.setAttribute('data-bs-theme', 'light');
