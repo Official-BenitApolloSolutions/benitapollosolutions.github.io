@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Education: Hardware Solution</title>
+        <meta name="charset" content="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://eduqii-blip.github.io/benitapollosolutions/main.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">BAS</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#edumenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="edumenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://eduqii-blip.github.io/benitapollosolutions/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                Hardware Solution
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://eduqii-blip.github.io/benitapollosolutions/solutions.html" class="nav-link">Solutions</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="carousel slide" data-bs-ride="carousel" id="bannerslideshow">
+            <!-- indicators -->
+            <div class="carousel-indicators">
+                <button class="active" data-bs-slide-to="0" data-bs-target="#bannerslideshow" type="button"></button>
+                <button type="button" data-bs-slide-to="1" data-bs-target="#bannerslideshow">
+                </button>
+                <button data-bs-slide-to="2" data-bs-target="#bannerslideshow"></button>
+            </div>
+            
+            <!-- slid -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://eduqii-blip.github.io/benitapollosolutions/Comp.png" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://eduqii-blip.github.io/benitapollosolutions/Pgam.png" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://eduqii-blip.github.io/benitapollosolutions/Dcu.png" class="d-block w-100">
+                </div>
+            </div>
+            
+            <!-- control -->
+            <button class="carousel-control-prev" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="container mt-5">
+            <div class="shadow-lg bg-light m-5 p-5">
+                <form id="solution-form" method="post">
+                    <label class="form-label">
+                        Facility 
+                    </label>
+                    <input type="text" name="from_name" class="form-control form-control-lg mb-3">
+                    <label class="form-label">
+                        Email address 
+                    </label>
+                    <input class="form-control form-control-lg mb-3" type="email" name="to_name">
+                    <label class="form-label">Solution Type</label>
+                    <select class="form-select form-select-lg" name="message">
+                        <option value="school management suite">In-Class Solution</option>
+                        <option value="InShop Solution">In-Shop Solution</option>
+                        <option value="InClinic Solution">In-Clinic Solution</option>
+                        <option disabled selected>Please select an option</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary mt-5">Get A Quote</button>
+                </form>
+                <p class="mt-5">Join our mailing list today. </p><input type="button" value="Subscribe" class="btn btn-danger" onClick="Subscribe()">
+            </div>
+        </div>
+    </body>
+</html>
