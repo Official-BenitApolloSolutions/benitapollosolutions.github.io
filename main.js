@@ -9,7 +9,7 @@ const htmlBody = document.querySelector('html');
  //   let visionbanner =  document.querySelector('#visionbanner');
     let settingscontrolsa = document.querySelector('#settingscontrolsa');
     let settingscontrolsb = document.querySelector("#settingscontrolsb");
-    let contentfirst = document.querySelector("content-first");
+    let contentfirst = document.querySelector("#content-first");
     if(typeof(Storage) !== "undefined"){
               if(counter % 2 == 0){
     htmlBody.setAttribute('data-bs-theme', 'dark');
