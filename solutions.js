@@ -4,7 +4,7 @@
     if(this.currentTime >= 5 * 14) {
         this.pause();
         
-        window.location.assign("https://tinyurl.com/25s9w8wq")
+        window.location.assign("https:/\/tinyurl.com/25s9w8wq")
     }
 });
   

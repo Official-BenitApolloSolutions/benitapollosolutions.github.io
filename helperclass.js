@@ -7,10 +7,10 @@ let loadr = document.querySelector("#loadPage");
 loadr.style.visibility = "visible";
 
     if(regfullname !== " "){
-    document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/solutions.html");
+    document.location.assign("https:/\/www.benitapollosolutions.com/solutions.html");
     }
     else{
-        document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/index.html");
+        document.location.assign("https:/\/www.benitapollosolutions.com/index.html");
     }
 }
 //eval(loadBas());
@@ -19,7 +19,7 @@ loadr.style.visibility = "visible";
 export const loadHome = function () {
      let loadr = document.querySelector('#loadstatus');
     loadr.style.visibility = "visible";
-    document.location.assign("https:/\/eduqii-blip.github.io/benitapollosolutions/home.html");
+    document.location.assign("https:/\/www.benitapollosolutions.com/home.html");
     if(regfullname !== " "){
         document.querySelector("#user").innerHTML =           "Hello " + regfullname  + "Explore our various list of seamless integration systems. Check out solutions customized for your needs.";
     }
@@ -53,7 +53,7 @@ export const userSent = function(){
     let regemail = localStorage.email;
     let regpassword = localStorage.password;
     if(user == regemail && pswd == regpassword){
-      document.location.assign("https://eduqii-blip.github.io/benitapollosolutions/home.html");
+      document.location.assign("https:/\/www.benitapollosolutions/home.html");
        // document.location.assign("../view/home.html")
     }else{
     console.log(regemail);
@@ -77,20 +77,20 @@ let thesearxh = searxh.trim();
  if(searxhque[0] == inventory[0]){
       if(typeof(Storage) !== "undefined"){
           localStorage.searchterms = searxhque[0];
-         window.location.assign("../controller/searchresult.html");
+         window.location.assign("https:/\/www.benitapollosolutions.com/searchresult.html");
       }
  //     alert(searchterm);
   }
  else if(searxhque[1] == inventory[1]){
       if(typeof(Storage) !== "undefined"){
           localStorage.searchterms = searxhque[1];
-         window.location.assign("../controller/searchresult.html");
+         window.location.assign("https:/\/www.benitapollosolutions.com/searchresult.html");
       }
   }
   else if(searxhque[2] == inventory[2]){
       if(typeof(Storage) !== "undefined"){
           localStorage.searchterms = searxhque[2];
-         window.location.assign("../controller/searchresult.html");
+         window.location.assign("https:/\/www.benitapollosolutions.com/searchresult.html");
       }
   }
   else{

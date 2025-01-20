@@ -45,46 +45,46 @@ const htmlBody = document.querySelector('html');
     const getHardware = function (){
         document.write("loading please wait...");
         
-        window.location.assign("https://www.benitapollosolutions.com/hardwaresolution.html");
+        window.location.assign("https:/\/www.benitapollosolutions.com/hardwaresolution.html");
     }
     
 const getSolution = function(){
     document.write("loading please wait... study in the U.S.A | U.K | Canada | Europe");
-    window.location.assign("https://www.benitapollosolutions.com/educationstudy.html");
+    window.location.assign("https:/\/www.benitapollosolutions.com/educationstudy.html");
 }
 
 const openSuite = function(){
     document.write("loading please wait...");
-    window.location.assign("https://www.benitapollosolutions.com/educationsolution.html");
+    window.location.assign("https:/\/www.benitapollosolutions.com/educationsolution.html");
   }
   
   const openCalSys = function (){
       document.write("loading please wait...");
-       window.location.assign("https://www.benitapollosolutions.com/getdemo.html")
+       window.location.assign("https:/\/www.benitapollosolutions.com/getdemo.html")
   }
   
  const Subscribe = function (){
      document.write("loading please wait...");
      
-     window.location.assign("https://eepurl.com/iVSgP2");
+     window.location.assign("https:/\/eepurl.com/iVSgP2");
  }
  
  const openClass = function (){
       document.write("loading... please wait");
       
-      window.location.assign("https://tinyurl.com/25s9w8wq")
+      window.location.assign("https:/\/tinyurl.com/25s9w8wq")
   }
   
   const openDeveloper = function (){
      document.write("loading... please wait");
      
-     window.location.assign("https://tinyurl.com/2dfcmn6h")
+     window.location.assign("https:/\/tinyurl.com/2dfcmn6h")
   }
   
   const openShop = function (){
       document.write("loading... please wait");
       
-      window.location.assign("https://tinyurl.com/235p5aee")
+      window.location.assign("https:/\/tinyurl.com/235p5aee")
   }
   
  //search controller 
@@ -102,10 +102,10 @@ let notfound;
               localStorage.searchresults = inventory[count];
               if(localStorage.searchresults === "Ga-South Clientele"){
                   document.write("loading... please wait");
-                  window.location.assign("https://www.benitapollosolutions.com/basbusiness.html");
+                  window.location.assign("https:/\/www.benitapollosolutions.com/basbusiness.html");
               }
               else{
-           document.write("loading... please wait"); window.location.assign("https://www.benitapollosolutions.com/searchresult.html");
+           document.write("loading... please wait"); window.location.assign("https:/\/www.benitapollosolutions.com/searchresult.html");
            }
           }
       }else{
