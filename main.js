@@ -36,7 +36,10 @@ const htmlBody = document.querySelector('html');
     settingscontrolsb.classList.remove("text-bg-secondary");
     settingscontrolsb.classList.add("text-bg-light");
     searchbtn.classList.remove("btn-success");
-    searchbtn.classList.add("btn-primary")
+    searchbtn.classList.add("btn-primary");
+    
+    contentfirst.classList.remove("text-bg-secondary");
+    contentfirst.classList.add("text-bg-light");
       //  alert("i changed to light")
           }
         }
