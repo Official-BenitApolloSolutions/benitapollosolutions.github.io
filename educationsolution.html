@@ -10,6 +10,7 @@
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="https://www.benitapollosolutions.com/main.js" type="text/javascript"></script>
         <script src="https://www.benitapollosolutions.com/site.js" type="text/javascript"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -68,7 +69,7 @@
             </div>
         </div>
         <div class="container mt-4">
-            <div class="shadow-lg text-bg-light m-3 p-5">
+            <div class="shadow-lg text-bg-light m-3 p-3">
                 <form id="study-form" method="post">
                     <label class="form-label">
                         Name of Institute
@@ -81,6 +82,7 @@
                         <option value="school management suite">School Portal</option>
                         <option disabled selected>Please select an option</option>
                     </select>
+                    <div class="g-recaptcha mt-3" data-sitekey="6Le2zLwqAAAAACkRbFstv24_zj1kC_-hMyghd8LQ"></div> 
                     <button class="btn btn-primary mt-5" type="submit">Get A Quote</button>
                 </form>
                 <p class="mt-5">Join our mailing list today. </p><input type="button" value="Subscribe" class="btn btn-danger" onClick="Subscribe()">
