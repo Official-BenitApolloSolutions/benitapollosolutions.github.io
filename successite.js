@@ -4,7 +4,7 @@ for (let i = 0; i < 10; i++) {
   container.append(cardTemplate.content.cloneNode(true));
 }
 
-fetch("https://eduqii-blip.github.io/benitapollosolutions/data.json")
+fetch("https:/\/www.benitapollosolutions.com/data.json")
   .then((response) => response.json())
   .then((posts) => {
     container.innerHTML = "";

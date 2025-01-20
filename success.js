@@ -8,7 +8,7 @@ const verifiedUser = function (){
     userstatus.classList.add("alert-success");
     userstatus.innerText = "You have successfully sent a quote";
     userstatus.appendChild(comport);
-    comport.setAttribute("href","https://bit.ly/basonlinegh")>
+    comport.setAttribute("href","https:/\/bit.ly/basonlinegh")>
     comport.classList.add("alert-link");
     comport.innerText = "View Respondent ";
     console.log("hello world")
