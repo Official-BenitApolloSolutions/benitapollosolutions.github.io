@@ -8,3 +8,7 @@ window.addEventListener("load", (e) => {
 user.innerHTML = navigator.UserAgent();
 });
 
+const loadLesson = function{
+    document.WriteLine("loading lesson. please wait...");
+    window.location.assign("https:/\/www.benitapollosolutions.com/lessonnotes1.html");
+}
