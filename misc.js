@@ -17,7 +17,7 @@ if(loadLesson.addEventListener){
 }
 
 function MyFunction(){
-    document.WriteLine("loading lesson. please wait...");
+    document.writeln("loading lesson. please wait...");
     window.location.assign("https:/\/www.benitapollosolutions.com/lessonnotes1.html");
     console.log("i got executed!");
 }
