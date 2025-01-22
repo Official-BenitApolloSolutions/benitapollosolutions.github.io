@@ -1,6 +1,6 @@
-const biztimer = document.querySelector("#businessday");
-const user = document.querySelector("#user");
-const loadlesson = document.querySelector("#loadlesson");
+let biztimer = document.querySelector("#businessday");
+let user = document.querySelector("#user");
+let loadlesson = document.querySelector("#loadlesson");
 let newday = new Date();
 window.addEventListener("load", (e) => {
     e.preventDefault();
