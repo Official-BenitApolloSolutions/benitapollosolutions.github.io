@@ -14,4 +14,5 @@ loadlesson.addEventListener("click", (e) => {
          
     document.WriteLine("loading lesson. please wait...");
     window.location.assign("https:/\/www.benitapollosolutions.com/lessonnotes1.html");
+    console.log("i got executed!");
 });
