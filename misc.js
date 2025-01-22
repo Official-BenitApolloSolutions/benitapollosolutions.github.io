@@ -1,13 +1,16 @@
-/*let biztimer = document.querySelector("#businessday");
-let user = document.querySelector("#user");
-let newday = new Date();
-window.addEventListener("load", (e) => {
-    e.preventDefault();
-    
+function LoadTimer(){
+    let biztimer = document.querySelector("#businessday");
+  let user = document.querySelector("#user");
+  let newday = new Date();
+   if(window.addEventListener){
+       window.addEventListener("load", TimerFunction, false);
+   }
+}
+
+function TimerFunction(){
     biztimer.innerHTML = newday.toDateString();
 user.innerHTML = navigator.UserAgent();
-});
-*/
+}
 
 function LoadLesson(){
     let loadLesson = document.getElementById("loadLesson");
