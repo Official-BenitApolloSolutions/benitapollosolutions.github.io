@@ -15,7 +15,29 @@
     </head>
     <body>
        <div class="container mt-5">
+           <span class="visually-hidden">We upgrade every software into a solution. We Benit Apollo Solutions.</span>
             <h1 class="display-3" id="loadstatus"><span class="spinner-border"></span>Loading... Please wait</h1>
+        </div>
+        <div class="container">
+            <div class="shadow-lg p-3 text-bg-dark rounded">
+                 <h1 class="display-5 mb-3">Sign into your account</h1>
+                <form id="form-main" name="userform" class="mt-2" method="POST" class="was-validated" onsubmit="userSent()">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" placeholder="Enter Email" name="email" required>
+                    <label class="form-label">Email</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+                    <label class="form-label">Password</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-btn-lg">Login</button>
+            </form>
+            <p class="mt-3">Does not have an account? <span><a class="text-decoration-none" onclick="registerNow()">Register</a></span></p>
+            </div>
         </div>
     </body>
 </html>
