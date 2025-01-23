@@ -70,11 +70,6 @@
         </div>
         <div class="container mt-4">
             <div class="shadow-lg text-bg-light m-3 p-3">
-                <div class="container">
-                    <div class="invisible m-2 p-3 rounded">
-                        <span id="suc_status"></span>
-                    </div>
-                </div>
                 <form id="study-form" method="post">
                     <label class="form-label">
                         Name of Institute
@@ -83,15 +78,19 @@
                     <label class="form-label">Email Address</label>
                     <input type="email" name="to_name" class="form-control form-control-lg mb-3" required>
                     <label class="form-label">Solution Type</label>
-                    <select name="message" class="form-select form-select-lg" required>
+                    <select name="message" class="form-select form-select-lg" required="required">
                         <option value="school management suite">School Portal</option>
+                        <option value="video solution">Video Solution</option>
+                        <option value="Hardware Solutions">Hardware Solutions </option>
                         <option disabled selected>Please select an option</option>
                     </select>
-                    <div class="g-recaptcha mt-3" data-size="normal" data-sitekey="6Le2zLwqAAAAACkRbFstv24_zj1kC_-hMyghd8LQ"></div> 
                     <button class="btn btn-primary mt-4" type="submit">Get A Quote</button>
                 </form>
                 <p class="mt-4">Join our mailing list today. </p><input type="button" value="Subscribe" class="btn btn-danger" onClick="Subscribe()">
             </div>
+        </div>
+        <div class="container">
+            <div class="g-recaptcha mt-3" data-size="normal" data-sitekey="6Le2zLwqAAAAACkRbFstv24_zj1kC_-hMyghd8LQ"></div> 
         </div>
    <!--     <div class="container mt-3">
             <div class="p-3 m-3 text-bg-light">
