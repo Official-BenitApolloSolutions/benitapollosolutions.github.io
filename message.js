@@ -1,7 +1,15 @@
-import { getHome } from 'https:/\/www.benitapollosolutions.com/index.js';
+import { GetHome } from 'https:/\/www.benitapollosolutions.com/index.js';
             
-window.addEventListener("load", (e) => {
+
+
+window.onload = function(){
+    if(window.addEventListener){
+        window.addEventListener("load", (e) => {
      e.preventDefault();
                  
-    getHome();
-});
+     GetHome();
+     
+}, false);
+
+    }
+}

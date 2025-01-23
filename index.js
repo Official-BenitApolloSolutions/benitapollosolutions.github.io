@@ -1,12 +1,13 @@
-const getHome = function (){ 
+const GetHome = function (){ 
 //window.location.assign("https:/\/www.benitapollosolutions.com/home.html");
-
-    let usrld =   document.getElementById("loadstatus");
 
  console.log("200");
   setTimeOut(() => { 
+  let usrld =   document.getElementById("loadstatus");
+  usrld.classList.remove("spinner-border");
   usrld.classList.add("invisible");   console.log(location.protocol); 
-      }, 3000);
+      }, 1300);
+      
 }
 
-export { getHome };
+export { GetHome };
