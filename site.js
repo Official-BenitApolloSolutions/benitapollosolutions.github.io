@@ -14,6 +14,10 @@
                 emailjs.sendForm('service_xga0ihl', 'template_66nw7jk', this)
                     .then(() => {
                         console.log('SUCCESS!');
+        let sucstatus = document.getElementById("suc_status");
+        sucstatus.classList.remove("invisible");
+        sucstatus.classList.add("visible");
+        sucstatus.innerHTML = "successfully sent a quote. Check your email for confirmation.";             
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
