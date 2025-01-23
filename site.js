@@ -10,12 +10,12 @@
                     .then(() => {
                         console.log('SUCCESS!');
                         document.write("information sent");
-                        if(location.href="https:/\/www. benitapollosolutiolns.com/educationstudy.html"){
+                        /*if(location.href="https:/\/www. benitapollosolutiolns.com/educationstudy.html"){
                             window.location.assign("https:/\/www.benitapollosolutions.com/studysuccess.html");
                         } 
                         else if(location.href="https:/\/www.benitapollosolutions.com/educationsolution.html"){
                             window.location.assign("https:/\/www.benitapollosolutions.com/gettingstarted.html")
-                        }
+                        }*/
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
