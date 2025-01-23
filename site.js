@@ -1,3 +1,4 @@
+  "use strict";
    (function() {  
              emailjs.init({ 
              publicKey: "UZxRIO87B2gXO7tyZ", }); 
@@ -6,6 +7,7 @@
           window.onload = function() {
           
           let studyform = document.getElementById('study-form');
+          
           let solutionform = document.getElementById("solution-form");
           
     if(studyform.addEventListener){
@@ -27,7 +29,7 @@ document.writeln("successfully sent a quote. Check your email for confirmation."
         //end of control
     }
     
-    if(solutionform.addEventListener){
+   else if(solutionform.addEventListener){
         // start of control
         
          solutionform.addEventListener('submit', function(event) {
