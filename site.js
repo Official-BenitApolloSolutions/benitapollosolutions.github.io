@@ -10,14 +10,16 @@
         
          studyform.addEventListener('submit', function(event) {
                 event.preventDefault();
-                // these IDs from the previous steps
+                // date
                 emailjs.sendForm('service_xga0ihl', 'template_66nw7jk', this)
                     .then(() => {
                         console.log('SUCCESS!');
         let sucstatus = document.getElementById("suc_status");
         sucstatus.classList.remove("invisible");
         sucstatus.classList.add("visible");
-        sucstatus.innerHTML = "successfully sent a quote. Check your email for confirmation.";             
+        sucstatus.classList.add("text-bg-success");
+        sucstatus.innerHTML = "successfully sent a quote. Check your email for confirmation.";
+           // location.reload();        
                     }, (error) => {
                         console.log('FAILED...', error);
                     });
