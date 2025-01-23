@@ -1,12 +1,12 @@
    (function() {  
              emailjs.init({ 
-             publicKey: "D1y25vk5Im7SPLYnC", }); 
+             publicKey: "UZxRIO87B2gXO7tyZ", }); 
              })();
              
           window.onload = function() {
-           document.getElementById('solution-form').addEventListener('submit', function(event) {
+           document.getElementById('study-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
+                emailjs.sendForm('service_xga0ihl', 'template_66nw7jk', this)
                     .then(() => {
                         console.log('SUCCESS!');
                         document.write("information sent");
