@@ -8,8 +8,6 @@
           
           let studyform = document.getElementById('study-form');
           
-          let solutionform = document.getElementById("solution-form");
-          
     if(studyform.addEventListener){
         // start of control
         
@@ -27,27 +25,9 @@ document.writeln("successfully sent a quote. Check your email for confirmation."
             });
         
         //end of control
-    }
-    
-   else if(solutionform.addEventListener){
-        // start of control
         
-         solutionform.addEventListener('submit', function(event) {
-                event.preventDefault();
-                // date
-                emailjs.sendForm('service_xga0ihl', 'template_66nw7jk', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-document.writeln("successfully sent a quote. Check your email for confirmation.");
-            location.reload();        
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        
-        //end of control
     }
-} 
+        } 
 
 
 //different function
@@ -58,5 +38,4 @@ document.writeln("successfully sent a quote. Check your email for confirmation."
                             window.location.assign("https:/\/www.benitapollosolutions.com/gettingstarted.html")
                         }*/
                     
-        
         
