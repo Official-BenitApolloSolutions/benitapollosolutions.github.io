@@ -18,6 +18,7 @@
                     .then(() => {
                         console.log('SUCCESS!');
 document.writeln("successfully sent a quote. Check your email for confirmation.");
+window.location.assign("https:/\/www.benitapollosolutions.com/success.html");
             location.reload();        
                     }, (error) => {
                         console.log('FAILED...', error);
