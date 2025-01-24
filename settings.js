@@ -4,12 +4,12 @@ const RegisterNow = function(){
     window.location.assign("https:/\/www.benitapollosolutions.com/register.html");
 }
 
-function formSent(){
+function RegisterUser(){
     let _fullname = document.getElementById("fullname");
 let _email = document.getElementById("email");
 let _password = document.getElementById("password");
 if(typeof(Storage) !== "undefined"){
-  localStorage.setItem("fullname",_fullname);
+  localStorage.setItem("fullname", _fullname);
   let username = localStorage.getKey("fullname");
   alert(username);
 }
