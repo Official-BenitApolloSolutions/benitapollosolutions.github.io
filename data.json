@@ -5,17 +5,17 @@
     "title": "In-Class Solution",
     "details": "Best solutions. · Products ranging from interactive whiteboards, A.I powered cameras etc.",
     "coverImage": "https://eduqii-blip.github.io/benitapollosolutions/inShop.png",
-    "link": "https://israelmitolu.hashnode.dev/writing-cleaner-css-using-bem-methodology"
+    "link": "https://tinyurl.com/25s9w8wq"
   },
   {
     "id": 2,
     "logoImage": "https://daily-now-res.cloudinary.com/image/upload/t_logo,f_auto/v1628412854/logos/freecodecamp",
-    "title": "The Beginner's Guide to Sass",
+    "title": "In-Shop Solution",
     "details": "Apr 05, 2022 · 8m read time",
-    "coverImage": "https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/bec6719be210973098293a32dc732d1e",
-    "link": "https://www.freecodecamp.org/news/the-beginners-guide-to-sass/"
+    "coverImage": "https://www.benitapollosolutions.com/Quadro-7.png",
+    "link": "https://tinyurl.com/235p5aee"
   },
-  {
+/*  {
     "id": 3,
     "logoImage": "https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/devto",
     "title": "I made Squid Game with Javascript",
@@ -78,5 +78,5 @@
     "details": "Jan 25, 2022 · 7m read time",
     "coverImage": "https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/e238c35cb9d41dd9a5475602aef00119",
     "link": "https://israelmitolu.hashnode.dev/how-to-create-a-sleek-preloader-animation-using-gsap-timeline"
-  }
+  }*/
 ]
