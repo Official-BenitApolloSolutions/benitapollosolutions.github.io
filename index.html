@@ -11,18 +11,18 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://www.benitapollosolutions.com/settings.js">
-            <script src="https://www.benitapollosolutions.com/message.js"></script>
+            <script src="message.js"></script>
         </script>        
     </head>
-    <body>
+    <body onload="ShowMessage()">
        <div class="container mt-5">
            <div class="container">
            <span class="visually-hidden">We upgrade every software into a solution. We Benit Apollo Solutions.</span>
            </div>
            
-            <h1 class="display-3" id="loadstatus" style="display: none;"><span class="spinner-border"></span>Loading... Please wait</h1>
+            <h1 class="display-3" id="loadstatus"><span class="spinner-border"></span>Loading... Please wait</h1>
         </div>
-        <div id="mainaccount" class="container" style="display: none;">
+        <div id="mainaccount" class="container">
             <div class="shadow-lg p-3 text-bg-light rounded">
                  <h1 class="display-5 mb-3">Signin account</h1>
                 <form id="form-main" name="userform" class="mt-2" method="POST" class="was-validated" onsubmit="userSent()">
