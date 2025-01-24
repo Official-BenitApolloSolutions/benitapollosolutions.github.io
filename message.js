@@ -1,4 +1,4 @@
-import { GetHome } from 'https:/\/www.benitapollosolutions.com/index.js';
+//import { GetHome } from 'https:/\/www.benitapollosolutions.com/index.js';
             
 
 
@@ -10,7 +10,7 @@ window.onload = function(){
       let mainacc = document.getElementById("mainaccount"); 
       let usrld =   document.getElementById("loadstatus");
           
-     GetHome();
+     //GetHome();
      
      setTimeOut(() => { 
           mainacc.style.display = "block";
