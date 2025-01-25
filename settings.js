@@ -12,6 +12,9 @@ if(typeof(Storage) !== "undefined"){
   let username = localStorage.getKey("fullname");
   alert(username);*/
   alert("hello world");
-}
+
 }
 
+function ShowPassword(){
+    alert("hello world")
+}
