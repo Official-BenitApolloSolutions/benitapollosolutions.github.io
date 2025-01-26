@@ -85,7 +85,7 @@
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td><span></span></td>
+                    <td><span id="schoolday"></span></td>
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails1" class="btn btn-outline-success">Details</button></td>
                       <td> <button class="btn btn-outline-info" onclick="alert('timetable loading..')">Timetable</button> </td> 
                     <td> &nbsp; <!--<button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button> --></td>
@@ -270,6 +270,9 @@
     </div>
     <script type="text/javascript">
         let _myYear = new Date();
+        let _schoolday = document.getElementById("schoolday");
+        _schoolday.innerHTML = _myYear.toLocaleString();
+        
         let nodeList = document.querySelectorAll(".myYear");
         for(let i=0; i < nodeList.length; i++){
             nodeList[i].innerHTML = _myYear.getYear();
