@@ -1,4 +1,4 @@
-import { paymentmethod } from  'https:/\/www.benitapollosolutions.com/sitesetting.js';
+import { paymentmethod } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
 let paymentbtn = document.getElementById("payment-method");
 
