@@ -1,5 +1,7 @@
 const paymentmethod = function (){
-    document.writeln("loading payment client...");
+let payrate = document.getElementById("payrate");
+let pay = `Loading payment client... Total Amount: ${payrate}`;
+    document.writeln(pay);
     window.location.assign("https:/\/wa.me/+233500518387?text=Connect%20me%20to%20the%20payment%20method.");
 }
 

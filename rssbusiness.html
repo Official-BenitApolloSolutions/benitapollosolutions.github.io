@@ -156,15 +156,17 @@
             <pre> Bi-Payment </pre>
             1st Week: Ghs150 <span class="badge bg-success rounded-pill">paid</span> <span class="badge bg-info">Jan 19, 2025</span><br>
             2nd Week: Ghs150 <span class="badge bg-danger rounded-pill">unpaid</span> <br>
-            3rd Week: Ghs150 <span class="badge bg-danger rounded-pill">unpaid</span><br> February <br>
+            3rd Week: Ghs150 <span class="badge bg-danger rounded-pill">unpaid</span><br><br><span id="payment-date"></span> <br>
             1st Week: Ghs150 <span class="badge bg-warning rounded-pill">pending</span> <br>
             2nd Week: Ghs0 <!--<span class="badge bg-danger rounded-pill">unpaid</span>-->
+            <br> 3rd Week: Ghs0
+            <br> 4th Week: Ghs0
            <!--New: Seasonal computing; <br>
             Payment mode: weekly.
             Payment method: cash 
             Date: 22/11/2020
             First week: Ghs150 <span class="badge bg-success">Paid</span>--></p>
-            <p> Total Balance: <span class="text-warning"> GHS480</span></p>
+            <p> Total Balance: <span class="text-warning" id="payrate"> GHS480</span></p>
             <button class="btn btn-outline-success" id="payment-method">Make Payment</button>
         </div>
     </div>
@@ -293,6 +295,8 @@
         let quartertm = document.getElementById("quarter-year");
         let quarterdate = new Date();
         quartertm.innerHTML =  quarterdate.toGMTString();
+        let payment_date = document.getElementById("payment-date");
+        payment_date.innerHTML = quarterdate.toLocaleString();
     </script>
 </body>
 </html>
