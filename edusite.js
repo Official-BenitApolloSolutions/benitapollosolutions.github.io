@@ -19,3 +19,9 @@ if(paymentbtn.addEventListener){
 if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
 }
+
+let payList = document.querySelectorAll(".pay-rate");
+let pay_rate = document.getElementById("payrate");
+        for(let i=0; i < payList.length; i++){
+            payList[i].innerHTML = pay_rate.innerHTML;
+        }

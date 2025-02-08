@@ -68,7 +68,7 @@
                     <td>BASB<span class="myYear"></span>RS</td>
                     <td>The Royals Secondary School Ablekuma</td>
                     <td><span class="jobYear"></span></td>
-                    <td>GHS530</td>
+                    <td>GHS0</td>
                     <td>1</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -82,7 +82,7 @@
                     <td>BASB<span class="myYear"></span>RS</td>
                     <td>The Royals Secondary School Ablekuma</td>
                     <td><span class="jobYear"></span></td>
-                    <td>GHS480</td>
+                    <td class="pay-rate"></td>
                     <td>2 </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -146,8 +146,9 @@
             <p>
                 Amount Payable:<span class="text-danger">  Ghs530 </span><br>
                 Amount Received: <span class="text-success"> Ghs300 </span><span class="badge bg-info">Jan 13, 2025</span>
-                <br>Amount Received: <span class="text-success">Ghs200</span><span class="badge bg-info">Jan 31, 2025</span><br>
-                Balance: <span class="badge bg-warning">Ghs30</span>
+                <br>Amount Received: <span class="text-success">Ghs200</span>&nbsp;<span class="badge bg-info">Jan 31, 2025</span><br>
+                Amount Received: <span class="text-success">Ghs30</span>&nbsp;<span class="badge bg-info">Feb 7, 2025</span><br>
+                Balance: <span class="badge bg-success">Ghs0</span>
                  </p>
             <p class="text-muted"><!--Amount Paid: Ghs200, 18/11/24. Total to pay: Ghs680</p><br>
             Paid: Ghs150 <br>
@@ -155,7 +156,7 @@
             Payment Method: Cash <br>-->
             <pre> Bi-Payment </pre>
             1st Week: Ghs150 <span class="badge bg-success rounded-pill">paid</span> <span class="badge bg-info">Jan 19, 2025</span><br>
-            2nd Week: Ghs150 <span class="badge bg-danger rounded-pill">unpaid</span> <br>
+            2nd Week: Ghs30 <span class="badge bg-danger rounded-pill">part</span>&nbsp;<span class="badge bg-warning rounded-pill">-Ghs120</span>&nbsp;<span class="badge bg-info">Feb 7, 2025</span> <br>
             3rd Week: Ghs150 <span class="badge bg-danger rounded-pill">unpaid</span><br><br><span id="payment-date"></span> <br>
             1st Week: Ghs150 <span class="badge bg-warning rounded-pill">pending</span> <br>
             2nd Week: Ghs0 <!--<span class="badge bg-danger rounded-pill">unpaid</span>-->
@@ -166,14 +167,14 @@
             Payment method: cash 
             Date: 22/11/2020
             First week: Ghs150 <span class="badge bg-success">Paid</span>--></p>
-            <p> Total Balance: <span class="text-warning" id="payrate"> GHS480</span></p>
+            <p> Total Balance: <span class="text-warning" id="payrate"> GHS330</span></p>
             <button class="btn btn-outline-success" id="payment-method">Make Payment</button>
         </div>
     </div>
     
     <div class="offcanvas offcanvas-end" id="arearsreport">
         <div class="offcanvas-header">
-            <h4 class="offcanvas-title">Arears report As At August / September Till <span id="arearsperiod"></span> Is Ghs530</h4>
+            <h4 class="offcanvas-title">Arears report As At August / September Till <span id="arearsperiod"></span> Is Ghs0</h4>
             <button class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -285,6 +286,7 @@
         for(let i=0; i < nodeList.length; i++){
             nodeList[i].innerHTML = _myYear.getYear();
         }
+        
         let _jobnode = document.querySelectorAll(".jobYear");
         for(let n=0; n < _jobnode.length; n++){
         _jobnode[n].innerHTML = _myYear.getFullYear();
