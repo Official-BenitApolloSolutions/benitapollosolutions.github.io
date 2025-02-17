@@ -23,5 +23,36 @@ if(timetable.addEventListener){
 let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = pay_rate.innerHTML;
+            payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
         }
+
+//session charges
+switch(new Date().getDay()){
+    case 0:
+       let currentpay = Number(pay_rate.innerHTML);
+       currentpay += 150;
+}
+
+//season
+let _myYear = new Date();
+        let _schoolday = document.getElementById("schoolday");
+        _schoolday.innerHTML = _myYear.toLocaleString();
+        
+        let nodeList = document.querySelectorAll(".myYear");
+        for(let i=0; i < nodeList.length; i++){
+            nodeList[i].innerHTML = _myYear.getYear();
+        }
+        
+        let _jobnode = document.querySelectorAll(".jobYear");
+        for(let n=0; n < _jobnode.length; n++){
+        _jobnode[n].innerHTML = _myYear.getFullYear();
+        }
+        let arearperiod = document.querySelector("#arearsperiod");
+        arearperiod.innerHTML = _myYear.toGMTString();
+        
+        let quartertm = document.getElementById("quarter-year");
+        let quarterdate = new Date();
+        quartertm.innerHTML =  quarterdate.toGMTString();
+        let payment_date = document.getElementById("payment-date");
+        payment_date.innerHTML = quarterdate.toLocaleString();
+        
