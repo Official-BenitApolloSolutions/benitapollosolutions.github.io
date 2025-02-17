@@ -27,7 +27,7 @@ let pay_rate = document.getElementById("payrate");
 switch(new Date().getDay()){
     case 1:
        let paydata = pay_rate.innerHTML;
-       pay_rate.innerHTML = paydata + 150;
+       pay_rate.innerHTML = Number(paydata) + 150;
        break;
     default:
         window.alert("today's not Monday");
