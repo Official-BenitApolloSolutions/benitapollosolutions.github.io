@@ -36,7 +36,7 @@ switch(new Date().getDay()){
 
 
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GH&#x20B5;" + pay_rate.innerHTML;
+            payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
         }
         
 
