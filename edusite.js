@@ -22,16 +22,20 @@ if(timetable.addEventListener){
 
 let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
-        for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
-        }
 
 //session charges
 switch(new Date().getDay()){
     case 1:
-       pay_rate.innerHTML = pay_rate.innerHTML + 150;
+       let paydata = pay_rate.innerHTML;
+       pay_rate.innerHTML = paydata + 150;
        break;
 }
+
+
+        for(let i=0; i < payList.length; i++){
+            payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
+        }
+        
 
 //season
 let _myYear = new Date();
