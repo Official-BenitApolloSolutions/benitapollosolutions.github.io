@@ -29,6 +29,9 @@ switch(new Date().getDay()){
        let paydata = pay_rate.innerHTML;
        pay_rate.innerHTML = paydata + 150;
        break;
+    default:
+        window.alert("today's not Monday");
+        break;
 }
 
 
