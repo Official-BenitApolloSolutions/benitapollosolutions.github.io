@@ -30,7 +30,7 @@ switch(new Date().getDay()){
        pay_rate.innerHTML = Number(paydata) + 150;
        break;
     default:
-        window.alert("today's not Monday");
+        window.alert("Have a great day today!");
         break;
 }
 
