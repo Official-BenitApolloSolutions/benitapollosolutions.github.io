@@ -29,9 +29,7 @@ let pay_rate = document.getElementById("payrate");
 //session charges
 switch(new Date().getDay()){
     case 1:
-       let currentpay = Number(pay_rate.innerHTML);
-       currentpay += 150;
-       pay_rate.innerHTML = currentpay;
+       pay_rate.innerHTML = pay_rate.innerHTML + 150;
        break;
 }
 
