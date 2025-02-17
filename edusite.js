@@ -31,6 +31,8 @@ switch(new Date().getDay()){
     case 1:
        let currentpay = Number(pay_rate.innerHTML);
        currentpay += 150;
+       pay_rate.innerHTML = currentpay;
+       break;
 }
 
 //season
