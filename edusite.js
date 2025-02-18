@@ -24,7 +24,7 @@ let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
 
 //session charges
-eval(pay_rate.innerHTML = sessionstarted);
+eval(pay_rate.innerHTML = schoolsession);
 
 switch(new Date().getDay()){
     case 1:
