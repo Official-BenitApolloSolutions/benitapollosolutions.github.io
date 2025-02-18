@@ -24,8 +24,11 @@ let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
 
 //session charges
-eval(pay_rate.innerHTML = schoolsession);
-
+let firstweek = document.getElementById("first-week").innerHTML;
+let secondweek = document.getElementById("second-week").innerHTML;
+let thirdweek = document.getElementById("third-week").innerHTML;
+eval(pay_rate.innerHTML = firstweek + secondweek + thirdweek);
+/*
 switch(new Date().getDay()){
     case 1:
        let paydata = pay_rate.innerHTML;
@@ -39,7 +42,7 @@ switch(new Date().getDay()){
         window.alert("Have a great day today!");
         break;
 }
-
+*/
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
