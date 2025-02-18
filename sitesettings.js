@@ -11,5 +11,24 @@ const MyTimeTable = function (){
     document.location.assign("https:/\/www.benitapollosolutions.com/lessonmodel.html");
 }
 
-export { paymentmethod, MyTimeTable };
+const schoolsession = SchoolSession();
+
+function SchoolSession(){
+    let _schoolsession = "School is in sesdion";
+    let count = 0;
+    let cashdate = new Date();
+    let a = 0;
+     cashdate.getDate();
+    while (count !== cashdate){
+        
+        let payhour = a + 150;
+        return payhour;
+        count++;
+    }
+    
+    //let payhour = a + 150;
+    return payhour;
+}
+
+export { paymentmethod, MyTimeTable, schoolsession };
 

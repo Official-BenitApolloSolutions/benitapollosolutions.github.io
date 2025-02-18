@@ -32,7 +32,7 @@ switch(new Date().getDay()){
        pay_rate.innerHTML = Number(paydata) + 150;
        break;
      case 2:
-        pay_rate.innerHtml = sessionstarted;
+        pay_rate.innerHtml = schoolsession;
        break;
        
   default:
