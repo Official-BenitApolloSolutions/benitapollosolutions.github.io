@@ -61,6 +61,7 @@
                         <th>&nbsp;</th>
                         <th> Particulars </th>
                         <th> Report</th>
+                        <th> Notification</th>
                     </thead>
                 </tr>
                 <tr>
@@ -77,6 +78,7 @@
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails" class="btn btn-outline-success">Details</button></td>
                      <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button></td>
+             <td> &nbsp; </td>
                 </tr>
                 <tr>
                     <td>BASB<span class="myYear"></span>RS</td>
@@ -91,6 +93,7 @@
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails1" class="btn btn-outline-success">Details</button></td>
                       <td> <button class="btn btn-outline-info" id="timetable">Timetable</button> </td> 
                     <td> &nbsp; <!--<button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button> --></td>
+                    <td> <button class="btn btn-primary">Notification<span class="badge bg-danger" id="totnots"></button></td>
                 </tr>
                 <tr>
                     <td>BASB<span class="myYear"></span>RS</td>
@@ -105,6 +108,7 @@
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#relDetails" class="btn btn-outline-success">Details</button></td>
                      <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
                     <td>&nbsp;</td>
+                    <td> &nbsp; </td>
                 </tr>
                 </tbody>
                 </table>
@@ -158,7 +162,7 @@
             1st Week: Ghs150 <span class="badge bg-success rounded-pill">paid</span> <span class="badge bg-info">Jan 19, 2025</span><br>
             2nd Week: <strike>Ghs30</strike> Ghs150 <span class="badge bg-success rounded-pill">paid</span>&nbsp;<span class="badge bg-warning rounded-pill"><strike>-Ghs120</strike></span>&nbsp;<span class="badge bg-info">Feb 7, 2025</span>&nbsp;<span class="badge bg-info">Feb 11,2025</span> <br>
             3rd Week: Ghs150 <span class="badge bg-success rounded-pill">paid</span>&nbsp;<span class="badge bg-info">Feb 11,2025</span><br><br><span id="payment-date"></span> <br>
-            1st Week: Ghs<span id="first-week">130</span><span class="badge bg-danger rounded-pill">part</span>&nbsp;<span class="badge bg-info">Feb 11,2025</span> <br>
+            1st Week: Ghs<span id="first-week">130</span><span class="badge bg-danger rounded-pill">part</span>&nbsp;<span class="badge bg-warning">GHS20</span>&nbsp;<span class="badge bg-info">Feb 11,2025</span> <br>
             2nd Week: Ghs<span id="second-week">150</span> <span class="badge bg-danger rounded-pill">unpaid</span>
             <br> 3rd Week: Ghs<span id="third-week">150</span> <span class="badge bg-warning rounded-pill">pending</span>
             <br> 4th Week: Ghs0
