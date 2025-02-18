@@ -29,9 +29,9 @@ switch(new Date().getDay()){
        let paydata = pay_rate.innerHTML;
        pay_rate.innerHTML = Number(paydata) + 150;
        break;
-    default:
+   /*default:
         window.alert("Have a great day today!");
-        break;
+        break;*/
 }
 
 
