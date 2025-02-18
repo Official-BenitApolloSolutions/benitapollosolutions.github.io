@@ -1,4 +1,4 @@
-import { paymentmethod, MyTimeTable } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
+import { paymentmethod, MyTimeTable, schoolsession } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
 let paymentbtn = document.getElementById("payment-method");
 
@@ -24,19 +24,26 @@ let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
 
 //session charges
+eval(pay_rate.innerHTML = sessionstarted);
+
 switch(new Date().getDay()){
     case 1:
        let paydata = pay_rate.innerHTML;
        pay_rate.innerHTML = Number(paydata) + 150;
        break;
-   /*default:
+     case 2:
+        pay_rate.innerHtml = sessionstarted;
+       break;
+       
+  default:
         window.alert("Have a great day today!");
-        break;*/
+        break;
 }
 
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
+            
         }
         
 
