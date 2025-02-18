@@ -27,7 +27,7 @@ let pay_rate = document.getElementById("payrate");
 let firstweek = document.getElementById("first-week").innerHTML;
 let secondweek = document.getElementById("second-week").innerHTML;
 let thirdweek = document.getElementById("third-week").innerHTML;
-eval(pay_rate.innerHTML = firstweek + secondweek + thirdweek);
+eval(pay_rate.innerHTML = Number(firstweek) + Number(secondweek) + Number(thirdweek));
 /*
 switch(new Date().getDay()){
     case 1:
