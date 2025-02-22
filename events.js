@@ -10,3 +10,6 @@ const LoadPage = function(){
   }
   
 }
+
+const bodycontent = document.getElementById("cohort-2025");
+window.onload = bodycontent.addEventListener("load",LoadPage(),false);
