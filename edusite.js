@@ -43,7 +43,7 @@ function PayDay(){
        if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        
        break;
