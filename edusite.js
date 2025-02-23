@@ -52,49 +52,49 @@ function PayDay(){
        if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break;
      case 2:
        if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break;
      case 3:
         if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break; 
        case 4:
         if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        };
        break;
        case 5:
         if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break;
        case 6:
         if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break; 
        case 7:
         if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break;
   default:
