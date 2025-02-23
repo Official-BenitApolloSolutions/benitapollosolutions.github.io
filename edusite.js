@@ -24,26 +24,88 @@ let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
 
 //session charges
-let firstweek = document.getElementById("first-week").innerHTML;
-let secondweek = document.getElementById("second-week").innerHTML;
-let thirdweek = document.getElementById("third-week").innerHTML;
-eval(pay_rate.innerHTML = Number(firstweek) + Number(secondweek) + Number(thirdweek));
-/*
-switch(new Date().getDay()){
+let firstweek = document.getElementById("first-week");
+let secondweek = document.getElementById("second-week");
+let thirdweek = document.getElementById("third-week");
+let forthweek = document.getElementById("forth-week");
+let weekstatus = document.getElementById("week4-status");
+
+firstweek.innerHTML = schoolsession;
+secondweek.innerHTML = schoolsession;
+thirdweek.innerHTML = schoolsession;
+forthweek.innerHTML = schoolsession;
+
+let totalpay = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(forthweek);
+
+function PayDay(){
+    switch(new Date().getDay()){
+    case 0:
+       if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
+       
+       break;
     case 1:
-       let paydata = pay_rate.innerHTML;
-       pay_rate.innerHTML = Number(paydata) + 150;
+       weekstatus.innerHTML = "pending";
+       if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
        break;
      case 2:
-        pay_rate.innerHtml = schoolsession;
+       if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
        break;
-       
+     case 3:
+        if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
+       break; 
+       case 4:
+        if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       };
+       break;
+       case 5:
+        if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
+       break;
+       case 6:
+        if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
+       break; 
+       case 7:
+        if(weekstatus.innerHTML === "pending") {
+           pay_rate.innerHtml = totalpay;
+       }else{
+           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.HTML) + Number(forthweek.innerHTML);
+       }
+       break;
   default:
         window.alert("Have a great day today!");
         break;
+ }
 }
-*/
 
+eval(PayDay());
+
+//session payment
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
             

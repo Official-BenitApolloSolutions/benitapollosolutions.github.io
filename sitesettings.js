@@ -11,19 +11,17 @@ const MyTimeTable = function (){
     document.location.assign("https:/\/www.benitapollosolutions.com/lessonmodel.html");
 }
 
-const schoolsession = SchoolSession();
+let schoolsession = SchoolSession();
 
 function SchoolSession(){
     let _schoolsession = "School is in sesdion";
-    let count = 0;
+    let count = 1;
     let cashdate = new Date();
-    let a = 0;
-     cashdate.getDate();
-    while (count !== cashdate){
+     cashdate.getDay();
+    while (count === cashdate){
         
-        let payhour = a + 150;
+        let payhour = 150;
         return payhour;
-        count++;
     }
     
     //let payhour = a + 150;
