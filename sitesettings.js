@@ -16,16 +16,14 @@ let schoolsession = SchoolSession();
 function SchoolSession(){
     let _schoolsession = "School is in sesdion";
     let count = 1;
+    let payhour = 0;
     let cashdate = new Date();
-     cashdate.getDay();
-    while (count === cashdate){
-        
-        let payhour = 150;
-        return payhour;
+    while (count == cashdate.getDay()){
+        payhour = 150;
     }
     
     //let payhour = a + 150;
-    return 0;
+    return payhour;
 }
 
 export { paymentmethod, MyTimeTable, schoolsession };

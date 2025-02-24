@@ -24,16 +24,16 @@ let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
 
 //session charges
-let firstweek = document.getElementById("first-week");
-let secondweek = document.getElementById("second-week");
-let thirdweek = document.getElementById("third-week");
-let forthweek = document.getElementById("forth-week");
+let firstweek = document.getElementById("first-week").innerHTML;
+let secondweek = document.getElementById("second-week").innerHTML;
+let thirdweek = document.getElementById("third-week").innerHTML;
+let forthweek = document.getElementById("forth-week").innerHTML;
 let weekstatus = document.getElementById("week4-status");
 
-firstweek.innerHTML = schoolsession;
-secondweek.innerHTML = schoolsession;
-thirdweek.innerHTML = schoolsession;
-forthweek.innerHTML = schoolsession;
+firstweek = schoolsession;
+secondweek = schoolsession;
+thirdweek = schoolsession;
+forthweek = schoolsession;
 
 let totalpay = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(forthweek);
 
