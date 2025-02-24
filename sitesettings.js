@@ -20,10 +20,11 @@ function SchoolSession(){
     let cashdate = new Date();
     while (count == cashdate.getDay()){
         payhour = 150;
+        return payhour;
     }
     
     //let payhour = a + 150;
-    return payhour;
+    //return;
 }
 
 export { paymentmethod, MyTimeTable, schoolsession };
