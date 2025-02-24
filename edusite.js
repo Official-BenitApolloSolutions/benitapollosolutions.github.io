@@ -54,10 +54,10 @@ function PayDay(){
        weekstatus.innerHTML = "pending";
        if(weekstatus.innerHTML === "unpending") {
            pay_rate.innerHtml = PayRate();
-           console.write("pay week");
+           Console.WriteLine("pay week");
        }else{
            pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
-           console.write("arrears payment");
+           Console.WriteLine("arrears payment");
        }
        break;
      case 2:
@@ -111,10 +111,11 @@ function PayDay(){
 eval(PayDay());
 
 //session payment
+eval(
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
             
-        }
+        });
         
 
 //season
