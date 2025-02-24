@@ -42,22 +42,29 @@ return totalpay;
 }
 
 function PayDay(){
+//session payment
+let totalpayment = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+
+        for(let i=0; i < payList.length; i++){
+            payList[i].innerHTML = "GHS" + totalpay;
+            
+        };
     switch(new Date().getDay()){
     case 0:
        if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = PayRate();
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = totalpay;
        }
        break;
     case 1:
        weekstatus.innerHTML = "pending";
        if(weekstatus.innerHTML === "unpending") {
            pay_rate.innerHtml = PayRate();
-           Console.WriteLine("pay week");
+           console.log("pay week");
        }else{
            pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
-           Console.WriteLine("arrears payment");
+           console.log("arrears payment");
        }
        break;
      case 2:
@@ -110,12 +117,6 @@ function PayDay(){
 }
 
 eval(PayDay());
-
-//session payment
-        for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GHS" + PayDay();
-            
-        };
         
 
 //season
