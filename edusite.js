@@ -64,6 +64,7 @@ function PayDay(){
        if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = PayRate();
        }else{
+           forthweek.innerHTML = 150;
            pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
        break;
@@ -111,11 +112,10 @@ function PayDay(){
 eval(PayDay());
 
 //session payment
-eval(
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GHS" + pay_rate.innerHTML;
+            payList[i].innerHTML = "GHS" + PayDay();
             
-        });
+        };
         
 
 //season
