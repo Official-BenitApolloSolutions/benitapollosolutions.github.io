@@ -45,14 +45,15 @@ function PayDay(){
        }else{
            pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
        }
-       
        break;
     case 1:
        weekstatus.innerHTML = "pending";
        if(weekstatus.innerHTML === "pending") {
            pay_rate.innerHtml = totalpay;
+           console.write("pay week");
        }else{
            pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+           console.write("arrears payment");
        }
        break;
      case 2:

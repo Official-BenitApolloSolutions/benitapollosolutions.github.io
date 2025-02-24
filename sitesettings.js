@@ -24,7 +24,7 @@ function SchoolSession(){
     }
     
     //let payhour = a + 150;
-    //return;
+    return;
 }
 
 export { paymentmethod, MyTimeTable, schoolsession };
