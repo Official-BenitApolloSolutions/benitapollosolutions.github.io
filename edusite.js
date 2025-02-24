@@ -43,7 +43,7 @@ return totalpay;
 
 function PayDay(){
 //session payment
-let totalpayment = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
@@ -55,6 +55,7 @@ let totalpayment = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + 
            pay_rate.innerHtml = PayRate();
        }else{
            pay_rate.innerHTML = totalpay;
+           forthweek.innerHTML = 150
        }
        break;
     case 1:
@@ -63,7 +64,8 @@ let totalpayment = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + 
            pay_rate.innerHtml = PayRate();
            console.log("pay week");
        }else{
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = totalpay;
+           forthweek.innerHTML = 150;
            console.log("arrears payment");
        }
        break;
@@ -72,7 +74,7 @@ let totalpayment = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + 
            pay_rate.innerHtml = PayRate();
        }else{
            forthweek.innerHTML = 150;
-           pay_rate.innerHTML = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+           pay_rate.innerHTML = totalpay;
        }
        break;
      case 3:
