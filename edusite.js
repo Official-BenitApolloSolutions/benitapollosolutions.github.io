@@ -75,6 +75,7 @@ let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Numb
        }else{
            weekstatus.classList.remove("bg-secondary");
            weekstatus.classList.add("bg-warning");
+           weekstatus.innerHTML = "pending";
            forthweek.innerHTML = 150;
            pay_rate.innerHTML = totalpay;
        }
