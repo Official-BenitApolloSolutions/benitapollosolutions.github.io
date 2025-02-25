@@ -74,7 +74,7 @@ let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Numb
        if(weekstatus.innerHTML === "unpending") {
            pay_rate.innerHtml = PayRate();
        }else{
-           weekstatus.classList.remove("bg-secondary");
+       weekstatus.innerHTML = "pending";    weekstatus.classList.remove("bg-secondary");
            weekstatus.classList.add("bg-warning");
            forthweek.innerHTML = 150;
            pay_rate.innerHTML = totalpay;
