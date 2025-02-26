@@ -43,12 +43,14 @@ return totalpay;
 
 function PayDay(){
 //session payment
+forthweek.innerHTML = 150;
 let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
             
         };
+      
     switch(new Date().getDay()){
     case 0:
        if(weekstatus.innerHTML === "pending") {
@@ -84,7 +86,8 @@ let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Numb
         if(weekstatus.innerHTML === "unpending") {
            pay_rate.innerHtml = PayRate();
        }else{
-           forthweek.innerHTML = 150;
+       weekstatus.innerHTML = "pending";
+           
            pay_rate.innerHTML = totalpay;
        }
        break; 
@@ -92,6 +95,7 @@ let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Numb
         if(weekstatus.innerHTML === "unpending") {
            pay_rate.innerHtml = PayRate();
        }else{
+       weekstatus.innerHTML = "pending";
            pay_rate.innerHTML = totalpay;
        };
        break;
