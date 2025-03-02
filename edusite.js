@@ -29,8 +29,8 @@ let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 
-let febsum = document.getElementById("febsum");
-febsum.innerHTML = 380;
+let febsum = document.getElementById("feb-sum");
+febsum.innerText = 380;
 
 let pay = 0;
 
