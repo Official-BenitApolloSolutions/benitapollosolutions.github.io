@@ -27,24 +27,41 @@ let pay_rate = document.getElementById("payrate");
 let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
-let forthweek = document.getElementById("forth-week");
-let weekstatus = document.getElementById("week4-status");
+let fourthweek = document.getElementById("fourth-week");
+
+let febsum = document.getElementById("febsum");
+febsum.innerHTML = 380;
 
 function PayRate(){
-firstweek.innerHTML = schoolsession;
-secondweek.innerHTML = schoolsession;
-thirdweek.innerHTML = schoolsession;
-forthweek.innerHTML = schoolsession;
+ switch(new Date().getWeek()){
+     case 0:
+       firstweek.innerHTML = schoolsession;
+       break;
+       case 1:
+         secondweek.innerHTML = schoolsession;
+         break;
+       case 2:
+         thirdweek.innerHTML = schoolsession;
+         break;
+       case 3:
+         fourthweek.innerHTML = schoolsession;
+         break;
+       default:
+         firstweek.innerHTML = 0;
+         secondweek.innerHTML = 0;
+         thirdweek.innerHTML = 0;
+         fourthweek.innerHTML = 0;
+         break;
+ }
 
-let totalpay = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(forthweek);
+let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(forthweek);
 
-return totalpay;
+ return totalpay;
 }
 
 function PayDay(){
 //session payment
-forthweek.innerHTML = 150;
-let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Number(thirdweek.innerHTML) + Number(forthweek.innerHTML);
+let totalpay = PayRate;
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
@@ -53,72 +70,28 @@ let totalpay = Number(firstweek.innerHTML) + Number(secondweek.innerHTML) + Numb
       
     switch(new Date().getDay()){
     case 0:
-       if(weekstatus.innerHTML === "pending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-           pay_rate.innerHTML = totalpay;
-           forthweek.innerHTML = 150
-       }
+           pay_rate.innerHtml = PayRate;
        break;
     case 1:
-       weekstatus.innerHTML = "pending";
-       if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-           console.log("pay week");
-       }else{
-           pay_rate.innerHTML = totalpay;
-           forthweek.innerHTML = 150;           
-           console.log("arrears payment");
-       }
+       pay_rate.innerHtml = PayRate;
        break;
      case 2:
-     weekstatus.innerHTML = "pending";
-       if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-       weekstatus.innerHTML = "pending";    weekstatus.classList.remove("bg-secondary");
-           weekstatus.classList.add("bg-warning");
-           forthweek.innerHTML = 150;
-           pay_rate.innerHTML = totalpay;
-       }
+     pay_rate.innerHtml = PayRate;
        break;
      case 3:
-        if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-       weekstatus.innerHTML = "pending";
-           
-           pay_rate.innerHTML = totalpay;
-       }
+        pay_rate.innerHtml = PayRate;
        break; 
        case 4:
-        if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-       weekstatus.innerHTML = "pending";
-           pay_rate.innerHTML = totalpay;
-       };
+        pay_rate.innerHtml = PayRate;
        break;
        case 5:
-        if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-           pay_rate.innerHTML = totalpay;
-       }
+        pay_rate.innerHtml = PayRate;
        break;
        case 6:
-        if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-           pay_rate.innerHTML = totalpay;
-       }
+        pay_rate.innerHtml = PayRate;
        break; 
        case 7:
-        if(weekstatus.innerHTML === "unpending") {
-           pay_rate.innerHtml = PayRate();
-       }else{
-           pay_rate.innerHTML = totalpay;
-       }
+        pay_rate.innerHtml = PayRate;
        break;
   default:
         window.alert("Have a great day today!");
