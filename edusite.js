@@ -32,25 +32,25 @@ let fourthweek = document.getElementById("fourth-week");
 let febsum = document.getElementById("feb-sum");
 febsum.innerText = 380;
 
-let pay = 0;
+let totpay = 0;
 
 function PayRate(){
  switch(new Date().getWeek()){
      case 0:
        firstweek.innerHTML = schoolsession;
-       pay = Number(firstweek.innerHTML);
+       totpay = Number(firstweek.innerHTML);
        break;
        case 1:
         secondweek.innerHTML = schoolsession;
-        pay = Number(secondweek.innerHTML);
+        totpay = Number(secondweek.innerHTML);
          break;
        case 2:
         thirdweek.innerHTML = schoolsession;
-        pay = Number(thirdweek.innerHTML);
+        totpay = Number(thirdweek.innerHTML);
          break;
        case 3:
         fourthweek.innerHTML = schoolsession;
-         pay = Number(fourthweek.innerHTML);
+         totpay = Number(fourthweek.innerHTML);
          break;
        default:
          console.log("Bas for business");
@@ -63,7 +63,7 @@ function PayRate(){
 
 /*let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(thirdweek) */
 
-return pay;
+return totpay;
 }
 
 function PayDay(){
