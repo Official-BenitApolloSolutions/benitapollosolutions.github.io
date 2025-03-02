@@ -61,7 +61,7 @@ let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(
 
 function PayDay(){
 //session payment
-let totalpay = PayRate;
+let totalpay = PayRate();
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
