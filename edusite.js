@@ -29,7 +29,7 @@ let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 
-let febsum = document.getElementById("feb-sum");
+let febsum = document.getElementById("Feb-sum");
 febsum.innerText = 380;
 
 let totpay = 0;
