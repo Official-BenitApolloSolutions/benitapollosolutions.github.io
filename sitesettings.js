@@ -25,7 +25,7 @@ function SchoolSession(){
     
     //let payhour = a + 150;
     console.log("new week");
-    return 0;
+   // return 0;
 }
 
 export { paymentmethod, MyTimeTable, schoolsession };
