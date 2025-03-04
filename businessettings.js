@@ -85,7 +85,7 @@ let totalpay = PayRate();
        pay_rate.innerHtml = currency + " " + PayRate;
        break;
      case 2:
-     pay_rate.innerHtml = PayRate;
+     pay_rate.innerHtml = PayRate();
        break;
      case 3:
         pay_rate.innerHtml = PayRate;
