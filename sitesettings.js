@@ -28,5 +28,11 @@ function SchoolSession(){
    // return 0;
 }
 
-export { paymentmethod, MyTimeTable, schoolsession };
+function PostNotification(){
+    document.writeln("Loading... please wait");
+    const url = "https:/\/www.benitapollosolutions.com/notifications";
+    window.location.assign(url);
+}
+
+export { paymentmethod, MyTimeTable, schoolsession, PostNotification };
 

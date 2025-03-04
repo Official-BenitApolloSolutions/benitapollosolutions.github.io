@@ -1,8 +1,13 @@
-import { paymentmethod, MyTimeTable, schoolsession } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
+import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
 let paymentbtn = document.getElementById("payment-method");
 
 let timetable = document.getElementById("timetable");
+
+let postnotification = document.getElementById("post-notification");
+if(postnotification.addEventListener){
+    postnotification.addEventListener("click", PostNotification, false);
+}
 
 function pay(){
     paymentmethod();
