@@ -67,6 +67,7 @@ function PayRate(){
  return totpay;
 }
 
+/*
 function PayDay(){
 //session payment
 
@@ -104,6 +105,7 @@ let totalpay = PayRate();
         break;
  }
 }
+*/
 
 //eval(PayDay());
         
