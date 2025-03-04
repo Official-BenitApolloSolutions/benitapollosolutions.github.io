@@ -30,6 +30,7 @@ let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let currency = "GH&#x20B5";
 let febsum = document.getElementById("Feb-sum").innerHTML;
+eval(febsum = currency + " " + 380);
 
 let totpay = 0;
 let today = new Date();
@@ -68,7 +69,6 @@ function PayRate(){
 
 function PayDay(){
 //session payment
-febsum = currency + 380;
 
 let totalpay = PayRate();
 
