@@ -29,7 +29,7 @@ let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let currency = "GH&#x20B5";
-let febsum = document.getElementById("Feb-sum");
+let febsum = document.getElementById("Feb-sum").innerHTML;
 
 let totpay = 0;
 let today = new Date();
@@ -68,7 +68,7 @@ function PayRate(){
 
 function PayDay(){
 //session payment
-febsum.innerText = currency + 380;
+febsum = currency + 380;
 let totalpay = PayRate();
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
@@ -110,7 +110,7 @@ eval(PayDay());
 let _myYear = new Date();
 let datetempc = document.querySelector("#dateclosed").innerHTML;
 let _dateclosednode = document.querySelectorAll(".dateclosed");
- for(let p=0; p < _dateclosednode.length; p++){
+ for(let k=0; k< _dateclosednode.length; k++){
      _dateclosednode.innerHTML = datetempc
  }
         let _schoolday = document.getElementById("schoolday");
