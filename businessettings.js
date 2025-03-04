@@ -38,19 +38,19 @@ function PayRate(){
  switch(today.getMonth() + 1){
      case 0:
        firstweek.innerHTML = schoolsession;
-       totpay = Number(firstweek.innerHTML);
+       totpay = Number(firstweek);
        break;
        case 1:
         secondweek.innerHTML = schoolsession;
-        totpay = Number(secondweek.innerHTML);
+        totpay = Number(secondweek);
          break;
        case 2:
         thirdweek.innerHTML = schoolsession;
-        totpay = Number(thirdweek.innerHTML);
+        totpay = thirdweek;
          break;
        case 3:
         fourthweek.innerHTML = schoolsession;
-         totpay = Number(fourthweek.innerHTML);
+         totpay = Number(fourthweek);
          break;
        default:
          console.log("Bas for business");
@@ -69,7 +69,9 @@ function PayRate(){
 function PayDay(){
 //session payment
 febsum = currency + 380;
+
 let totalpay = PayRate();
+
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
             
@@ -80,13 +82,13 @@ let totalpay = PayRate();
            pay_rate.innerHtml = currency + PayRate;
        break;
     case 1:
-       pay_rate.innerHtml = currency + PayRate;
+       pay_rate.innerHtml = currency + " " + PayRate;
        break;
      case 2:
-     pay_rate.innerHtml = PayRate;
+     pay_rate.innerHtml = PayRate();
        break;
      case 3:
-        pay_rate.innerHtml = PayRate;
+        pay_rate.innerHtml = PayRate();
        break; 
        case 4:
         pay_rate.innerHtml = PayRate;
