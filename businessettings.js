@@ -40,21 +40,21 @@ eval("febsum.innerHTML = currency + 380");
 let totpay = 0;
 let today = new Date();
 
-function PayRate(){
+const PayRate = function(){
  switch(today.getMonth() + 1){
-     case 0:
+     case 3:
        firstweek.innerHTML = schoolsession;
        totpay = Number(firstweek);
        break;
-       case 1:
+       case 4:
         secondweek.innerHTML = schoolsession;
         totpay = Number(secondweek);
          break;
-       case 2:
+       case 5:
         thirdweek.innerHTML = schoolsession;
         totpay = thirdweek;
          break;
-       case 3:
+       case 6:
         fourthweek.innerHTML = schoolsession;
          totpay = Number(fourthweek);
          break;
@@ -76,7 +76,7 @@ function PayDay(){
 //session payment
 
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GHS" + 0;
+            payList[i].innerHTML = "GHS" + PayRate;
             
         };
       
@@ -88,7 +88,7 @@ function PayDay(){
        pay_rate.innerHtml = currency + " " + PayRate;
        break;
      case 2:
-     pay_rate.innerHtml = PayRate();
+     pay_rate.innerHtml = PayRate;
        break;
      case 3:
         pay_rate.innerHtml = PayRate;
