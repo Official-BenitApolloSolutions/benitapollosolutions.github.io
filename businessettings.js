@@ -67,7 +67,6 @@ function PayRate(){
  return totpay;
 }
 
-/*
 function PayDay(){
 //session payment
 
@@ -105,11 +104,9 @@ let totalpay = PayRate();
         break;
  }
 }
-*/
 
-//eval(PayDay());
+eval("PayDay()");
         
-
 //season
 let _myYear = new Date();
 let datetempc = document.querySelector("#dateclosed").innerHTML;

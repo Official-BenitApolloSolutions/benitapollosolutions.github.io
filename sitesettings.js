@@ -18,13 +18,14 @@ function SchoolSession(){
     let count = 1;
     let payhour = 0;
     let cashdate = new Date();
-    while (count == cashdate.getDay()){
+    while (count !== cashdate.getDay()){
         payhour = 150;
         return payhour;
     }
     
     //let payhour = a + 150;
-    return;
+    console.log("new week");
+    return 0;
 }
 
 export { paymentmethod, MyTimeTable, schoolsession };
