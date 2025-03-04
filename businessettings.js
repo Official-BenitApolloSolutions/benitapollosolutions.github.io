@@ -110,7 +110,7 @@ eval(PayDay());
 let _myYear = new Date();
 let datetempc = document.querySelector("#dateclosed").innerHTML;
 let _dateclosednode = document.querySelectorAll(".dateclosed");
- for(int p=0; p < _dateclosednode.length; p++){
+ for(let p=0; p < _dateclosednode.length; p++){
      _dateclosednode.innerHTML = datetempc
  }
         let _schoolday = document.getElementById("schoolday");
