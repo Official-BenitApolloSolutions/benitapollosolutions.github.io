@@ -30,7 +30,7 @@ let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let currency = "GHS "
 let febsum = document.getElementById("Feb-sum");
-eval(febsum.innerHTML = currency + ". " + 380);
+eval(febsum.innerHTML = 380);
 
 let totpay = 0;
 let today = new Date();
@@ -105,7 +105,7 @@ let totalpay = PayRate();
  }
 }
 
-eval(PayDay());
+//eval(PayDay());
         
 
 //season
