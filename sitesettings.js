@@ -30,7 +30,7 @@ function SchoolSession(){
 
 function PostNotification(){
     document.writeln("Loading... please wait");
-    const url = "https:/\/www.benitapollosolutions.com/notifications";
+    const url = "https:/\/www.benitapollosolutions.com/notifications.html";
     window.location.assign(url);
 }
 
