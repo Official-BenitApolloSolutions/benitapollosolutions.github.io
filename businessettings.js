@@ -28,14 +28,14 @@ let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
-
+let currency = "GH&#x20B5";
 let febsum = document.getElementById("Feb-sum");
-febsum.innerText = 380;
 
 let totpay = 0;
+let today = new Date();
 
 function PayRate(){
- switch(new Date().getWeek()){
+ switch(today.getMonth() + 1){
      case 0:
        firstweek.innerHTML = schoolsession;
        totpay = Number(firstweek.innerHTML);
@@ -63,13 +63,13 @@ function PayRate(){
 
 /*let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(thirdweek) */
 
-return totpay;
+ return totpay;
 }
 
 function PayDay(){
 //session payment
+febsum.innerText = currency + 380;
 let totalpay = PayRate();
-
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + totalpay;
             
@@ -77,10 +77,10 @@ let totalpay = PayRate();
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.innerHtml = PayRate;
+           pay_rate.innerHtml = currency + PayRate;
        break;
     case 1:
-       pay_rate.innerHtml = PayRate;
+       pay_rate.innerHtml = currency + PayRate;
        break;
      case 2:
      pay_rate.innerHtml = PayRate;
@@ -97,9 +97,6 @@ let totalpay = PayRate();
        case 6:
         pay_rate.innerHtml = PayRate;
        break; 
-       case 7:
-        pay_rate.innerHtml = PayRate;
-       break;
   default:
         window.alert("Have a great day today!");
         break;
@@ -111,6 +108,11 @@ eval(PayDay());
 
 //season
 let _myYear = new Date();
+let datetempc = document.querySelector("#dateclosed").innerHTML;
+let _dateclosednode = document.querySelectorAll(".dateclosed");
+ for(int p=0; p < _dateclosednode.length; p++){
+     _dateclosednode.innerHTML = datetempc
+ }
         let _schoolday = document.getElementById("schoolday");
         _schoolday.innerHTML = _myYear.toLocaleString();
         
@@ -123,8 +125,12 @@ let _myYear = new Date();
         for(let n=0; n < _jobnode.length; n++){
         _jobnode[n].innerHTML = _myYear.getFullYear();
         }
-        let arearperiod = document.querySelector("#arearsperiod");
-        arearperiod.innerHTML = _myYear.toGMTString();
+        
+        let _archivenode = document.querySelectorAll(".arearsperiod");
+        for(let i=0; i < _archivenode.length; i++){
+            _archivenode.innerHTML = _myYear.toGMTString();
+        }
+        
         
         let quartertm = document.getElementById("quarter-year");
         let quarterdate = new Date();
