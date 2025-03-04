@@ -28,7 +28,7 @@ let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
-let currency = "GHS";
+let currency = "GHS "
 let febsum = document.getElementById("Feb-sum").innerHTML;
 eval(febsum = currency + " " + 380);
 
