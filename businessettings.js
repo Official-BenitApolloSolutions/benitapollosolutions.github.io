@@ -5,8 +5,9 @@ let paymentbtn = document.getElementById("payment-method");
 let timetable = document.getElementById("timetable");
 
 let postnotification = document.getElementById("post-notification");
+
 if(postnotification.addEventListener){
-    postnotification.addEventListener("click", PostNotification, false);
+   postnotification.addEventListener("click", PostNotification, false);
 }
 
 function pay(){
@@ -33,7 +34,7 @@ let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
-let currency = "GHS"
+let currency = "GHS "
 let febsum = document.getElementById("Feb-sum");
 eval("febsum.innerHTML = currency + 380");
 
@@ -42,19 +43,19 @@ let today = new Date();
 
 const PayRate = function(){
  switch(today.getMonth() + 1){
-     case 3:
+     case 2:
        firstweek.innerHTML = schoolsession;
        totpay = Number(firstweek);
        break;
-       case 4:
+       case 3:
         secondweek.innerHTML = schoolsession;
         totpay = Number(secondweek);
          break;
-       case 5:
+       case 4:
         thirdweek.innerHTML = schoolsession;
         totpay = thirdweek;
          break;
-       case 6:
+       case 5:
         fourthweek.innerHTML = schoolsession;
          totpay = Number(fourthweek);
          break;
