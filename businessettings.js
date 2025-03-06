@@ -1,6 +1,6 @@
 import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
-window.onload = ShowTotalNotifications;
+window.onload = NumberOfNotifications;
 
 let paymentbtn = document.getElementById("payment-method");
 
@@ -17,11 +17,7 @@ function NumberOfNotifications(){
     if(localStorage != "undefined"){
         localStorage.notification = totalnot.length;
     }  
-}
-
-NumberOfNotifications();
-
-function ShowTotalNotifications(){
+    
   totnots.innerText = localStorage.notification;
     if(postnotification.addEventListener){
    postnotification.addEventListener("click", PostNotification, false);
