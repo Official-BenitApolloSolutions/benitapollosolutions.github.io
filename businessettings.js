@@ -8,11 +8,11 @@ let timetable = document.getElementById("timetable");
 
 let postnotification = document.getElementById("post-notification");
 
+let totalnot = document.querySelectorAll(".posts-notification");
+
 let totnots = document.getElementById("totnots");
 
 function NumberOfNotifications(){
-
-    let totalnot = document.querySelectorAll(".posts-notification");
     
     if(localStorage != "undefined"){
         localStorage.notification = totalnot.length;
@@ -30,6 +30,7 @@ if(paymentbtn.addEventListener){
  if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
 }
+
 }
 
 function pay(){
