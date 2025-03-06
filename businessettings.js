@@ -18,17 +18,8 @@ function NumberOfNotifications(){
         localStorage.notification = totalnot.length;
         totnots.innerText = localStorage.notification;
     }
-}
-
-function pay(){
-    paymentmethod();
-}
-
-function Showtimetable(){
-    MyTimeTable();
-}
-
-if(postnotification.addEventListener){
+    
+    if(postnotification.addEventListener){
    postnotification.addEventListener("click", PostNotification, false);
 }
 
@@ -38,6 +29,15 @@ if(paymentbtn.addEventListener){
 
 if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
+}
+}
+
+function pay(){
+    paymentmethod();
+}
+
+function Showtimetable(){
+    MyTimeTable();
 }
 
 let payList = document.querySelectorAll(".pay-rate");
