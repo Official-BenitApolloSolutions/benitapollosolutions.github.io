@@ -1,13 +1,23 @@
 import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
+window.onload = NumberOfNotifications;
+
 let paymentbtn = document.getElementById("payment-method");
 
 let timetable = document.getElementById("timetable");
 
 let postnotification = document.getElementById("post-notification");
 
-if(postnotification.addEventListener){
-   postnotification.addEventListener("click", PostNotification, false);
+let totnots = document.getElementById("totnots");
+
+function NumberOfNotifications(){
+    let totalnot = document.getElementById("posts-notification");
+    if(localStorage != "undefined"){
+        localStorage.notification = totalnot.length;
+        totnots.innerText = localStorage.notification;
+    }
+}
+ 
 }
 
 function pay(){
@@ -16,6 +26,10 @@ function pay(){
 
 function Showtimetable(){
     MyTimeTable();
+}
+
+if(postnotification.addEventListener){
+   postnotification.addEventListener("click", PostNotification, false);
 }
 
 if(paymentbtn.addEventListener){
@@ -42,7 +56,7 @@ let totpay = 0;
 let today = new Date();
 
 const PayRate = function(){
- switch(today.getMonth() + 1){
+ /*switch(today.getMonth() + 1){
      case 2:
        firstweek.innerHTML = schoolsession;
        totpay = Number(firstweek);
@@ -61,16 +75,13 @@ const PayRate = function(){
          break;
        default:
          console.log("Bas for business");
-         /*firstweek.innerHTML = 0;
-         secondweek.innerHTML = 0;
-         thirdweek.innerHTML = 0;
-         fourthweek.innerHTML = 0;*/
          break;
  }
+let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(thirdweek) 
 
-/*let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(thirdweek) */
-
- return totpay;
+ return totpay;*/
+ let myNum = 0;
+ return myNum;
 }
 
 function PayDay(){
