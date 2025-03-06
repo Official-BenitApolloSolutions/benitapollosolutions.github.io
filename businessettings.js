@@ -47,36 +47,27 @@ let currency = "GHS "
 let febsum = document.getElementById("Feb-sum");
 eval("febsum.innerHTML = currency + 380");
 
-let totpay = 0;
 let today = new Date();
 
 const PayRate = function(){
- /*switch(today.getMonth() + 1){
+ switch(today.getMonth() + 1){
      case 2:
-       firstweek.innerHTML = schoolsession;
-       totpay = Number(firstweek);
+       return schoolsession;
        break;
        case 3:
-        secondweek.innerHTML = schoolsession;
-        totpay = Number(secondweek);
+        return schoolsession
          break;
        case 4:
-        thirdweek.innerHTML = schoolsession;
-        totpay = thirdweek;
+        return schoolsession
          break;
        case 5:
-        fourthweek.innerHTML = schoolsession;
-         totpay = Number(fourthweek);
+        return schoolsession
          break;
        default:
          console.log("Bas for business");
          break;
  }
-let totalpay = Number(febsum) + Number(firstweek) + Number(secondweek) + Number(thirdweek) 
 
- return totpay;*/
- let myNum = 0;
- return myNum;
 }
 
 function PayDay(){
