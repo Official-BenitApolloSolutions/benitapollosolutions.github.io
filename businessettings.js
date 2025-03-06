@@ -17,8 +17,6 @@ function NumberOfNotifications(){
         totnots.innerText = localStorage.notification;
     }
 }
- 
-}
 
 function pay(){
     paymentmethod();
