@@ -1,6 +1,6 @@
 import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
-window.onload = NumberOfNotifications;
+window.onload = ShowTotalNotifications;
 
 let paymentbtn = document.getElementById("payment-method");
 
@@ -12,13 +12,17 @@ let totnots = document.getElementById("totnots");
 
 function NumberOfNotifications(){
 
-    let totalnot = document.querySelectorAll("posts-notification");
+    let totalnot = document.querySelectorAll(".posts-notification");
     
     if(localStorage != "undefined"){
         localStorage.notification = totalnot.length;
-        totnots.innerText = localStorage.notification;
-    }
-    
+    }  
+}
+
+eval("NumberOfNotifications()");
+
+function ShowTotalNotifications{
+  totnots.innerText = localStorage.notification;
     if(postnotification.addEventListener){
    postnotification.addEventListener("click", PostNotification, false);
 }
@@ -27,7 +31,7 @@ if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
 }
 
-if(timetable.addEventListener){
+ if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
 }
 }
