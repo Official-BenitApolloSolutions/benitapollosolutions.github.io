@@ -21,7 +21,7 @@ function NumberOfNotifications(){
 
 eval("NumberOfNotifications()");
 
-function ShowTotalNotifications{
+function ShowTotalNotifications(){
   totnots.innerText = localStorage.notification;
     if(postnotification.addEventListener){
    postnotification.addEventListener("click", PostNotification, false);
