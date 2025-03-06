@@ -74,7 +74,7 @@ function PayDay(){
 //session payment
 
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GHS" + 0;
+            payList[i].innerHTML = "GHS" + PayRate();
             
         };
       
