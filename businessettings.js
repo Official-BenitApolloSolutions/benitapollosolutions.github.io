@@ -11,7 +11,9 @@ let postnotification = document.getElementById("post-notification");
 let totnots = document.getElementById("totnots");
 
 function NumberOfNotifications(){
-    let totalnot = document.getElementById("posts-notification");
+
+    let totalnot = document.querySelectorAll("posts-notification");
+    
     if(localStorage != "undefined"){
         localStorage.notification = totalnot.length;
         totnots.innerText = localStorage.notification;
