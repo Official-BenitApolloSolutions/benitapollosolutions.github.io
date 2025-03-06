@@ -19,7 +19,7 @@ function NumberOfNotifications(){
     }  
 }
 
-eval("NumberOfNotifications()");
+NumberOfNotifications();
 
 function ShowTotalNotifications(){
   totnots.innerText = localStorage.notification;
