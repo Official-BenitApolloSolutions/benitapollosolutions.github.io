@@ -9,6 +9,7 @@ let postnotification = document.getElementById("post-notification");
 let totnots = document.getElementById("totnots");
 
 function ShowNotifications(){
+
     if(localStorage != "undefined"){
         totnots.innerText = localStorage.notification;
     }
@@ -23,6 +24,7 @@ if(paymentbtn.addEventListener){
  if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
 }
+//end of function 
 }
 
 function pay(){
