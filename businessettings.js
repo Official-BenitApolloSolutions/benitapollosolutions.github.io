@@ -1,5 +1,12 @@
 import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
+let sesspanweek = 4;
+let parthr = 2;
+let sespsat = 25;
+let sessat = 150;
+let sessionpart = sesspanweek * parthr * sespsat;
+let sessionrate = sesspanweek * sessat;
+
 let paymentbtn = document.getElementById("payment-method");
 
 let timetable = document.getElementById("timetable");
@@ -114,25 +121,25 @@ function PayDay(){
  
     switch(new Date().getDay()){
     case 0:
-           pay_rate.innerHtml = PayRate();
+           pay_rate.innerText = PayRate();
        break;
     case 1:
-       pay_rate.innerHtml = PayRate();
+       pay_rate.innerText = PayRate();
        break;
      case 2:
-     pay_rate.innerHtml = PayRate();
+     pay_rate.innerText = PayRate();
        break;
      case 3:
-        pay_rate.innerHtml = PayRate();
+        pay_rate.innerText = PayRate();
        break; 
        case 4:
-        pay_rate.innerHtml = PayRate();
+        pay_rate.innerText = PayRate();
        break;
        case 5:
-        pay_rate.innerHtml = PayRate();
+        pay_rate.innerText = PayRate();
        break;
        case 6:
-        pay_rate.innerHtml = PayRate();
+        pay_rate.innerText = PayRate();
        break; 
   default:
         window.alert("Have a great day today!");
