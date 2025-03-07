@@ -30,7 +30,7 @@ if(postnotification.addEventListener){
 let totnots = document.getElementById("totnots");
 
 function ShowNotifications(){
-    institue.innerText = "Royal Secondary School";
+    institute.innerText = "Royal Secondary School";
     
     if(localStorage != "undefined"){
         totnots.innerText = localStorage.notification;

@@ -31,7 +31,7 @@ function SchoolSession(){
 function PostNotification(){
     document.writeln("Loading notifications... please wait");
     const notiurl = "https:/\/www.benitapollosolutions.com/notifications.html";
-    window.location.assign(notiurl);
+    window.open(notiurl, "_blank", "width=400,height=300");
 }
 
 export { paymentmethod, MyTimeTable, schoolsession, PostNotification };
