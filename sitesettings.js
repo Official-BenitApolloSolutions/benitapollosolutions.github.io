@@ -1,5 +1,5 @@
 const PaymentMethod = function (){
- let payrate = document.getElementById("payrate").innerHTML;
+ let payrate = document.getElementById("payrate").innerText;
  let pay = `Loading payment client... 
             Total Amount: GHS ${payrate}`;
     document.writeln(pay);
@@ -16,13 +16,13 @@ let MyschoolSession = SchoolSession();
 function SchoolSession(){
     let _schoolsession = "School is in sesdion";
     let count = 1;
-    let payhour = 0;
+    let payhour = 150;
     let cashdate = new Date();
     while (count != cashdate.getDay()){
-        payhour = 150;
         return payhour;
     }
-    
+    count++;
+    payhour+=150;
     //let payhour = a + 150;
     console.log("new week");
    // return 0;

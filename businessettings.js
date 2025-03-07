@@ -108,16 +108,16 @@ function PayDay(){
        console.log(today.getMonth() + 1);
        break;
        case 3:
-        firstweek.innerText = schoolsession;
+        firstweek.innerText = MyschoolSession;
          break;
        case 4:
-        secondweek.innerText = schoolsession;
+        secondweek.innerText = MyschoolSession;
          break;
        case 5:
-        thirdweek.innerText = schoolsession;
+        thirdweek.innerText = MyschoolSession;
          break;
          case 6:
-         fourthweek.innerText = schoolsession;
+         fourthweek.innerText = MyschoolSession;
        default:
          console.log("Bas for business");
          break;
