@@ -1,4 +1,4 @@
-const paymentmethod = function (){
+const PaymentMethod = function (){
  let payrate = document.getElementById("payrate").innerHTML;
  let pay = `Loading payment client... 
             Total Amount: GHS ${payrate}`;
@@ -11,14 +11,14 @@ const MyTimeTable = function (){
     document.location.assign("https:/\/www.benitapollosolutions.com/lessonmodel.html");
 }
 
-let schoolsession = SchoolSession();
+let MyschoolSession = SchoolSession();
 
 function SchoolSession(){
     let _schoolsession = "School is in sesdion";
     let count = 1;
     let payhour = 0;
     let cashdate = new Date();
-    while (count !== cashdate.getDay()){
+    while (count != cashdate.getDay()){
         payhour = 150;
         return payhour;
     }
@@ -34,5 +34,5 @@ function PostNotification(){
     window.open(notiurl, "_blank", "width=400,height=300");
 }
 
-export { paymentmethod, MyTimeTable, schoolsession, PostNotification };
+export { PaymentMethod, MyTimeTable, MyschoolSession, PostNotification };
 
