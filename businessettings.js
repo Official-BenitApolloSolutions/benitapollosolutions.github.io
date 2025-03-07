@@ -44,7 +44,7 @@ let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let febsum = document.getElementById("feb-sum");
-febsum.innerHTML = "380";
+febsum.innerText = "380";
 
 let curList = document.querySelectorAll(".currency");
  
@@ -52,7 +52,7 @@ let today = new Date();
 
 const PayRate = function(){
  
-    let total = Number(febsum) + schoolsession;
+    let total = 380 + schoolsession;
     
  switch(today.getMonth() + 1){
      case 2:
@@ -82,7 +82,7 @@ for(let k=0; k < curList.length; k++){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = "GHS" + PayRate();
+            payList[i].innerHTML = PayRate();
             
         };
       
