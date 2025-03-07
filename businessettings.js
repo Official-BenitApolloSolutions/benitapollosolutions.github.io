@@ -44,25 +44,25 @@ let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let currency = "GHS "
-let febsum = document.getElementById("Feb-sum").innerText;
-
-eval("febsum.innerHTML = currency + 380");
+let febsum = document.getElementById("feb-sum").innerText;
 
 let today = new Date();
 
 const PayRate = function(){
+    let total = Number(febsum) + schoolsession;
+    
  switch(today.getMonth() + 1){
      case 2:
-       return febsum + schoolsession;
+       return total;
        break;
        case 3:
-        return febsum + schoolsession
+        return total;
          break;
        case 4:
-        return febsum + schoolsession
+        return total;
          break;
        case 5:
-        return schoolsession
+        return total;
          break;
        default:
          console.log("Bas for business");
@@ -73,18 +73,39 @@ const PayRate = function(){
 
 function PayDay(){
 //session payment
+febsum.innerHTML = currency + 380;
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + PayRate();
             
         };
       
+      switch(today.getMonth() + 1){
+     case 2:
+       console.log(today.getMonth() + 1);
+       break;
+       case 3:
+        firstweek.innerText = currency + schoolsession;
+         break;
+       case 4:
+        secondweek.innerText = currency + schoolsession;
+         break;
+       case 5:
+        thirdweek.innerText = currency + schoolsession;
+         break;
+         case 6:
+         fourthweek.innerText = currency + schoolsession;
+       default:
+         console.log("Bas for business");
+         break;
+ }
+ 
     switch(new Date().getDay()){
     case 0:
-           pay_rate.innerHtml = currency + PayRate();
+           pay_rate.innerHtml = PayRate();
        break;
     case 1:
-       pay_rate.innerHtml = currency + " " + PayRate();
+       pay_rate.innerHtml = PayRate();
        break;
      case 2:
      pay_rate.innerHtml = PayRate();
