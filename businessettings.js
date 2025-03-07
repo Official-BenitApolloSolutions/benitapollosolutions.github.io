@@ -1,4 +1,4 @@
-import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
+import { paymentmethod, MyTimeTable, schoolsession, PostNotification, NumberOfNotifications } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
 let institute = document.getElementById("institution-name");
 
@@ -27,16 +27,13 @@ if(postnotification.addEventListener){
    postnotification.addEventListener("click", PostNotification, false);
 }
 
-let totnots = document.getElementById("totnots");
-
 function ShowNotifications(){
     institute.innerText = "Royal Secondary School";
-    
-    if(localStorage != "undefined"){
-        totnots.innerText = localStorage.notification;
-    }
+     document.getElementById("totnots").innerText = NumberOfNotifications();
 //end of function 
 }
+
+ShowNotifications();
 
 function pay(){
     paymentmethod();
@@ -54,7 +51,9 @@ let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
+
 let febsum = document.getElementById("feb-sum");
+
 febsum.innerText = "380";
 let _febpay = 380;
 
@@ -184,5 +183,3 @@ let _dateclosednode = document.querySelectorAll(".dateclosed");
         quartertm.innerHTML =  quarterdate.toGMTString();
         let payment_date = document.getElementById("payment-date");
         payment_date.innerHTML = quarterdate.toLocaleString();
-        
-window.onload = ShowNotifications;
