@@ -71,9 +71,10 @@ const PayRate = function(){
 
 }
 
+eval("febsum.innerText = currency + 380");
+
 function PayDay(){
 //session payment
-febsum.innerText = currency + 380;
 
         for(let i=0; i < payList.length; i++){
             payList[i].innerHTML = "GHS" + PayRate();
