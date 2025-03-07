@@ -1,4 +1,5 @@
-import { paymentmethod, MyTimeTable, schoolsession, PostNotification, NumberOfNotifications } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
+import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
+import { NumberOfNotifications } from 'https:/\/www.benitapollosolutions.com/businotifications.js';
 
 let institute = document.getElementById("institution-name");
 
