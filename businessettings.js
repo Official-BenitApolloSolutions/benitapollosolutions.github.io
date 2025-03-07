@@ -1,5 +1,7 @@
 import { paymentmethod, MyTimeTable, schoolsession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 
+let institute = document.getElementById("institution-name");
+
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
@@ -9,28 +11,30 @@ let sessionrate = sesspanweek * sessat;
 
 let paymentbtn = document.getElementById("payment-method");
 
-let timetable = document.getElementById("timetable");
-
-let postnotification = document.getElementById("post-notification");
-
-let totnots = document.getElementById("totnots");
-
-function ShowNotifications(){
-
-    if(localStorage != "undefined"){
-        totnots.innerText = localStorage.notification;
-    }
-     if(postnotification.addEventListener){
-   postnotification.addEventListener("click", PostNotification, false);
-}
-
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
 }
 
- if(timetable.addEventListener){
+let timetable = document.getElementById("timetable");
+
+if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
 }
+
+let postnotification = document.getElementById("post-notification");
+
+if(postnotification.addEventListener){
+   postnotification.addEventListener("click", PostNotification, false);
+}
+
+let totnots = document.getElementById("totnots");
+
+function ShowNotifications(){
+    institue.innerText = "Royal Secondary School";
+    
+    if(localStorage != "undefined"){
+        totnots.innerText = localStorage.notification;
+    }
 //end of function 
 }
 
