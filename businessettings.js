@@ -91,16 +91,16 @@ for(let k=0; k < curList.length; k++){
        console.log(today.getMonth() + 1);
        break;
        case 3:
-        firstweek.innerText = currency + schoolsession;
+        firstweek.innerText = schoolsession;
          break;
        case 4:
-        secondweek.innerText = currency + schoolsession;
+        secondweek.innerText = schoolsession;
          break;
        case 5:
-        thirdweek.innerText = currency + schoolsession;
+        thirdweek.innerText = schoolsession;
          break;
          case 6:
-         fourthweek.innerText = currency + schoolsession;
+         fourthweek.innerText = schoolsession;
        default:
          console.log("Bas for business");
          break;
