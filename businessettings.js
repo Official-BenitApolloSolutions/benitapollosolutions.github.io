@@ -45,6 +45,7 @@ let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let febsum = document.getElementById("feb-sum");
 febsum.innerText = "380";
+let _febpay = febsum;
 
 let curList = document.querySelectorAll(".currency");
  
@@ -52,7 +53,7 @@ let today = new Date();
 
 const PayRate = function(){
  
-    let total = febsum + schoolsession;
+    let total = _febpay + schoolsession;
     
  switch(today.getMonth() + 1){
      case 2:
@@ -74,9 +75,8 @@ const PayRate = function(){
 
 }
 
-function PayDay(){
-//session payment
-for(let k=0; k < curList.length; k++){
+function TotalPaymentDue(){
+    for(let k=0; k < curList.length; k++){
             curList[k].innerHTML = "GHS";
             
         };
@@ -85,6 +85,12 @@ for(let k=0; k < curList.length; k++){
             payList[i].innerHTML = PayRate();
             
         };
+}
+
+TotalPaymentDue();
+
+function PayDay(){
+//session payment
       
       switch(today.getMonth() + 1){
      case 2:
