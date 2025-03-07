@@ -43,7 +43,7 @@ let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
-let febsum = document.getElementById("feb-sum").innerHTML;
+let febsum = document.getElementById("feb-sum");
 
 let curList = document.querySelectorAll(".currency");
  
