@@ -77,12 +77,12 @@ const PayRate = function(){
 
 function TotalPaymentDue(){
     for(let k=0; k < curList.length; k++){
-            curList[k].innerHTML = "GHS";
+            curList[k].innerText = "GHS";
             
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].innerHTML = PayRate();
+            payList[i].innerText = PayRate();
             
         };
 }
