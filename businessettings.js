@@ -45,7 +45,7 @@ let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let febsum = document.getElementById("feb-sum");
 febsum.innerText = "380";
-let _febpay = febsum;
+let _febpay = 380;
 
 let curList = document.querySelectorAll(".currency");
  
