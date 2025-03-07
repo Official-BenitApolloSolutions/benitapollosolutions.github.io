@@ -1,4 +1,5 @@
-let postfeed = document.querySelectorAll(".notiupdates");
+let postfeed = document.querySelectorAll(".noti-updates");
+
 function NumberOfNotifications(){
     
     if(localStorage != "undefined"){

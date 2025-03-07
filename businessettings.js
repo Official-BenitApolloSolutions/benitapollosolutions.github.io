@@ -44,7 +44,8 @@ let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
 let currency = "GHS "
-let febsum = document.getElementById("Feb-sum");
+let febsum = document.getElementById("Feb-sum").innerText;
+
 eval("febsum.innerHTML = currency + 380");
 
 let today = new Date();
