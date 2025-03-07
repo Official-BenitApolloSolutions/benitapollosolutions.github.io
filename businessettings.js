@@ -43,15 +43,15 @@ let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
 let thirdweek = document.getElementById("third-week");
 let fourthweek = document.getElementById("fourth-week");
-let febsum = document.getElementById("feb-sum");
+let febsum = document.getElementById("feb-sum").innerHTML;
 
-let curList = document.querySelectorAll(".currency")
+let curList = document.querySelectorAll(".currency");
  
 let today = new Date();
 
 const PayRate = function(){
  febsum.innerHTML = 380;
-    let total = Number(febsum) + schoolsession;
+    let total = febsum + schoolsession;
     
  switch(today.getMonth() + 1){
      case 2:
