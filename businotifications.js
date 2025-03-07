@@ -4,7 +4,7 @@ function NumberOfNotifications(){
     
     if(localStorage != "undefined"){
         localStorage.setItem("total-notis", postfeed.length);
-        const totNotstoday = localStorage.getItem("total-notis");
+        let totNotstoday = localStorage.getItem("total-notis");
     }  
      return totNotstoday;
 }
