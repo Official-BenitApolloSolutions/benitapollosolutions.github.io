@@ -52,7 +52,7 @@ let today = new Date();
 
 const PayRate = function(){
  
-    let total = 380 + schoolsession;
+    let total = febsum + schoolsession;
     
  switch(today.getMonth() + 1){
      case 2:
