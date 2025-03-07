@@ -52,13 +52,13 @@ let today = new Date();
 const PayRate = function(){
  switch(today.getMonth() + 1){
      case 2:
-       return schoolsession;
+       return febsum + schoolsession;
        break;
        case 3:
-        return schoolsession
+        return febsum + schoolsession
          break;
        case 4:
-        return schoolsession
+        return febsum + schoolsession
          break;
        case 5:
         return schoolsession
@@ -80,25 +80,25 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.innerHtml = currency + PayRate;
+           pay_rate.innerHtml = currency + PayRate();
        break;
     case 1:
-       pay_rate.innerHtml = currency + " " + PayRate;
+       pay_rate.innerHtml = currency + " " + PayRate();
        break;
      case 2:
-     pay_rate.innerHtml = PayRate;
+     pay_rate.innerHtml = PayRate();
        break;
      case 3:
-        pay_rate.innerHtml = PayRate;
+        pay_rate.innerHtml = PayRate();
        break; 
        case 4:
-        pay_rate.innerHtml = PayRate;
+        pay_rate.innerHtml = PayRate();
        break;
        case 5:
-        pay_rate.innerHtml = PayRate;
+        pay_rate.innerHtml = PayRate();
        break;
        case 6:
-        pay_rate.innerHtml = PayRate;
+        pay_rate.innerHtml = PayRate();
        break; 
   default:
         window.alert("Have a great day today!");

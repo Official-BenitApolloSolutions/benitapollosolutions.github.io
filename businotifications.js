@@ -1,8 +1,8 @@
-let postfeed = document.getElementById("feedupdates");
+let postfeed = document.querySelectorAll(".notiupdates");
 function NumberOfNotifications(){
     
     if(localStorage != "undefined"){
-        localStorage.notification = postfeed.innerText;
+        localStorage.notification = postfeed.length;
     }  
     
   
