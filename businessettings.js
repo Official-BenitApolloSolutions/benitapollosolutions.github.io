@@ -1,28 +1,81 @@
 import { PaymentMethod, MyTimeTable, MyschoolSession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 import { NumberOfNotifications } from 'https:/\/www.benitapollosolutions.com/businotifications.js';
 
+let _dateclosednode = document.querySelectorAll(".dateclosed");
+
+let nodeList = document.querySelectorAll(".myYear");
+
+let postnotification = document.getElementById("post-notification");
+
+let _schoolday = document.getElementById("schoolday");
+
 let institute = document.getElementById("institution-name");
+
+let datetempc = document.querySelector("#dateclosed").innerHTML;
+
+let timetable = document.getElementById("timetable");
+
+let payList = document.querySelectorAll(".pay-rate");
+
+let pay_rate = document.getElementById("payrate");
+
+let payment_date = document.getElementById("payment-date");
+//session charges
+let firstweek = document.getElementById("first-week");
+let secondweek = document.getElementById("second-week");
+let thirdweek = document.getElementById("third-week");
+let fourthweek = document.getElementById("fourth-week");
+
+let _archivenode = document.querySelectorAll(".arearsperiod");
+
+let _jobnode = document.querySelectorAll(".jobYear");
+
+let febsum = document.getElementById("feb-sum");
+
+febsum.innerText = "380";
+let _febpay = 380;
+
+let curList = document.querySelectorAll(".currency");
+
+let paymentbtn = document.getElementById("payment-method");
+ 
+ let amountpaid = document.querySelectorAll(".amount-paid");
+ 
+let quartertm = document.getElementById("quarter-year");
+ 
+let today = new Date();
 
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
+let newbalance;
+
 let sessionpart = sesspanweek * parthr * sespsat;
+
 let sessionrate = sesspanweek * sessat;
 
-let paymentbtn = document.getElementById("payment-method");
+let workmonth = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","International Women's Day","Workers Day"];
+
+/*(function() => {
+    let celebmonth = today.getMonth();
+    let celebday = today.getDay()+1;
+    
+    if(celebmonth===workmonth[2] && celebday===6){
+        alert("hello world");
+    }
+   
+})();*/
 
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
 }
 
-let timetable = document.getElementById("timetable");
-
 if(timetable.addEventListener){
     timetable.addEventListener("click", Showtimetable, false);
 }
-
-let postnotification = document.getElementById("post-notification");
 
 if(postnotification.addEventListener){
    postnotification.addEventListener("click", PostNotification, false);
@@ -43,24 +96,6 @@ function pay(){
 function Showtimetable(){
     MyTimeTable();
 }
-
-let payList = document.querySelectorAll(".pay-rate");
-let pay_rate = document.getElementById("payrate");
-
-//session charges
-let firstweek = document.getElementById("first-week");
-let secondweek = document.getElementById("second-week");
-let thirdweek = document.getElementById("third-week");
-let fourthweek = document.getElementById("fourth-week");
-
-let febsum = document.getElementById("feb-sum");
-
-febsum.innerText = "380";
-let _febpay = 380;
-
-let curList = document.querySelectorAll(".currency");
- 
-let today = new Date();
 
 const PayRate = function(){
  
@@ -154,33 +189,31 @@ function PayDay(){
 eval("PayDay()");
         
 //season
-let _myYear = new Date();
-let datetempc = document.querySelector("#dateclosed").innerHTML;
-let _dateclosednode = document.querySelectorAll(".dateclosed");
+
  for(let k=0; k< _dateclosednode.length; k++){
      _dateclosednode.innerHTML = datetempc
  }
-        let _schoolday = document.getElementById("schoolday");
-        _schoolday.innerHTML = _myYear.toLocaleString();
+ 
+        _schoolday.innerHTML = today.toLocaleString();
         
-        let nodeList = document.querySelectorAll(".myYear");
         for(let i=0; i < nodeList.length; i++){
-            nodeList[i].innerHTML = _myYear.getYear();
+            nodeList[i].innerHTML = today.getYear();
         }
         
-        let _jobnode = document.querySelectorAll(".jobYear");
         for(let n=0; n < _jobnode.length; n++){
-        _jobnode[n].innerHTML = _myYear.getFullYear();
+        _jobnode[n].innerHTML = today.getFullYear();
         }
         
-        let _archivenode = document.querySelectorAll(".arearsperiod");
         for(let i=0; i < _archivenode.length; i++){
-            _archivenode.innerHTML = _myYear.toGMTString();
+            _archivenode.innerHTML = today.toGMTString();
         }
         
+        quartertm.innerHTML =  today.toGMTString();
         
-        let quartertm = document.getElementById("quarter-year");
-        let quarterdate = new Date();
-        quartertm.innerHTML =  quarterdate.toGMTString();
-        let payment_date = document.getElementById("payment-date");
-        payment_date.innerHTML = quarterdate.toLocaleString();
+        payment_date.innerHTML = today.toLocaleString();
+         
+function DebitBalance(){
+    const balance = PayRate();
+    newbalance = balance - amountpaid;
+    return newbalance;
+}
