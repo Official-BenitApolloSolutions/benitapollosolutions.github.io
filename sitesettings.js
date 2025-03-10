@@ -19,10 +19,10 @@ function SchoolSession(){
     let payhour = 150;
     let cashdate = new Date();
     while (count == cashdate.getDay()){
+        payhour = payhour + 150;
         return payhour;
     }
     count++;
-    payhour = payhour + 150;
     //let payhour = a + 150;
     console.log("new week");
    // return 0;
