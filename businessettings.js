@@ -128,7 +128,7 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = PayRate;
+            payList[i].textContent = PayRate();
             
         };
 }
@@ -163,7 +163,7 @@ function PayDay(){
            pay_rate.textContent = PayRate;
        break;
     case 1:
-       pay_rate.textContent = PayRate;
+       pay_rate.textContent = PayRate();
        break;
      case 2:
      pay_rate.textContent = PayRate;
