@@ -1,6 +1,6 @@
-let postfeed = document.querySelectorAll(".noti-updates");
-let totNotstoday;
 function NumberOfNotifications(){
+let totNotstoday;
+let postfeed = document.querySelectorAll(".noti-updates");
     
     if(localStorage != "undefined"){
         localStorage.setItem("total-notis", postfeed.length);

@@ -32,7 +32,7 @@ let _jobnode = document.querySelectorAll(".jobYear");
 
 let febsum = document.getElementById("feb-sum");
 
-febsum.innerText = "380";
+febsum.textContent = "380";
 let _febpay = 380;
 
 let curList = document.querySelectorAll(".currency");
@@ -82,8 +82,8 @@ if(postnotification.addEventListener){
 }
 
 function ShowNotifications(){
-    institute.innerText = "Royal Secondary School";
-     document.getElementById("totnots").innerText = NumberOfNotifications();
+    institute.textContent = "Royal Secondary School";
+     document.getElementById("totnots").TextContent = NumberOfNotifications;
 //end of function 
 }
 
@@ -123,12 +123,12 @@ const PayRate = function(){
 
 function TotalPaymentDue(){
     for(let k=0; k < curList.length; k++){
-            curList[k].innerText = "GHS";
+            curList[k].textContent = "GHS";
             
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].innerText = PayRate();
+            payList[i].textContent = PayRate;
             
         };
 }
@@ -143,16 +143,16 @@ function PayDay(){
        console.log(today.getMonth() + 1);
        break;
        case 3:
-        firstweek.innerText = MyschoolSession;
+        firstweek.textContent = MyschoolSession;
          break;
        case 4:
-        secondweek.innerText = MyschoolSession;
+        secondweek.textContent = MyschoolSession;
          break;
        case 5:
-        thirdweek.innerText = MyschoolSession;
+        thirdweek.textContent = MyschoolSession;
          break;
          case 6:
-         fourthweek.innerText = MyschoolSession;
+         fourthweek.textContent = MyschoolSession;
        default:
          console.log("Bas for business");
          break;
@@ -160,25 +160,25 @@ function PayDay(){
  
     switch(new Date().getDay()){
     case 0:
-           pay_rate.innerText = PayRate();
+           pay_rate.textContent = PayRate;
        break;
     case 1:
-       pay_rate.innerText = PayRate();
+       pay_rate.textContent = PayRate;
        break;
      case 2:
-     pay_rate.innerText = PayRate();
+     pay_rate.textContent = PayRate;
        break;
      case 3:
-        pay_rate.innerText = PayRate();
+        pay_rate.textContent = PayRate;
        break; 
        case 4:
-        pay_rate.innerText = PayRate();
+        pay_rate.textContent = PayRate;
        break;
        case 5:
-        pay_rate.innerText = PayRate();
+        pay_rate.textContent = PayRate;
        break;
        case 6:
-        pay_rate.innerText = PayRate();
+        pay_rate.textContent = PayRate;
        break; 
   default:
         window.alert("Have a great day today!");
@@ -186,7 +186,7 @@ function PayDay(){
  }
 }
 
-eval("PayDay()");
+PayDay();
         
 //season
 
