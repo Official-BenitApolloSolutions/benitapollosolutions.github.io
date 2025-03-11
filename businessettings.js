@@ -45,7 +45,6 @@ let quartertm = document.getElementById("quarter-year");
  
 let today = new Date();
 
-let newbalance = 0;
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
@@ -79,9 +78,9 @@ let _paynow = document.getElementById("pay-now");
 function DebitBalance(){
 let amountpaid = document.getElementById("amount-paid").value;
     let balance = _febpay + MyschoolSession + 150;
-    newbalance = balance - Number(amountpaid);
-   console.log(newbalance);
-   console.log(amountpaid);
+    let newbalance = balance - Number(amountpaid);
+   console.log("New balance: " + newbalance);
+   console.log("Amount paid: " + amountpaid);
     return newbalance;
 }
 
