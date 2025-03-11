@@ -77,9 +77,9 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 function DebitBalance(){
-let amountpaid = document.getElementById("amount-paid");
+let amountpaid = document.getElementById("amount-paid").value;
     let balance = _febpay + MyschoolSession + 150;
-    newbalance = balance - amountpaid;
+   let newbalance = balance - Number(amountpaid);
     return newbalance;
 }
 
