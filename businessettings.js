@@ -77,17 +77,16 @@ let _paynow = document.getElementById("pay-now");
 
 function DebitBalance(){
 let amountpaid = document.getElementById("amount-paid").value;
-    let balance = _febpay + MyschoolSession + 150;
-    let newbalance = balance - Number(amountpaid);
-   console.log("New balance: " + newbalance);
+    let balance = _febpay + MyschoolSession + 150; 
+    return balance - Number(amountpaid);
+    console.log("New balance: " + newbalance);
    console.log("Amount paid: " + amountpaid);
-    return newbalance;
 }
 
 let AvailBalance = DebitBalance();
 
 if(_paynow.addEventListener){
- _paynow.addEventListener("click",DebitBalance,false);
+ _paynow.addEventListener("click",DebitBalance);
 }
 
 if(paymentbtn.addEventListener){
