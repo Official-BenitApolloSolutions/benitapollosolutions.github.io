@@ -74,17 +74,17 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 function DebitBalance(){
-const amountpaid = document.getElementById("amount-paid").value;
-    let balance = _febpay + MyschoolSession + 150; 
+let balance = _febpay + MyschoolSession + 150; 
+let amountpaid = document.getElementById("amount-paid").value;
     return balance - Number(amountpaid);
    //end of function 
 }
 
-let _paynow = document.getElementById("pay-now");
+/*let _paynow = document.getElementById("pay-now");
 
 if(_paynow.addEventListener){
  _paynow.addEventListener("click",DebitBalance, false);
-}
+}*/
 
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
@@ -157,7 +157,6 @@ function TotalPaymentDue(){
             payList[i].textContent = DebitBalance();
             
         };
-        console.log(DebitBalance());
 }
 
 TotalPaymentDue();
