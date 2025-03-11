@@ -159,7 +159,6 @@ function PayDay(){
         else{
             console.log("Something went wrong");
         }
- }
  
     switch(new Date().getDay()){
     case 0:
