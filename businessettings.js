@@ -229,7 +229,7 @@ PayDay();
 let newbalance = 0;
          
 function DebitBalance(){
-    const balance = PayRate();
+    let balance = _febpay + MyschoolSession + 150;
     newbalance = balance - amountpaid;
     return newbalance;
 }
