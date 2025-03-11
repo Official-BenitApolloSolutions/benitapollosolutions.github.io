@@ -239,8 +239,5 @@ function DebitBalance(){
 availbalance = DebitBalance();
 
 if(paynow.addEventListener){
-    event.preventDefault();
-   /*document.writeln("processing... please wait.");*/
-   paynow.addEventListener("click","alert('hello world')",false);
-   /* paynow.addEventListener("click",DebitBalance,false);*/
+    event.preventDefault(); paynow.addEventListener("click",DebitBalance(),false);
 }
