@@ -150,7 +150,7 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = AvailBalance;
+            payList[i].textContent = AvailBalance();
             
         };
 }
