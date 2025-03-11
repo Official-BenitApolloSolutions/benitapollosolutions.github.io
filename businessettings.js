@@ -1,6 +1,8 @@
 import { PaymentMethod, MyTimeTable, MyschoolSession, PostNotification } from  'https:/\/www.benitapollosolutions.com/sitesettings.js';
 import { NumberOfNotifications } from 'https:/\/www.benitapollosolutions.com/businotifications.js';
 
+let totalnots = document.querySelectorAll(".total-nots");
+
 let _dateclosednode = document.querySelectorAll(".dateclosed");
 
 let nodeList = document.querySelectorAll(".myYear");
@@ -88,8 +90,16 @@ if(postnotification.addEventListener){
 }
 
 function ShowNotifications(){
-    institute.textContent = "Royal Secondary School";
-     document.getElementById("totnots").textContent = NumberOfNotifications();
+    //institute.textContent = "Royal Secondary School";
+    let notistat = document.querySelector(".noti");
+    notistat.classList.remove("bg-success");
+    notistat.classList.add(".bg-danger");
+    
+    for(let i=0; i < totalnots.length; i++){
+            totalnots[i].textContent = NumberOfNotifications();
+        }
+     
+     
 //end of function 
 }
 
@@ -144,16 +154,16 @@ TotalPaymentDue();
 function PayDay(){
 //session payment
       switch(getWeekofMonth(today)){
-         case getWeekofMonth(firstw):
+         case getWeekofMonth(firstw)<=1:
           firstweek.textContent = MyschoolSession;
            break;
-         case getWeekofMonth(secondw):
+         case getWeekofMonth(secondw)<=2:
           secondweek.textContent = MyschoolSession;
           break;
-         case getWeekofMonth(thirdw):
+         case getWeekofMonth(thirdw)<=3:
           thirdweek.textContent = MyschoolSession;
            break;
-        case getWeekofMonth(fourthw):
+        case getWeekofMonth(fourthw)<=4:
            fourthweek.textContent = MyschoolSession;
           break;
           default:
