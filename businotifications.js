@@ -1,3 +1,4 @@
+//number of notifications 
 function NumberOfNotifications(){
 let totNotstoday;
 let postfeed = document.querySelectorAll(".noti-updates");
