@@ -117,7 +117,9 @@ function Showtimetable(){
 
 const PayRate = function(){
  
-    let total = _febpay + MyschoolSession + 150;
+   // let total = _febpay + MyschoolSession + 150;
+    
+    let total = Paid();
     
  switch(today.getMonth() + 1){
      case 2:
@@ -139,10 +141,6 @@ const PayRate = function(){
 
 }
 
-let AvailBalance = 0;
-
-AvailBalance = Paid();
-
 function TotalPaymentDue(){
     for(let k=0; k < curList.length; k++){
             curList[k].textContent = "GHS";
@@ -150,7 +148,7 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = AvailBalance();
+            payList[i].textContent = PayRate();
             
         };
 }
@@ -183,27 +181,27 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = AvailBalance;
+           pay_rate.textContent = Paid();
        break;
     case 1:
-       pay_rate.textContent = AvailBalance;
+       pay_rate.textContent = Paid();
        break;
      case 2:
-     pay_rate.textContent = AvailBalance;
-     console.log(AvailBalance)
+     pay_rate.textContent = Paid();
+     console.log(Paid())
        break;
      case 3:
-        pay_rate.textContent = AvailBalance;
-        console.log(AvailBalance);
+        pay_rate.textContent = Paid();
+        console.log(Paid());
        break; 
        case 4:
-        pay_rate.textContent = AvailBalance;
+        pay_rate.textContent = Paid();
        break;
        case 5:
-        pay_rate.textContent = AvailBalance;
+        pay_rate.textContent = Paid();
        break;
        case 6:
-        pay_rate.textContent = AvailBalance;
+        pay_rate.textContent = Paid();
        break; 
   default:
         window.alert("Have a great day today!");
