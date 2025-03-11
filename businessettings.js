@@ -143,13 +143,13 @@ function PayDay(){
        firstweek.textContent = MyschoolSession;
        break;
        case "2025-03-15":
-         secondweek.textContent = MyschoolSession - 150;
+         secondweek.textContent = MyschoolSession;
          break;
        case "2025-03-22":
-        thirdweek.textContent = MyschoolSession - 150;
+        thirdweek.textContent = MyschoolSession;
          break;
        case "2025-03-28":
-        fourthweek.textContent = MyschoolSession - 150;
+        fourthweek.textContent = MyschoolSession;
          break;
        default:
          console.log("Bas for business");
