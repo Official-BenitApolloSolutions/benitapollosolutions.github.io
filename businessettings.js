@@ -138,21 +138,19 @@ TotalPaymentDue();
 function PayDay(){
 //session payment
       
-      switch(today.getMonth() + 1){
-     case 2:
-       console.log(today.getMonth() + 1);
+      switch(today){
+     case "2025-03-01":
+       firstweek.textContent = MyschoolSession;
        break;
-       case 3:
-        firstweek.textContent = MyschoolSession;
+       case "2025-03-15":
+         secondweek.textContent = MyschoolSession - 150;
          break;
-       case 4:
-        secondweek.textContent = MyschoolSession;
+       case "2025-03-22":
+        thirdweek.textContent = MyschoolSession - 150;
          break;
-       case 5:
-        thirdweek.textContent = MyschoolSession;
+       case "2025-03-28":
+        fourthweek.textContent = MyschoolSession - 150;
          break;
-         case 6:
-         fourthweek.textContent = MyschoolSession;
        default:
          console.log("Bas for business");
          break;
@@ -163,7 +161,7 @@ function PayDay(){
            pay_rate.textContent = PayRate;
        break;
     case 1:
-       pay_rate.textContent = PayRate();
+       pay_rate.textContent = PayRate;
        break;
      case 2:
      pay_rate.textContent = PayRate;

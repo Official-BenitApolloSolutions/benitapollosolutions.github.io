@@ -18,7 +18,7 @@ function SchoolSession(){
     let count = 1;
     let payhour = 150;
     let cashdate = new Date();
-    while (count == cashdate.getDay()){
+    while (count != cashdate.getDay()){
         payhour = payhour + 150;
         count++;
         return payhour;
