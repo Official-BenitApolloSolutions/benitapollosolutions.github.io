@@ -157,7 +157,10 @@ function PayDay(){
            fourthweek.textContent = MyschoolSession;
           break;
           default:
-           console.log("Something went wrong");
+           console.log(getWeekofMonth(firstw));
+           console.log(getWeekofMonth(secondw));
+           console.log(getWeekofMonth(thirdw));
+           console.log(getWeekofMonth(fourthw));
            break;
       }
       
