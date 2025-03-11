@@ -54,7 +54,6 @@ let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
-let AvailBalance = DebitBalance();
 let sessionpart = sesspanweek * parthr * sespsat;
 
 let sessionrate = sesspanweek * sessat;
@@ -78,6 +77,18 @@ const firstw = moment(_firstweek);
 const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
+
+function DebitBalance(){
+    let balance = _febpay + MyschoolSession + 150;
+    newbalance = balance - amountpaid;
+    return newbalance;
+}
+
+let AvailBalance = DebitBalance();
+
+if(_paynow.addEventListener){
+ _paynow.addEventListener("click",DebitBalance,false);
+}
 
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
@@ -110,12 +121,6 @@ function pay(){
 
 function Showtimetable(){
     MyTimeTable();
-}
-         
-function DebitBalance(){
-    let balance = _febpay + MyschoolSession + 150;
-    newbalance = balance - amountpaid;
-    return newbalance;
 }
 
 const PayRate = function(){
@@ -233,7 +238,3 @@ PayDay();
         quartertm.innerHTML =  today.toGMTString();
         
         payment_date.innerHTML = today.toLocaleString();
-
-if(_paynow.addEventListener){
- _paynow.addEventListener("click",DebitBalance,false);
-}
