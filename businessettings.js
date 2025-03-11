@@ -45,7 +45,7 @@ let paymentbtn = document.getElementById("payment-method");
  
 let quartertm = document.getElementById("quarter-year");
 
-let paynow_ = document.getElementById("pay-now");
+let _paynow = document.getElementById("pay-now");
  
 let today = new Date();
 
@@ -238,6 +238,6 @@ function DebitBalance(){
 
 availbalance = DebitBalance();
 
-if(paynow.addEventListener){
-    event.preventDefault(); paynow.addEventListener("click",DebitBalance(),false);
+if(_paynow.addEventListener){
+    event.preventDefault(); _paynow.addEventListener("click",DebitBalance(),false);
 }
