@@ -77,14 +77,13 @@ function DebitBalance(){
 const amountpaid = document.getElementById("amount-paid").value;
     let balance = _febpay + MyschoolSession + 150; 
     return balance - Number(amountpaid);
-   console.log("Amount paid: " + amountpaid);
    //end of function 
 }
 
 let _paynow = document.getElementById("pay-now");
 
 if(_paynow.addEventListener){
- _paynow.addEventListener("click",DebitBalance);
+ _paynow.addEventListener("click",DebitBalance, false);
 }
 
 if(paymentbtn.addEventListener){
@@ -155,9 +154,10 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = AvailBalance;
+            payList[i].textContent = DebitBalance();
             
         };
+        console.log(DebitBalance());
 }
 
 TotalPaymentDue();
