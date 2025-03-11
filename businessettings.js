@@ -236,8 +236,9 @@ function DebitBalance(){
 
 availbalance = DebitBalance();
 
-let paynow = document.getElementById("pay-now");
+let paynow = document.getElementById("amount-paid");
 if(paynow.addEventListener){
+   /*document.writeln("processing... please wait.");*/
    alert("hello world");
    /* paynow.addEventListener("click",DebitBalance,false);*/
 }
