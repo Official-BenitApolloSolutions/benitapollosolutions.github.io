@@ -239,5 +239,5 @@ function DebitBalance(){
 availbalance = DebitBalance();
 
 if(_paynow.addEventListener){
- _paynow.addEventListener("click",DebitBalance(),false);
+ _paynow.addEventListener("click",DebitBalance,false);
 }
