@@ -34,9 +34,6 @@ let _jobnode = document.querySelectorAll(".jobYear");
 
 let febsum = document.getElementById("feb-sum");
 
-febsum.textContent = "380";
-let _febpay = 380;
-
 let curList = document.querySelectorAll(".currency");
 
 let paymentbtn = document.getElementById("payment-method");
@@ -45,6 +42,8 @@ let quartertm = document.getElementById("quarter-year");
  
 let today = new Date();
 
+febsum.textContent = "380";
+let _febpay = 380;
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
@@ -73,12 +72,13 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
-const Payment = function(){
+function Payment(){
 //start of function 
 let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
     return balance - Number(amountpaid);
    //end of function 
+   console.log("amount paid: " + amountpaid);
 }
 
 if(paymentbtn.addEventListener){
