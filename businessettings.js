@@ -89,7 +89,7 @@ if(postnotification.addEventListener){
 
 function ShowNotifications(){
     institute.textContent = "Royal Secondary School";
-     document.getElementById("totnots").TextContent = NumberOfNotifications();
+     document.getElementById("totnots").textContent = NumberOfNotifications();
 //end of function 
 }
 
@@ -161,6 +161,7 @@ function PayDay(){
            console.log(getWeekofMonth(secondw));
            console.log(getWeekofMonth(thirdw));
            console.log(getWeekofMonth(fourthw));
+           console.log(getWeekofMonth(today));
            break;
       }
       
