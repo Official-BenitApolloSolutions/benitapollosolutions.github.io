@@ -141,7 +141,7 @@ const PayRate = function(){
 
 let AvailBalance = 0;
 
-AvailBalance = Paid;
+AvailBalance = Paid();
 
 function TotalPaymentDue(){
     for(let k=0; k < curList.length; k++){
