@@ -63,19 +63,19 @@ let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","Intern
 
 const moment = window.moment;
 
-/*let _firstweek = "2025-03-01T01:03:00";
+let _firstweek = "2025-03-01T01:03:00";
 let _secondweek = "2025-03-08T01:03:00";
 let _thirdweek = "2025-03-15T01:03:00";
-let _fourthweek = "2025-03-22T01:03:00";*/
+let _fourthweek = "2025-03-22T01:03:00";
 
 function getWeekofMonth(_date) {
     return moment(_date).week() - moment(_date).startOf('month').week() + 1;
 }
 
-const firstw = moment(today);
-const secondw = moment(today);
-const thirdw = moment(today);
-const fourthw = moment(today);
+const firstw = moment(_firstweek);
+const secondw = moment(_secondweek);
+const thirdw = moment(_thirdweek);
+const fourthw = moment(_fourthweek);
 
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
