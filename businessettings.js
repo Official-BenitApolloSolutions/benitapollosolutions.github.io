@@ -49,11 +49,12 @@ let _paynow = document.getElementById("pay-now");
  
 let today = new Date();
 
+let newbalance = 0;
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
-const AvailBalance = DebitBalance();
+let AvailBalance = DebitBalance();
 let sessionpart = sesspanweek * parthr * sespsat;
 
 let sessionrate = sesspanweek * sessat;
@@ -109,6 +110,12 @@ function pay(){
 
 function Showtimetable(){
     MyTimeTable();
+}
+         
+function DebitBalance(){
+    let balance = _febpay + MyschoolSession + 150;
+    newbalance = balance - amountpaid;
+    return newbalance;
 }
 
 const PayRate = function(){
