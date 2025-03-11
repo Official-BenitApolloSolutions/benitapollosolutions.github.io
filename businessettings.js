@@ -62,9 +62,9 @@ let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","Intern
 const moment = window.moment;
 
 let _firstweek = "2025-03-01T01:03:00";
-let _secondweek = "2025-03-15T01:03:00";
-let _thirdweek = "2025-03-22T01:03:00";
-let _fourthweek = "2025-03-31T01:03:00";
+let _secondweek = "2025-03-08T01:03:00";
+let _thirdweek = "2025-03-15T01:03:00";
+let _fourthweek = "2025-03-22T01:03:00";
 
 function getWeekofMonth(_date) {
     return moment(_date).week() - moment(_date).startOf('month').week() + 1;
@@ -147,13 +147,13 @@ function PayDay(){
       if(getWeekofMonth(firstw) == 1){
           firstweek.textContent = MyschoolSession;
       }
-      else if(getWeekofMonth(secondw) == 2){
+      if(getWeekofMonth(secondw) == 2){
           secondweek.textContent = MyschoolSession;
       }
-      else if(getWeekofMonth(thirdw) == 3){
+      if(getWeekofMonth(thirdw) == 3){
           thirdweek.textContent = MyschoolSession;
       }
-       else if(getWeekofMonth(fourthw) == 4){
+      if(getWeekofMonth(fourthw) == 4){
            fourthweek.textContent = MyschoolSession;
        }
         else{
