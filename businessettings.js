@@ -41,7 +41,7 @@ let curList = document.querySelectorAll(".currency");
 
 let paymentbtn = document.getElementById("payment-method");
  
- let amountpaid = document.querySelectorAll(".amount-paid");
+ const amountpaid = document.getElementById("amount-paid");
  
 let quartertm = document.getElementById("quarter-year");
  
@@ -52,6 +52,7 @@ let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
 let newbalance = 0;
+let availbalance = DebitBalance();
 
 let sessionpart = sesspanweek * parthr * sespsat;
 
@@ -180,7 +181,7 @@ function PayDay(){
        pay_rate.textContent = PayRate();
        break;
      case 2:
-     pay_rate.textContent = PayRate();
+     pay_rate.textContent = availbalance;
        break;
      case 3:
         pay_rate.textContent = PayRate();
@@ -192,7 +193,7 @@ function PayDay(){
         pay_rate.textContent = PayRate();
        break;
        case 6:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = availbalance;
        break; 
   default:
         window.alert("Have a great day today!");
@@ -230,4 +231,9 @@ function DebitBalance(){
     const balance = PayRate();
     newbalance = balance - amountpaid;
     return newbalance;
+}
+
+let paynow = document.getElementById("pay-now");
+if(paynow.addEventListener){
+   /* paynow.addEventListener("click",DebitBalance,false);*/
 }
