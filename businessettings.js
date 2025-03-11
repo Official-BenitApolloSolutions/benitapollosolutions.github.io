@@ -90,13 +90,10 @@ if(postnotification.addEventListener){
 }
 
 function ShowNotifications(){
-    //institute.textContent = "Royal Secondary School";
-    let notistat = document.querySelector(".noti");
-    notistat.classList.remove("bg-success");
-    notistat.classList.add(".bg-danger");
-    
+    institute.textContent = "Royal Secondary School";
     for(let i=0; i < totalnots.length; i++){
             totalnots[i].textContent = NumberOfNotifications();
+            console.log(NumberOfNotifications())
         }
      
      
@@ -154,16 +151,16 @@ TotalPaymentDue();
 function PayDay(){
 //session payment
       switch(getWeekofMonth(today)){
-         case getWeekofMonth(firstw)<=1:
+         case getWeekofMonth(firstw):
           firstweek.textContent = MyschoolSession;
            break;
-         case getWeekofMonth(secondw)<=2:
+         case getWeekofMonth(secondw):
           secondweek.textContent = MyschoolSession;
           break;
-         case getWeekofMonth(thirdw)<=3:
+         case getWeekofMonth(thirdw):
           thirdweek.textContent = MyschoolSession;
            break;
-        case getWeekofMonth(fourthw)<=4:
+        case getWeekofMonth(fourthw):
            fourthweek.textContent = MyschoolSession;
           break;
           default:
