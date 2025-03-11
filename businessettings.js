@@ -235,5 +235,6 @@ function DebitBalance(){
 
 let paynow = document.getElementById("pay-now");
 if(paynow.addEventListener){
+   alert("hello world");
    /* paynow.addEventListener("click",DebitBalance,false);*/
 }
