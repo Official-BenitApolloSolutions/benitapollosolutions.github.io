@@ -59,15 +59,21 @@ let workmonth = ["January","February","March","April","May","June","July","Augus
 
 let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","International Women's Day","Workers Day"];
 
-/*(function() => {
-    let celebmonth = today.getMonth();
-    let celebday = today.getDay()+1;
-    
-    if(celebmonth===workmonth[2] && celebday===6){
-        alert("hello world");
-    }
-   
-})();*/
+const moment = require('moment');
+
+let _firstweek = "2025-03-01T01:03:00";
+let _secondweek = "2025-03-15T01:03:00";
+let _thirdweek = "2025-03-22T01:03:00";
+let _fourthweek = "2025-03-31T01:03:00";
+
+function getWeekofMonth(_date) {
+    return moment(_date).week() - moment(_date).startOf('month').week() + 1;
+}
+
+const firstw = moment(_firstweek);
+const secondw = moment(_secondweek);
+const thirdw = moment(_thirdweek);
+const fourthw = moment(_fourthweek);
 
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
@@ -83,7 +89,7 @@ if(postnotification.addEventListener){
 
 function ShowNotifications(){
     institute.textContent = "Royal Secondary School";
-     document.getElementById("totnots").TextContent = NumberOfNotifications;
+     document.getElementById("totnots").TextContent = NumberOfNotifications();
 //end of function 
 }
 
@@ -138,22 +144,21 @@ TotalPaymentDue();
 function PayDay(){
 //session payment
       
-      switch(today){
-     case "2025-03-01T01:03:00":
-       firstweek.textContent = MyschoolSession;
-       break;
-       case "2025-03-15T01:03:00":
-         secondweek.textContent = MyschoolSession;
-         break;
-       case "2025-03-22T01:03:00":
-        thirdweek.textContent = MyschoolSession;
-         break;
-       case "2025-03-31T01:03:00":
-        fourthweek.textContent = MyschoolSession;
-         break;
-       default:
-         console.log("Bas for business");
-         break;
+      if(getWeekofMonth(firstw) == 1){
+          firstweek.textContent = MyschoolSession;
+      }
+      else if(getWeekofMonth(secondw) == 2){
+          secondweek.textContent = MyschoolSession;
+      }
+      else if(getWeekofMonth(thirdw) == 3){
+          thirdweek.textContent = MyschoolSession;
+      }
+       else if(getWeekofMonth(fourthw) == 4){
+           fourthweek.textContent = MyschoolSession;
+       }
+        else{
+            console.log("Something went wrong");
+        }
  }
  
     switch(new Date().getDay()){

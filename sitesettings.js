@@ -19,12 +19,12 @@ function SchoolSession(){
     let payhour = 150;
     let cashdate = new Date();
     while (count != cashdate.getDay()){
-        if(cashdate.getDay() == 1){
-            return payhour+150;
-        }
         count++;
         return payhour;
     }
+    if(cashdate.getDay() == 1){
+            return payhour;
+        }
     
     //let payhour = a + 150;
     console.log("new week");
