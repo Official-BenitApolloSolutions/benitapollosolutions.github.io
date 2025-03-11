@@ -51,8 +51,7 @@ let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
-let newbalance = 0;
-let availbalance = DebitBalance();
+let availbalance;
 
 let sessionpart = sesspanweek * parthr * sespsat;
 
@@ -226,12 +225,16 @@ PayDay();
         quartertm.innerHTML =  today.toGMTString();
         
         payment_date.innerHTML = today.toLocaleString();
+        
+let newbalance = 0;
          
 function DebitBalance(){
     const balance = PayRate();
     newbalance = balance - amountpaid;
     return newbalance;
 }
+
+availbalance = DebitBalance();
 
 let paynow = document.getElementById("pay-now");
 if(paynow.addEventListener){
