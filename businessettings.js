@@ -42,8 +42,6 @@ let curList = document.querySelectorAll(".currency");
 let paymentbtn = document.getElementById("payment-method");
  
 let quartertm = document.getElementById("quarter-year");
-
-let _paynow = document.getElementById("pay-now");
  
 let today = new Date();
 
@@ -76,10 +74,13 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
+let _paynow = document.getElementById("pay-now");
+
 function DebitBalance(){
 let amountpaid = document.getElementById("amount-paid").value;
     let balance = _febpay + MyschoolSession + 150;
    let newbalance = balance - Number(amountpaid);
+   console.log(newbalance);
     return newbalance;
 }
 
@@ -87,6 +88,7 @@ let AvailBalance = DebitBalance();
 
 if(_paynow.addEventListener){
  _paynow.addEventListener("click",DebitBalance,false);
+ window.reload();
 }
 
 if(paymentbtn.addEventListener){
@@ -193,18 +195,20 @@ function PayDay(){
        break;
      case 2:
      pay_rate.textContent = AvailBalance;
+     console.log(AvailBalance)
        break;
      case 3:
         pay_rate.textContent = AvailBalance;
+        console.log(AvailBalance);
        break; 
        case 4:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = AvailBalance;
        break;
        case 5:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = AvailBalance;
        break;
        case 6:
-        pay_rate.textContent = availbalance;
+        pay_rate.textContent = AvailBalance;
        break; 
   default:
         window.alert("Have a great day today!");
