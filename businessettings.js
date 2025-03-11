@@ -99,7 +99,7 @@ function Showtimetable(){
 
 const PayRate = function(){
  
-    let total = _febpay + MyschoolSession;
+    let total = _febpay + MyschoolSession + 150;
     
  switch(today.getMonth() + 1){
      case 2:
@@ -139,16 +139,16 @@ function PayDay(){
 //session payment
       
       switch(today){
-     case "2025-03-01":
+     case "2025-03-01T01:03:00":
        firstweek.textContent = MyschoolSession;
        break;
-       case "2025-03-15":
+       case "2025-03-15T01:03:00":
          secondweek.textContent = MyschoolSession;
          break;
-       case "2025-03-22":
+       case "2025-03-22T01:03:00":
         thirdweek.textContent = MyschoolSession;
          break;
-       case "2025-03-28":
+       case "2025-03-31T01:03:00":
         fourthweek.textContent = MyschoolSession;
          break;
        default:
@@ -158,25 +158,25 @@ function PayDay(){
  
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = PayRate;
+           pay_rate.textContent = PayRate();
        break;
     case 1:
-       pay_rate.textContent = PayRate;
+       pay_rate.textContent = PayRate();
        break;
      case 2:
-     pay_rate.textContent = PayRate;
+     pay_rate.textContent = PayRate();
        break;
      case 3:
-        pay_rate.textContent = PayRate;
+        pay_rate.textContent = PayRate();
        break; 
        case 4:
-        pay_rate.textContent = PayRate;
+        pay_rate.textContent = PayRate();
        break;
        case 5:
-        pay_rate.textContent = PayRate;
+        pay_rate.textContent = PayRate();
        break;
        case 6:
-        pay_rate.textContent = PayRate;
+        pay_rate.textContent = PayRate();
        break; 
   default:
         window.alert("Have a great day today!");
