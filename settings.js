@@ -12,7 +12,7 @@ if(typeof(Storage) !== "undefined"){
   localStorage.email = _email;
   localStorage.password = _password;
   console.log(localStorage.fullname);
-  alert("successfully registered!");
+  alert("Successfully registered! Login to continue");
   location.reload();
  }
 }
@@ -26,6 +26,18 @@ function LoginUser(){
         document.writeln("Logins accepted. ");
         document.writeln("Loading... please wait");
         window.location.assign("https:/\/www.benitapollosolutions.com/home.html");
+    }
+}
+
+function LoginInstitution(){
+    let email = localStorage.email;
+    let password = localStorage.password;
+    let _email = document.getElementById("email").value;
+    let _password = document.getElementById("password").value;
+    if(email === _email && password === _password){
+        document.writeln("Logins accepted. ");
+        document.writeln("Loading... please wait");
+        window.location.assign("https:/\/www.benitapollosolutions.com/baseducation.html");
     }
 }
 

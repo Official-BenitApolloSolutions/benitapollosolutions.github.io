@@ -187,11 +187,9 @@ function PayDay(){
        break;
      case 2:
      pay_rate.textContent = PayRate();
-     console.log(PayRate())
        break;
      case 3:
         pay_rate.textContent = PayRate();
-        console.log(PayRate());
        break; 
        case 4:
         pay_rate.textContent = PayRate();
