@@ -79,7 +79,7 @@ let _paynow = document.getElementById("pay-now");
 function DebitBalance(){
 let amountpaid = document.getElementById("amount-paid").value;
     let balance = _febpay + MyschoolSession + 150;
-   let newbalance = balance - Number(amountpaid);
+    newbalance = balance - Number(amountpaid);
    console.log(newbalance);
    console.log(amountpaid);
     return newbalance;
