@@ -73,7 +73,7 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
-function Paid(){
+const Payment = function(){
 //start of function 
 let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
@@ -118,7 +118,7 @@ const PayRate = function(){
  
    // let total = _febpay + MyschoolSession + 150;
     
-    let total = Paid();
+    let total = Payment();
     
  switch(today.getMonth() + 1){
      case 2:
