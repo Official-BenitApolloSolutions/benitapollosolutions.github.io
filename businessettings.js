@@ -78,7 +78,6 @@ function Paid(){
 let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
     return balance - Number(amountpaid);
-    console.log(balance - Number(amountpaid));
    //end of function 
 }
 
