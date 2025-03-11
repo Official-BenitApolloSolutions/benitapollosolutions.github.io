@@ -53,8 +53,7 @@ let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
-let availbalance;
-
+const AvailBalance = DebitBalance();
 let sessionpart = sesspanweek * parthr * sespsat;
 
 let sessionrate = sesspanweek * sessat;
@@ -143,7 +142,7 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = PayRate();
+            payList[i].textContent = AvailBalance;
             
         };
 }
@@ -176,16 +175,16 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = PayRate();
+           pay_rate.textContent = AvailBalance;
        break;
     case 1:
-       pay_rate.textContent = PayRate();
+       pay_rate.textContent = AvailBalance;
        break;
      case 2:
-     pay_rate.textContent = availbalance;
+     pay_rate.textContent = AvailBalance;
        break;
      case 3:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = AvailBalance;
        break; 
        case 4:
         pay_rate.textContent = PayRate();
@@ -227,16 +226,6 @@ PayDay();
         quartertm.innerHTML =  today.toGMTString();
         
         payment_date.innerHTML = today.toLocaleString();
-        
-let newbalance = 0;
-         
-function DebitBalance(){
-    let balance = _febpay + MyschoolSession + 150;
-    newbalance = balance - amountpaid;
-    return newbalance;
-}
-
-availbalance = DebitBalance();
 
 if(_paynow.addEventListener){
  _paynow.addEventListener("click",DebitBalance,false);
