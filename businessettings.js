@@ -73,9 +73,7 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
-function Paid(e){
-e.preventDefault();
-
+function Paid(){
 let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
     return balance - Number(amountpaid);
