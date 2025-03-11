@@ -44,6 +44,8 @@ let paymentbtn = document.getElementById("payment-method");
  const amountpaid = document.getElementById("amount-paid");
  
 let quartertm = document.getElementById("quarter-year");
+
+let paynow_ = document.getElementById("pay-now");
  
 let today = new Date();
 
@@ -236,9 +238,9 @@ function DebitBalance(){
 
 availbalance = DebitBalance();
 
-let paynow = document.getElementById("amount-paid");
 if(paynow.addEventListener){
+    event.preventDefault();
    /*document.writeln("processing... please wait.");*/
-   alert("hello world");
+   paynow.addEventListener("click","alert('hello world')",false);
    /* paynow.addEventListener("click",DebitBalance,false);*/
 }
