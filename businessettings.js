@@ -59,7 +59,7 @@ let workmonth = ["January","February","March","April","May","June","July","Augus
 
 let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","International Women's Day","Workers Day"];
 
-const moment = require('moment');
+const moment = window.moment;
 
 let _firstweek = "2025-03-01T01:03:00";
 let _secondweek = "2025-03-15T01:03:00";
