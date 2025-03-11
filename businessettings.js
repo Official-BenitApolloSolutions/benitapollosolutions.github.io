@@ -81,6 +81,7 @@ let amountpaid = document.getElementById("amount-paid").value;
     let balance = _febpay + MyschoolSession + 150;
    let newbalance = balance - Number(amountpaid);
    console.log(newbalance);
+   console.log(amountpaid);
     return newbalance;
 }
 
@@ -88,7 +89,6 @@ let AvailBalance = DebitBalance();
 
 if(_paynow.addEventListener){
  _paynow.addEventListener("click",DebitBalance,false);
- window.reload();
 }
 
 if(paymentbtn.addEventListener){
