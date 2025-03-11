@@ -49,7 +49,7 @@ let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
 let sessat = 150;
-let newbalance;
+let newbalance = 0;
 
 let sessionpart = sesspanweek * parthr * sespsat;
 

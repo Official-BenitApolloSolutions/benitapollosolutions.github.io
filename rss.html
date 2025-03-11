@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="refresh" content="3600">
+    <meta http-equiv="refresh" content="3600">
     <meta HTTP-EQUIV="expires" CONTENT="Tue, 20 Jan 2026 14:25:27 GMT">
     <title>BAS | RSS</title>
      <link type="image/x-icon" rel="icon" href="https://www.benitapollosolutions.com/favicon.ico">
@@ -14,7 +14,14 @@
             text-decoration: none;
         }
     </style>
-    <script type="module" src="https://www.benitapollosolutions.com/edusite.js"></script>
+    
+    <script type="module" src="https://www.benitapollosolutions.com/businessettings.js"></script>
+    
+    <script type="module" src="https://www.benitapollosolutions.com/businotifications.js"></script>  
+    
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -22,14 +29,24 @@
             <a class="navbar-brand" href="https://bit.ly/basonlinegh">BAS</a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="mainmenu">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)">Home</a>
+                        <a class="nav-link" href="https://www.benitapollosolutions.com/account_profile.html"><i class="bi bi-person-circle"></i> Account</a>
                     </li>
                 </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" placeholder="Search" type="text">
+                    <button type="button" class="btn btn-primary">Search</button>
+                </form>
             </div>
         </div>
     </nav>
+    <div class="container mt-3" id="anniversary">
+        <div class="alert alert-success alert-dismissible fade show">
+            <button class="btn-close" type="button" data-bs-dismiss="alert"></button>
+            <strong><span id="ann"></span></strong> <span id="ann-week"> Happy Independence Day!</span> <a class="alert-link text-uppercase" href="javacript:void(0)" id="institution-name">rss</a>
+        </div>
+    </div>
     <div class="container mt-3">
         <div class="text-bg-light p-3 rounded">
             <p style="font-variant: small-caps;">Thank you for your custom.</p>
@@ -44,14 +61,15 @@
         </div>
     </div>
     <div class="container mt-3">
-        <div class="text-bg-secondary rounded p-3 mb-4">
-            <div class="table-responsive-sm">
+        <div class="bg-secondary p-3">
+            <div class="table-responsive">
                 <table class="table table-striped">
                  <tr>
                     <thead>
                         <th>ID</th>
                         <th>Business Name</th>
                         <th>Year</th>
+                        <th>Currency </th>
                         <th>Amount</th>
                         <th>Term </th>
                         <th>Address</th>
@@ -69,7 +87,9 @@
                     <td>BASB<span class="myYear"></span>RS</td>
                     <td>The Royals Secondary School Ablekuma</td>
                     <td><span class="jobYear"></span></td>
-                    <td><button class="badge bg-success">archive</button></td>
+                    <td><center>---</center></td>
+                    <td><button class="badge bg-success"
+        data-bs-toggle="offcanvas" data-bs-target="#arearsreport">archive</button></td>
                     <td>1</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -84,6 +104,7 @@
                     <td>BASB<span class="myYear"></span>RS</td>
                     <td>The Royals Secondary School Ablekuma</td>
                     <td><span class="jobYear"></span></td>
+                    <td><span class="currency"></span></td>
                     <td><span class="pay-rate"></span></td>
                     <td>2 </td>
                     <td>&nbsp;</td>
@@ -93,12 +114,13 @@
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails1" class="btn btn-outline-success">Details</button></td>
                       <td> <button class="btn btn-outline-info" id="timetable">Timetable</button> </td> 
                     <td> &nbsp; <!--<button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button> --></td>
-                    <td> <button class="btn btn-primary">Notification<span class="badge bg-danger" id="totnots"></button></td>
+                    <td> <button type="button" class="btn btn-primary"                  data-bs-toggle="modal"                   data-bs-target="#notifications"><i class="bi bi-bell"></i> <span class="badge bg-danger" id="totnots">0</span></button></td>
                 </tr>
                 <tr>
                     <td>BASB<span class="myYear"></span>RS</td>
                     <td>The Royals Secondary School Ablekuma</td>
                     <td><span class="jobYear"></span></td>
+                    <td>&nbsp;</td>
                     <td><center>---</center></td>
                     <td>3</td>
                     <td>&nbsp;</td>
@@ -107,16 +129,34 @@
                     <td>&nbsp;</td>
                     <td><button data-bs-toggle="offcanvas" data-bs-target="#relDetails" class="btn btn-outline-success">Details</button></td>
                      <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
+                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
-                    <td> &nbsp; </td>
                 </tr>
                 </tbody>
                 </table>
             </div>
-        </div>
     </div>
     
     <!-- call-to-action -->
+    <div class="modal" id="notifications">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Notifications</h4>
+                    <button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <div class="modal-body">
+                  <p>
+                      You have <span></span> notifications.
+                  </p>
+                  <button class="btn btn-info" type="button" id="post-notification">Open</button> 
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
       <div class="offcanvas offcanvas-end" id="gigDetails">
         <div class="offcanvas-header">
             <h3 class="offcanvas-title">Period <span class="myYear"></span></h3>
@@ -151,34 +191,65 @@
                 Amount Payable:<span class="text-danger">  Ghs530 </span><br>
                 Amount Received: <span class="text-success"> Ghs300 </span><span class="badge bg-info">Jan 13, 2025</span>
                 <br>Amount Received: <span class="text-success">Ghs200</span>&nbsp;<span class="badge bg-info">Jan 31, 2025</span><br>
-                Amount Received: <span class="text-success">Ghs30</span>&nbsp;<span class="badge bg-info">Feb 7, 2025</span><br>
+                Amount Received: <span class="text-success">Ghs30</span>&nbsp;<span class="badge bg-info" id="dateclosed">Feb 7, 2025</span><br>
                 Balance: <span class="badge bg-success">Ghs0</span>
                  </p>
             <p class="text-muted"><!--Amount Paid: Ghs200, 18/11/24. Total to pay: Ghs680</p><br>
             Paid: Ghs150 <br>
             Date: 2/12/2024<br>
             Payment Method: Cash <br>-->
+            
             <pre> Bi-Payment </pre>
-            1st Week: Ghs150 &nbsp; <span class="badge bg-success rounded-pill">paid</span> <span class="badge bg-info">Jan 19, 2025</span><br>
+            <!-- February summary -->
+          <div class="collapse" id="Feb-Sum"> 
+               1st Week: Ghs150 &nbsp; <span class="badge bg-success rounded-pill">paid</span> <span class="badge bg-info">Jan 19, 2025</span><br>
             2nd Week: <strike>Ghs30</strike> Ghs150 &nbsp; <span class="badge bg-success rounded-pill">paid</span> &nbsp; <span class="badge bg-warning rounded-pill"><strike>-Ghs120</strike></span> &nbsp; <span class="badge bg-info">Feb 7, 2025</span> &nbsp; <span class="badge bg-info">Feb 11, 2025</span> <br>
-            3rd Week: Ghs150 <span class="badge bg-success rounded-pill">paid</span> &nbsp; <span class="badge bg-info">Feb 11, 2025</span><br><br><span id="payment-date"></span> <br>
-            1st Week: Ghs<span id="first-week">80</span> &nbsp; <span class="badge bg-danger rounded-pill">part</span> &nbsp; <span class="badge bg-warning">GHS20</span> &nbsp;<span class="badge bg-warning">GHS50</span> &nbsp; <span class="badge bg-info">Feb 11, 2025</span> &nbsp; <span class="badge bg-info">Feb 21, 2025</span> <br>
-            2nd Week: Ghs<span id="second-week">150</span> &nbsp; <span class="badge bg-danger rounded-pill">unpaid</span>
-            <br> 3rd Week: Ghs<span id="third-week"></span>150 &nbsp; <span class="badge bg-success rounded-pill">paid</span> &nbsp; <span class="badge bg-info">Feb 21, 2025</span> 
-            <br> 4th Week: Ghs<span id="forth-week"></span> &nbsp; <span class="badge bg-secondary rounded-pill" id="week4-status"></span>
+            3rd Week: Ghs150 <span class="badge bg-success rounded-pill">paid</span> &nbsp; <span class="badge bg-info">Feb 11, 2025</span><br><br>
+            1st Week: Ghs80 &nbsp; <span class="badge bg-danger rounded-pill">part</span> &nbsp; <span class="badge bg-warning">GHS20</span> &nbsp;<span class="badge bg-warning">GHS50</span> &nbsp; <span class="badge bg-info">Feb 11, 2025</span> &nbsp; <span class="badge bg-info">Feb 21, 2025</span> <br>
+            2nd Week: Ghs150 &nbsp; <span class="badge bg-danger rounded-pill">unpaid</span>
+            <br> 3rd Week: Ghs150 &nbsp; <span class="badge bg-success rounded-pill">paid</span> &nbsp; <span class="badge bg-info">Feb 21, 2025</span> 
+            <br> 4th Week: Ghs150 <span class="badge bg-danger rounded-pill">unpaid</span>
+            </div><br>
+            <a data-bs-toggle="collapse" href="#Feb-Sum" style="text-decoration: none">February summary:</a> <span class="currency"></span> <span id="feb-sum">0</span>
+            <span id="payment-date"></span><hr>
+            <!-- March -->
+            First Week: <span class="currency"></span>&nbsp;<span id="first-week">0</span><br>
+            Second Week: <span class="currency"></span>&nbsp;<span id="second-week">0</span><br>
+            Third Week: <span class="currency"></span>&nbsp;<span id="third-week">0</span><br>
+            Fourth Week: <span class="currency"></span>&nbsp;<span id="fourth-week">0</span>
+            <br>
+ 
            <!--New: Seasonal computing; <br>
             Payment mode: weekly.
             Payment method: cash 
             Date: 22/11/2020
             First week: Ghs150 <span class="badge bg-success">Paid</span>--></p>
-            <p> Total Balance: GH&#x20B5; <span class="text-warning" id="payrate"></span></p>
-            <button class="btn btn-outline-success" id="payment-method">Make Payment</button>
+            <p> Total Balance: GH&#x20B5; <span class="text-warning" id="payrate">0</span></p>
+            <button class="btn btn-outline-success"  data-bs-toggle="modal"
+            data-bs-target="#paymentdialog">Make Payment</button>
         </div>
     </div>
-    
+    <div class="modal" id="paymentdialog">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm Payment</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Confirm payment of <span class="currency"></span><span class="pay-rate">0</span></p>
+                    <p>Get token: <button class="btn btn-success" id="payment-method"><i class="bi bi-whatsapp"></i> Send message</button></p>
+                    <button class="btn btn-outline-success">Pay</button>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="offcanvas offcanvas-end" id="arearsreport">
         <div class="offcanvas-header">
-            <h4 class="offcanvas-title">Arears report As At August / September Till <span id="arearsperiod"></span> Is Ghs0</h4>
+            <h4 class="offcanvas-title">Arears report As At August / September Till <span class="arearsperiod"></span> Is Ghs0</h4>
             <button class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
@@ -257,6 +328,13 @@
                             <td>Cash-in-hand</td>
                             <td><span class="text-danger">Ghs530</span></td>
                         </tr>
+                     <tr>
+                         <td><span class="dateclosed"></span></td>
+                         <td>GHS0</td>
+                         <td>&nbsp;</td>
+                         <td>&nbsp;</td>
+                         <td><center>---</center></td>
+                     </tr>   
                        <!-- <tr>
                             <td> January 13th</td>
                             <td>Ghs530</td>
@@ -279,6 +357,7 @@
                     <td>Paid </td>
                 </tr>
             </table>
+            </div>
         </div>
     </div>
     <footer>
@@ -296,5 +375,6 @@
             </div>
         </div>
     </footer>
+    <script src="helperfunctionsm.js"></script>
 </body>
 </html>
