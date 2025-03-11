@@ -143,23 +143,24 @@ TotalPaymentDue();
 
 function PayDay(){
 //session payment
-      
-      if(getWeekofMonth(firstw) == 1){
+      switch(getWeekofMonth(today)){
+         case getWeekofMonth(firstw):
           firstweek.textContent = MyschoolSession;
-      }
-      if(getWeekofMonth(secondw) == 2){
+           break;
+         case getWeekofMonth(secondw):
           secondweek.textContent = MyschoolSession;
-      }
-      if(getWeekofMonth(thirdw) == 3){
+          break;
+         case getWeekofMonth(thirdw):
           thirdweek.textContent = MyschoolSession;
-      }
-      if(getWeekofMonth(fourthw) == 4){
+           break;
+        case getWeekofMonth(fourthw):
            fourthweek.textContent = MyschoolSession;
-       }
-        else{
-            console.log("Something went wrong");
-        }
- 
+          break;
+          default:
+           console.log("Something went wrong");
+           break;
+      }
+      
     switch(new Date().getDay()){
     case 0:
            pay_rate.textContent = PayRate();
