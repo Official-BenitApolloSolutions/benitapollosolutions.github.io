@@ -41,8 +41,6 @@ let curList = document.querySelectorAll(".currency");
 
 let paymentbtn = document.getElementById("payment-method");
  
- const amountpaid = document.getElementById("amount-paid");
- 
 let quartertm = document.getElementById("quarter-year");
 
 let _paynow = document.getElementById("pay-now");
@@ -79,6 +77,7 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 function DebitBalance(){
+let amountpaid = document.getElementById("amount-paid");
     let balance = _febpay + MyschoolSession + 150;
     newbalance = balance - amountpaid;
     return newbalance;
