@@ -37,10 +37,9 @@ function animateAnn(){
     document.getElementById("ann").textContent = "🎉";
    
     let rammon = 3;
-    let count = 3;
+    let count = 4;
     if(month==3 && count!=0){
-        document.getElementById("ann").textContent = "👑"; document.getElementById("ann-week").textContent = count + " days since independence.";
-        count++
+       count++ document.getElementById("ann").textContent = "👑"; document.getElementById("ann-week").textContent = count + " days since independence.";
     }
     
 }
