@@ -74,9 +74,11 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 function Paid(){
+//start of function 
 let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
     return balance - Number(amountpaid);
+    console.log(balance - Number(amountpaid);)
    //end of function 
 }
 
@@ -179,27 +181,27 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = Paid();
+           pay_rate.textContent = PayRate();
        break;
     case 1:
-       pay_rate.textContent = Paid();
+       pay_rate.textContent = PayRate();
        break;
      case 2:
-     pay_rate.textContent = Paid();
-     console.log(Paid())
+     pay_rate.textContent = PayRate();
+     console.log(PayRate())
        break;
      case 3:
-        pay_rate.textContent = Paid();
-        console.log(Paid());
+        pay_rate.textContent = PayRate();
+        console.log(PayRate());
        break; 
        case 4:
-        pay_rate.textContent = Paid();
+        pay_rate.textContent = PayRate();
        break;
        case 5:
-        pay_rate.textContent = Paid();
+        pay_rate.textContent = PayRate();
        break;
        case 6:
-        pay_rate.textContent = Paid();
+        pay_rate.textContent = PayRate();
        break; 
   default:
         window.alert("Have a great day today!");
