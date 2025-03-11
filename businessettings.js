@@ -74,17 +74,12 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 function DebitBalance(){
-let balance = _febpay + MyschoolSession + 150; 
+/*let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
-    return balance - Number(amountpaid);
+    return balance - Number(amountpaid);*/
    //end of function 
+   alert("hi function ");
 }
-
-/*let _paynow = document.getElementById("pay-now");
-
-if(_paynow.addEventListener){
- _paynow.addEventListener("click",DebitBalance, false);
-}*/
 
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
@@ -154,7 +149,7 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = DebitBalance();
+            payList[i].textContent = AvailBalance;
             
         };
 }
