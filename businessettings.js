@@ -72,15 +72,16 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
-function InstallPayment(){
+function Payment(){
 //start of function 
 let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
     let newbalance = balance - Number(amountpaid);
-    if(localStorage != "undefined"){
+    if(typeof(localStorage) !== "undefined"){
         localStorage.setItem("Newbalance", newbalance);
     }
     alert("successfully paid amount of " + newbalance);
+    location.reload();
    //end of function 
 }
 
@@ -121,10 +122,10 @@ const PayRate = function(){
  
    // let total = _febpay + MyschoolSession + 150;
    let total;
-   if(localStorage != "undefined"){
+   if(typeof(localStorage) !== "undefined"){
         total = localStorage.getItem("Newbalance");
    }else{
-       total = 0;
+       total = _febpay + MyschoolSession + 150;
    }
     
  switch(today.getMonth() + 1){

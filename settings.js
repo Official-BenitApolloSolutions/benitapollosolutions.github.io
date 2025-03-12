@@ -3,6 +3,11 @@ const RegisterNow = function(){
     window.location.assign("https:/\/www.benitapollosolutions.com/register.html");
 }
 
+const RegisterInstitute = function(){
+    document.writeln("loading please wait...");
+    window.location.assign("https:/\/www.benitapollosolutions.com/institution_registration.html");
+}
+
 function RegisterUser(){
     let _fullname = document.getElementById("fullname").value;
 let _email = document.getElementById("email").value;
@@ -22,22 +27,37 @@ function LoginUser(){
     let password = localStorage.password;
     let _email = document.getElementById("email").value;
     let _password = document.getElementById("password").value;
+    
     if(email === _email && password === _password){
         document.writeln("Logins accepted. ");
         document.writeln("Loading... please wait");
         window.location.assign("https:/\/www.benitapollosolutions.com/home.html");
+    }else{
+        document.writeln("wrong credentials");
+        location.reload();
     }
 }
 
 function LoginInstitution(){
+    let institute = localStorage.fullname;
     let email = localStorage.email;
     let password = localStorage.password;
     let _email = document.getElementById("email").value;
     let _password = document.getElementById("password").value;
-    if(email === _email && password === _password){
+    let _ins = "Catalyst"
+    if(email === _email && password === _password && institute.includes(_ins)){
+        document.writeln("Logins accepted. ");
+        document.writeln("Loading... please wait");
+        window.location.assign("https:/\/www.benitapollosolutions.com/crs.html");
+    }
+    else if(email === _email && password === _password){
         document.writeln("Logins accepted. ");
         document.writeln("Loading... please wait");
         window.location.assign("https:/\/www.benitapollosolutions.com/baseducation.html");
+    }
+    else{
+        document.writeln("wrong credentials");
+        location.reload();
     }
 }
 
@@ -57,6 +77,11 @@ function RememberMe(){
   let remm = document.userform.rememberme.checked;
   if(typeof(Storage) !== "undefined"){
       sessionStorage.user = navigator.UserAgent;
-      console.log(sessionStorage.user);
   }
+  console.log(sessionStorage.user);
+}
+
+function Logoff(){
+    document.writeln("logging off");
+    window.location.replace("https:/\/www.benitapollosolutions.com/institutelogin.html");
 }
