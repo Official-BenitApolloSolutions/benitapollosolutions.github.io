@@ -78,7 +78,7 @@ let balance = _febpay + MyschoolSession + 150;
 let amountpaid = document.getElementById("amount-paid").value;
     let newbalance = balance - Number(amountpaid);
     if(localStorage != "undefined"){
-        localStorage.setItem("Newbalance", "newbalance");
+        localStorage.setItem("Newbalance", newbalance);
     }
     alert("successfully paid amount of " + newbalance);
    //end of function 
@@ -120,8 +120,12 @@ function Showtimetable(){
 const PayRate = function(){
  
    // let total = _febpay + MyschoolSession + 150;
-    
-    let total = localStorage.getItem("Newbalance");
+   let total;
+   if(localStorage != "undefined"){
+        total = localStorage.getItem("Newbalance");
+   }else{
+       total = 0;
+   }
     
  switch(today.getMonth() + 1){
      case 2:
