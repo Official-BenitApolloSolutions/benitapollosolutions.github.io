@@ -72,19 +72,6 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
-function Payment(){
-//start of function 
-//let balance = _febpay + MyschoolSession + 150; 
-let amountpaid = document.getElementById("amount-paid").value;
-   // let newbalance = balance - Number(amountpaid);
-    if(typeof(localStorage) !== "undefined"){
-        localStorage.setItem("Newbalance", amountpaid);
-    }
-    alert("successfully paid amount of " + amountpaid);
-    location.reload();
-   //end of function 
-}
-
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
 }
