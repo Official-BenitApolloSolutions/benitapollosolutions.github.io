@@ -74,13 +74,13 @@ const fourthw = moment(_fourthweek);
 
 function Payment(){
 //start of function 
-let balance = _febpay + MyschoolSession + 150; 
+//let balance = _febpay + MyschoolSession + 150; 
 let amountpaid = document.getElementById("amount-paid").value;
-    let newbalance = balance - Number(amountpaid);
+   // let newbalance = balance - Number(amountpaid);
     if(typeof(localStorage) !== "undefined"){
-        localStorage.setItem("Newbalance", newbalance);
+        localStorage.setItem("Newbalance", amountpaid);
     }
-    alert("successfully paid amount of " + newbalance);
+    alert("successfully paid amount of " + amountpaid);
     location.reload();
    //end of function 
 }
@@ -119,13 +119,13 @@ function Showtimetable(){
 }
 
 const PayRate = function(){
- 
-   // let total = _febpay + MyschoolSession + 150;
-   let total;
+  let total = 0;
+   let toq = _febpay + MyschoolSession + 150;
    if(typeof(localStorage) !== "undefined"){
-        total = localStorage.getItem("Newbalance");
+       let totalpaid = localStorage.getItem("Newbalance");
+        total = toq - totalpaid 
    }else{
-       total = _febpay + MyschoolSession + 150;
+       total = toq
    }
     
  switch(today.getMonth() + 1){
