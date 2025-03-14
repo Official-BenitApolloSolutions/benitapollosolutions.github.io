@@ -37,9 +37,10 @@ function animateAnn(){
     document.getElementById("ann").textContent = "🎉";
    
     let rammon = 3;
-    let count = 4;
-    if(month==3 && count<10){
-       count++; document.getElementById("ann").textContent = "👑"; document.getElementById("ann-week").textContent = count + " days after independence.";
+    let count = 8;
+    while(month==3 && count<10){ 
+    document.getElementById("ann").textContent = "👑"; document.getElementById("ann-week").textContent = count + " days after independence.";
+     count++;
     }
     if(today.getDay()==1){
         document.getElementById("ann-week").textContent = "Have a blessed week.";
