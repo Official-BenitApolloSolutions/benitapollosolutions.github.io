@@ -11,6 +11,9 @@
        <link rel="icon" href="https://www.benitapollosolutions.com/favicon.ico" type="image-x/icon">
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+       <script src="education.js"></script>
+       
        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
    </head> 
    <body>
@@ -45,7 +48,7 @@
                <a href="javascript:void(0)" class="dropdown-item"><i class="bi bi-cash-stack"></i> Payments</a>
            </li>
            <li>
-               <a href="javascript:void(0)" class="dropdown-item"><i class="bi bi-arrow-bar-left" onclick="logoff()"></i> Log off</a>
+               <a  class="dropdown-item" href="javascript:void(0)" onclick="Logoff()"><i class="bi bi-arrow-bar-left"></i> Log off</a>
            </li>
            <li><hr class="dropdown-divider"></li>
            <li>
@@ -61,24 +64,28 @@
               </div>
            </div>
        </nav>
+       <div class="container mt-3">
+           <p class="h4"><span id="institute" class="text-capitalize">Institution</span></p>
+       </div>
        <div class="container-fluid mt-3">
            <div class="table-responsive">
                <table class="table">
                    <tr>
                        <td>
-                               <div class="text-bg-light rounded-circle border-success p-3">
-                                   <p class="lead"><i class="bi bi-boxes"></i> ADD TASK</p>
+                               <div class="text-bg-light rounded-circle border-success p-2" style="width:100px; height:100px; margin:3px; position:relative;">
+                                   <p class="lead"><center><i class="bi bi-boxes"></i></center> <center class="text-uppercase">Invoice</center> </p>
+                                   <span class="badge bg-success" style="position: absolute;top:79%;left:50%"><i class="bi bi-plus"></i></span>
                                </div>
                        </td>
                        <td>
-                               <div class="text-bg-light rounded p-3">
-                                   <p class="lead"><i class="bi bi-calender-plus"></i>VIEW TASKS</p>
+                               <div class="text-bg-light rounded-circle p-2" style="width:100px; height:100px; margin:3px; position:relative;">
+                                   <p class="lead"><center><i class="bi bi-clipboard2-pulse"></i></center><center class="text-uppercase">Rate</center></p>                           <span class="badge bg-success" style="position: absolute;top:79%;left:50%"><i class="bi bi-plus"></i></span>
                                </div>
                        </td>
                        <td>
-                               <div class="text-bg-light rounded p-3">
-                                   <p class="lead"><i class="bi bi-calendar-month"></i> ACTIVE TASK</p>
-                                   
+                               <div class="text-bg-light rounded-circle p-2" style="width:100px; height:100px; margin:3px; position:relative;">
+                                   <p class="lead"><center><i class="bi bi-journals"></i></center><center class="text-uppercase">Class</center> </p>
+                   <span class="badge bg-success" style="position: absolute;top:79%;left:50%"><i class="bi bi-plus"></i></span>                
                                </div>
                        </td>
                    </tr>
@@ -86,11 +93,11 @@
            </div>
        </div>
        <div class="container mt-3">
-           <!-- style display inline-block -->
-           <div class="rounded-circle text-bg-light p-5" style="width:130px; height:130px; margin:6px;">
-               <p>Add Task</p>
-               <span class="badge bg-success" style="position:absolute;z-index:1">hello</span>
+           <div class="rounded text-bg-light p-3">
+              <img src="https://www.benitapollosolutions.com/no-task.webm" alt="Task Scheduler" onerror=""> 
            </div>
        </div>
+       
+       <script src="account.js"></script>
    </body>
 </html>      
