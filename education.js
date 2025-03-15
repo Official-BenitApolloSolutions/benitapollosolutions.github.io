@@ -8,5 +8,5 @@ document.writeln("logging off");
   history.replaceState({}, '', currentUrl);
   
    window.location.replace("https:/\/www.benitapollosolutions.com/institutelogin.html");
-    window.location.assign("institutelogin.html")
+    //window.location.assign("institutelogin.html")
 }
