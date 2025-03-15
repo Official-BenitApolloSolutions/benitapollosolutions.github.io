@@ -178,7 +178,7 @@ function PayDay(){
            pay_rate.textContent = PayRate();
        break;
     case 1:
-       pay_rate.textContent = PayRate();
+       pay_rate.textContent = PayRate() + 150;
        break;
      case 2:
      pay_rate.textContent = PayRate();
