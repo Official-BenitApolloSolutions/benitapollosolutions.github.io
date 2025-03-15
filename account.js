@@ -1,4 +1,5 @@
 'use strict'
+
 let currentUrl = window.location.href;
 
 window.onload = history.replaceState({}, '', currentUrl);

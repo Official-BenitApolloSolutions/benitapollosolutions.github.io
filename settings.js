@@ -1,3 +1,5 @@
+'use strict'
+
 const RegisterNow = function(){
     document.writeln("loading please wait...");
     window.location.assign("https:/\/www.benitapollosolutions.com/register.html");
@@ -81,7 +83,5 @@ function RememberMe(){
   console.log(sessionStorage.user);
 }
 
-function Logoff(){
-    document.writeln("logging off");
-    window.location.replace("https:/\/www.benitapollosolutions.com/institutelogin.html");
-}
+
+
