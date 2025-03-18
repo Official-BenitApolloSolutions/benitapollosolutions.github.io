@@ -12,14 +12,11 @@ if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/institute
 }
 
 console.log(window.location.href);
- 
-  
-let user = "Institution Profile";
 
 (function(){
    if(typeof(localStorage) !== "undefined"){
        
-      user  = localStorage.fullname; 
+      let user  = localStorage.fullname; 
    } 
    
 let institute= document.getElementById("institute");
