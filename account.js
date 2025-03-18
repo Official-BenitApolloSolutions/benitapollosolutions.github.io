@@ -1,8 +1,8 @@
 'use strict'
+let user;
+let currentUrl = window.location.href;
 
-/*let currentUrl = window.location.href;
-
-window.onload = history.replaceState({}, '', currentUrl);*/
+window.onload = history.replaceState({}, '', currentUrl);
 
 if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/institutelogin.html"){
     document.writeln("Access Denied.");
@@ -16,11 +16,11 @@ console.log(window.location.href);
 (function(){
    if(typeof(localStorage) !== "undefined"){
        
-      let user  = localStorage.fullname; 
+       user  = localStorage.fullname; 
    } 
    
-let institute= document.getElementById("institute");
-if(institute !== null){
+let institute = document.getElementById("institution-name");
+if(user !== null){
     
     institute.textContent = user;
 }else{
