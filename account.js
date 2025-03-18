@@ -1,8 +1,8 @@
 'use strict'
 
-let currentUrl = window.location.href;
+/*let currentUrl = window.location.href;
 
-window.onload = history.replaceState({}, '', currentUrl);
+window.onload = history.replaceState({}, '', currentUrl);*/
 
 if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/institutelogin.html"){
     document.writeln("Access Denied.");

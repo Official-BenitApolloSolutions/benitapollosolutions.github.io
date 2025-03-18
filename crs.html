@@ -86,12 +86,13 @@
                        <td>
                                <div class="text-bg-light rounded-circle border-success p-2" style="width:100px; height:100px; margin:3px; position:relative;">
                                    <p class="lead"><center><i class="bi bi-boxes"></i></center> <center class="text-uppercase">Invoice</center> </p>
-                                   <span class="badge" style="position: absolute;top:79%;left:50%; background:#40E0D0"><i class="bi bi-plus"></i></span>
+                                   <span class="badge" style="position: absolute;top:79%;left:50%; background:#40E0D0"><i class="bi bi-plus" data-bs-toggle="offcanvas"
+  data-bs-target="#invoice-now"></i></span>
                                </div>
                        </td>
                        <td>
                                <div class="text-bg-light rounded-circle p-2" style="width:100px; height:100px; margin:3px; position:relative;">
-                                   <p class="lead"><center><i class="bi bi-clipboard2-pulse"></i></center><center class="text-uppercase">Rate</center></p>                           <span class="badge" style="position: absolute;top:79%;left:50%; background:#FA8072;"><i class="bi bi-plus"></i></span>
+                                   <p class="lead"><center><i class="bi bi-clipboard2-pulse"></i></center><center class="text-uppercase">Rate</center></p>                           <span class="badge" style="position: absolute;top:79%;left:50%; background:#FA8072;"><i class="bi bi-plus" data-bs-target="#rate-now" data-bs-toggle="offcanvas"></i></span>
                                </div>
                        </td>
                        <td>
@@ -110,12 +111,36 @@
   src="https://lottie.host/fb675ddc-d57d-48e3-9a0a-0aba1b50d78c/8SFMHSElkH.lottie"
   background="transparent"
   speed="1"
-  style="width: 300px; height: 300px"
+  style="width: 280px; height: 280px"
   loop
   autoplay
 ></dotlottie-player>
            </div>
        </div>
-      
+       
+       <!-- invoice -->
+       <div class="offcanvas offcanvas-end" id="invoice-now">
+           <div class="offcanvas-header">
+               <h3 class="offcanvas-title">Invoice</h3>
+               <button type="button" data-bs-dismiss="offcanvas" class="btn-close text-reset"></button>
+           </div>
+           <div class="offcanvas-body"></div>
+       </div>
+       
+       <!-- Rate -->
+      <div class="offcanvas offcanvas-bottom text-bg-dark" id="rate-now">
+          <div class="offcanvas-header">
+              <h3 class="offcanvas-title">Modify Rate</h3>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+              <p class="lead">Current Rate: Ghs25 /hr</p>
+              <form>
+                  <label>Adjust Rate</label>
+                  <input class="form-control mb-2" placeholder="adjust rate">
+                  <input type="submit" class="btn btn-primary" value="Change Rate">
+              </form>
+          </div>
+      </div>
    </body>
 </html>      
