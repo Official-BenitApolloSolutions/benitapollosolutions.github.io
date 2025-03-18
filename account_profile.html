@@ -22,14 +22,48 @@
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="mainmenu">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link"><i class="bi bi-person-circle"></i> Account</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="text" placeholder="Search">
-                        <button type="button" class="btn btn-primary">Search</button>
-                    </form>
+                      <li class="nav-item">
+                          <a class="nav-link" href="javascript:void(0)"><i class="bi bi-activity"></i> Dashboard</a>
+                      </li>
+                      <li class="nav-item">
+                      <a class="nav-link" href="javascript:void(0)"><i class="bi bi-person-circle"></i> Account</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="javascript:void(0)"><span class="bi bi-info-circle-fill"></span> Support</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link active" href="javascript:void(0)"
+                      onclick="location.href='account_profile.html'"><i class="bi bi-alexa"></i> Profile</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="javascript:void(0)" data-bs-toggle="dropdown"><i class="bi bi-gear-wide-connected" role="button">
+                          
+                      </i> Settings</a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="javascript:void(0)" class="dropdown-item"><i class="bi bi-cloud"></i> Reports</a>
+                          </li>
+           <li>
+               <a href="javascript:void(0)" class="dropdown-item"><i class="bi bi-cash-stack"></i> Payments</a>
+           </li>
+           <li>
+               <li>
+               <a href="javascript:void(0)" class="dropdown-item"><i class="bi bi-radioactive"></i> Delete Account</a>
+           </li>
+           <li>
+               <a  class="dropdown-item" href="javascript:void(0)" onclick="Logoff()"><i class="bi bi-arrow-bar-left"></i> Log off</a>
+           </li>
+           <li><hr class="dropdown-divider"></li>
+           <li>
+               <a href="javascript:void(0)" class="dropdown-item"><i class="bi bi-briefcase"></i> Leaderboard</a>
+           </li>
+                      </ul>
+                  </li>
+                  </ul>
+                  <form class="d-flex">
+                   <input type="text" placeholder="Search" class="form-control me-2">
+                   <button type="button" class="btn btn-primary">Search</button>
+                  </form>
                 </div>
             </div>
         </nav>
