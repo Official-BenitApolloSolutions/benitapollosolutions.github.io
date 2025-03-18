@@ -21,8 +21,10 @@ console.log(window.location.href);
    
 let institute= document.getElementById("institute");
 if(institute !== null){
+    
     institute.textContent = user;
 }else{
+    console.log(user);
     console.error("something went wrong");
 }
 })();
