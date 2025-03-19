@@ -42,7 +42,7 @@
     <div class="container mt-3" id="anniversary">
         <div class="alert alert-success alert-dismissible fade show">
             <button class="btn-close" type="button" data-bs-dismiss="alert"></button>
-            <strong><span id="ann"></span></strong> <span id="ann-week"> Happy Independence Day!</span> <a class="alert-link text-uppercase" href="javacript:void(0)" id="institution-name">rss</a>
+            <strong><span id="ann"></span></strong> <span id="ann-week"></span> <a class="alert-link text-uppercase" href="javacript:void(0)" id="institution-name">rss</a>
         </div>
     </div>
     <div class="container mt-3">
@@ -145,7 +145,9 @@
                 </div>
                 <div class="modal-body">
                   <p>
-                      You have <span class="total-nots"></span> notifications. <a href="javascript:void(0)">check invoice</a>
+                      You have <span class="total-nots"></span> notifications. <a href="javascript:void(0)"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#invoice-now">check invoice</a>
                   </p>
                   <button class="btn btn-info" type="button" id="post-notification">Open</button> 
                 </div>
@@ -374,6 +376,16 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="https://www.benitapollosolutions.com/helperfunctionsm.js"></script>
+    <!--<script type="module" src="https://www.benitapollosolutions.com/helperfunctionsm.js"></script>-->
+    <div class="offcanvas offcanvas-bottom text-bg-dark" id="invoice-now">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title">Invoice Update </h3>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Cash Payment: Ghs200<br>Date: March 10, 2025<br>
+            Balance: Ghs<span class="pay-rate"></span></p>
+        </div>
+    </div>
 </body>
 </html>
