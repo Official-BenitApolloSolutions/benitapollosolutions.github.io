@@ -73,7 +73,7 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 if(paymentbtn.addEventListener){
-    paymentbtn.addEventListener("click", pay, false);
+    paymentbtn.addEventListener("click", pay, false);;;;;;;;;;
 }
 
 if(timetable.addEventListener){
@@ -142,7 +142,7 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = PayRate();
+            payList[i].textContent = PayRate() + 150;
             
         };
 }
@@ -175,25 +175,25 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = PayRate();
+           pay_rate.textContent = PayRate() + 150;
        break;
     case 1:
        pay_rate.textContent = PayRate() + 150;
        break;
      case 2:
-     pay_rate.textContent = PayRate();
+     pay_rate.textContent = PayRate() + 150;
        break;
      case 3:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = PayRate() + 150;
        break; 
        case 4:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = PayRate() + 150;
        break;
        case 5:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = PayRate() + 150;
        break;
        case 6:
-        pay_rate.textContent = PayRate();
+        pay_rate.textContent = PayRate() + 150;
        break; 
   default:
         window.alert("Have a great day today!");
