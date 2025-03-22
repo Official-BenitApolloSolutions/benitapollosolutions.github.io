@@ -1,7 +1,7 @@
   "use strict";
    (function() {  
              emailjs.init({ 
-             publicKey: "UZxRIO87B2gXO7tyZ", }); 
+             publicKey: "D1y25vk5Im7SPLYnC", }); 
              })();
              
           window.onload = function() {
