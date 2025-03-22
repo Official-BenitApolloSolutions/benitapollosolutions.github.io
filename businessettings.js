@@ -211,8 +211,9 @@ PayDay();
  
         _schoolday.innerHTML = today.toLocaleString();
         
-        for(let i=0; i < nodeList.length; i++){
         let curmonth = today.getMonth() + 1;
+        
+        for(let i=0; i < nodeList.length; i++){
             nodeList[i].innerHTML = curmonth + today.getYear();
         }
         
