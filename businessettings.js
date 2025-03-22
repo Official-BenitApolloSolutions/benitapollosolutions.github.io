@@ -23,10 +23,10 @@ let pay_rate = document.getElementById("payrate");
 
 let payment_date = document.getElementById("payment-date");
 //session charges
-let firstweek = document.getElementById("first-week").textContent;
-let secondweek = document.getElementById("second-week").textContent;
-let thirdweek = document.getElementById("third-week").textContent;
-let fourthweek = document.getElementById("fourth-week").textContent;
+let firstweek = document.getElementById("first-week");
+let secondweek = document.getElementById("second-week");
+let thirdweek = document.getElementById("third-week");
+let fourthweek = document.getElementById("fourth-week");
 
 let _archivenode = document.querySelectorAll(".arearsperiod");
 
@@ -73,7 +73,7 @@ const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
 if(paymentbtn.addEventListener){
-    paymentbtn.addEventListener("click", pay, false);;;;;;;;;;
+    paymentbtn.addEventListener("click", pay, false);
 }
 
 if(timetable.addEventListener){
@@ -193,7 +193,7 @@ function PayDay(){
         pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(fourthweek) - 200;
        break;
        case 6:
-        pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) - 200;
+        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) - 200;
        break; 
   default:
         window.alert("Have a great day today!");
