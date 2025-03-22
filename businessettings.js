@@ -23,10 +23,10 @@ let pay_rate = document.getElementById("payrate");
 
 let payment_date = document.getElementById("payment-date");
 //session charges
-let firstweek = document.getElementById("first-week");
-let secondweek = document.getElementById("second-week");
-let thirdweek = document.getElementById("third-week");
-let fourthweek = document.getElementById("fourth-week");
+let firstweek = document.getElementById("first-week").textContent;
+let secondweek = document.getElementById("second-week").textContent;
+let thirdweek = document.getElementById("third-week").textContent;
+let fourthweek = document.getElementById("fourth-week").textContent;
 
 let _archivenode = document.querySelectorAll(".arearsperiod");
 
