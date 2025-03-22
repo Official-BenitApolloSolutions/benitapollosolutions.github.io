@@ -14,7 +14,7 @@
          studyform.addEventListener('submit', function(event) {
                 event.preventDefault();
                 // date
-                emailjs.sendForm('service_xga0ihl', 'template_66nw7jk', this)
+                emailjs.sendForm('service_je7v6yn', 'Study_hjzp2fe', this)
                     .then(() => {
                         console.log('SUCCESS!');
 document.writeln("successfully sent a quote. Check your email for confirmation.");

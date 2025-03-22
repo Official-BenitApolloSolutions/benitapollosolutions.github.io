@@ -175,25 +175,25 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = PayRate() + 150;
+           pay_rate.textContent = firstweek + secondweek + thirdweek - 200;
        break;
     case 1:
-       pay_rate.textContent = PayRate() + 150;
+       pay_rate.textContent = firstweek + secondweek + thirdweek + fourthweek - 200;
        break;
      case 2:
-     pay_rate.textContent = PayRate() + 150;
+     pay_rate.textContent = firstweek + secondweek + thirdweek + fourthweek - 200;
        break;
      case 3:
-        pay_rate.textContent = PayRate() + 150;
+        pay_rate.textContent = firstweek + secondweek + thirdweek + fourthweek - 200;
        break; 
        case 4:
-        pay_rate.textContent = PayRate() + 150;
+        pay_rate.textContent = firstweek + secondweek + thirdweek + fourthweek - 200;
        break;
        case 5:
-        pay_rate.textContent = PayRate() + 150;
+        pay_rate.textContent = firstweek + secondweek + thirdweek + fourthweek - 200;
        break;
        case 6:
-        pay_rate.textContent = PayRate() + 150;
+        pay_rate.textContent = firstweek + secondweek + thirdweek - 200;
        break; 
   default:
         window.alert("Have a great day today!");
