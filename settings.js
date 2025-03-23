@@ -10,12 +10,16 @@ const RegisterInstitute = function(){
     window.location.assign("https:/\/www.benitapollosolutions.com/institution_registration.html");
 }
 
+//reg institute 
+const reginstitute = ['EC324T','CRS125A','Eg27£5'];
 function RegisterUser(){
     let _fullname = document.getElementById("fullname").value;
+    let _institute = document.getElementById("insticode").value;
 let _email = document.getElementById("email").value;
 let _password = document.getElementById("password").value;
 if(typeof(Storage) !== "undefined"){
   localStorage.fullname = _fullname;
+  localStorage.institute = _institute;
   localStorage.email = _email;
   localStorage.password = _password;
   console.log(localStorage.fullname);
@@ -42,12 +46,13 @@ function LoginUser(){
 
 function LoginInstitution(){
     let institute = localStorage.fullname;
+    let incode = localStorage.institute;
     let email = localStorage.email;
     let password = localStorage.password;
     let _email = document.getElementById("email").value;
     let _password = document.getElementById("password").value;
     let _ins = "Catalyst"
-    if(email === _email && password === _password && institute.includes(_ins)){
+    if(email === _email && password === _password && institute.includes(_ins) && incode === reginstitute[1]){
         document.writeln("Logins accepted. ");
         document.writeln("Loading... please wait");
         window.location.assign("https:/\/www.benitapollosolutions.com/crs.html");
@@ -55,7 +60,7 @@ function LoginInstitution(){
     else if(email === _email && password === _password){
         document.writeln("Logins accepted. ");
         document.writeln("Loading... please wait");
-        window.location.assign("https:/\/www.benitapollosolutions.com/baseducation.html");
+        window.location.assign("https:/\/www.benitapollosolutions.com/home.html");
     }
     else{
         document.writeln("wrong credentials");
@@ -78,7 +83,7 @@ function ShowPassword(){
 function RememberMe(){
   let remm = document.userform.rememberme.checked;
   if(typeof(Storage) !== "undefined"){
-      sessionStorage.user = navigator.UserAgent;
+      sessionStorage.user = window.navigator.UserAgent;
   }
   console.log(sessionStorage.user);
 }
