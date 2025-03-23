@@ -1,3 +1,6 @@
+//prevent abuse
+'use strict';
+
  (function() {  
              emailjs.init({ 
              publicKey: "D1y25vk5Im7SPLYnC", }); 
@@ -33,16 +36,15 @@ window.location.assign("https:/\/www.benitapollosolutions.com/success.html");
  function Budget(){
                let _budget = document.getElementById("locked");
                let _rate = document.getElementById("rate");
-               if(_budget.checked==false){
-                 _rate.disabled = false;
-                 _rate.value = "";
+              _budget.checked = false; if(_budget.checked===true){
+               _budget.checked = false;
+                 _rate.disabled = true;
                }
                else{
-                   _rate.disabled = true;
-                   _rate.value = "";
+                   _rate.disabled = false;
+                   _rate.value = "Gh¢10000";
                }
-            //   function 
-            _budget.checked = false;
+            
             }
             
 function jobPrice(){
