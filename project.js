@@ -1,5 +1,3 @@
- let projectr = document.getElementById("start-project");
- 
  (function() {  
              emailjs.init({ 
              publicKey: "D1y25vk5Im7SPLYnC", }); 
@@ -17,7 +15,7 @@
                 // date
                 emailjs.sendForm('service_qdmoeeb', 'template_vka0rx7', this)
                     .then(() => {
-                        console.log('SUCCESS!');                      projectr.disabled = true;
+                        console.log('SUCCESS!');                   
                         
 document.writeln("successfully sent a quote. Check your email for confirmation.");
 window.location.assign("https:/\/www.benitapollosolutions.com/success.html");
@@ -44,7 +42,7 @@ window.location.assign("https:/\/www.benitapollosolutions.com/success.html");
                    _rate.value = "";
                }
             //   function 
-            _budget.checked == false;
+            _budget.checked = false;
             }
             
 function jobPrice(){
@@ -64,17 +62,19 @@ function jobPrice(){
     }
     else if(jp.value === "Website Development"){
         rate.value = 'GH¢' + _wd;
-        _locked.checked == true;
+        _locked.checked = true;
         rate.disabled = true;
         console.log(_wd);
     }
     else if(jp.value === "Software Development"){
         rate.value = 'GH¢' + _sof;
-        _locked.checked == true;
+        _locked.checked = true;
         rate.disabled = true;
         console.log(_sof);
     }
     else{
+        _locked.checked = false;
+        rate.disabled = false;
         console.log(rate);
         console.error("something went wrong");
     }
