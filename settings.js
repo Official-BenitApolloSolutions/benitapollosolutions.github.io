@@ -24,7 +24,7 @@ if(typeof(Storage) !== "undefined"){
   localStorage.password = _password;
   console.log(localStorage.fullname);
   alert("Successfully registered! Login to continue");
-  location.reload();
+  window.open("https:/\/www.benitapollosolutions.com/institutelogin.html","Login",true);
  }
 }
 
@@ -55,7 +55,7 @@ function LoginInstitution(){
     if(email === _email && password === _password && institute.includes(_ins) && incode === reginstitute[1]){
         document.writeln("Logins accepted. ");
         document.writeln("Loading... please wait");
-        window.location.assign("https:/\/www.benitapollosolutions.com/crs.html");
+        window.open("https:/\/www.benitapollosolutions.com/crs.html","CRS",true);
     }
     else if(email === _email && password === _password){
         document.writeln("Logins accepted. ");
@@ -83,7 +83,7 @@ function ShowPassword(){
 function RememberMe(){
   let remm = document.userform.rememberme.checked;
   if(typeof(Storage) !== "undefined"){
-      sessionStorage.user = window.navigator.UserAgent;
+      sessionStorage.user = navigator.userAgent;
   }
   console.log(sessionStorage.user);
 }

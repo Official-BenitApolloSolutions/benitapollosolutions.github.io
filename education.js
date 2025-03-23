@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 function Logoff(){
 const currentUrl = window.location.href;
