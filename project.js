@@ -50,6 +50,7 @@ function jobPrice(){
     let _rate = document.getElementById("rate");
     let _dm = 3700;
     let _wd = 3000;
+    let _sof = 7000;
     
     if(jp.value === "Digital Marketing"){
         _rate.value = 'GH¢' + _dm;
@@ -59,8 +60,13 @@ function jobPrice(){
     else if(jp.value === "Website Development"){
         _rate.value = 'GH¢' + _wd;
         _locked.checked == true;
-        console.log(_wd)
-    }else{
+        console.log(_wd);
+    }else if(jp.value === "Software Development"){
+        _rate.value = 'GH¢' + _sof;
+        _locked.checked == true;
+        console.log(_wd);
+    }
+    else{
         _locked.checked == true;
         const _go = jp.selectedOptions[0];
         const _sd = jp.selectedOptions[1];
