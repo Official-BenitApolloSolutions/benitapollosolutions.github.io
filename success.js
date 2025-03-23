@@ -1,3 +1,20 @@
+'use strict'
+
+let currentUrl = window.location.href;
+
+window.onload = history.replaceState({}, '', currentUrl);
+
+if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/project-submission.html"){
+    document.writeln("Access Denied.");
+    document.writeln("Not Allowed");
+}else if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/educationsolution.html"){
+    document.writeln("Access Denied.");
+    document.writeln("Not Allowed");
+}    
+else{
+    console.log("secure access");
+}
+
 const verifiedUser = function (){
    // let userstatus = document.querySelector("#userstatus");
    const htmlBody = document.querySelector("body");
