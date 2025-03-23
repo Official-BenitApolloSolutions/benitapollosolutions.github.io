@@ -6,10 +6,10 @@ if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/institute
     document.writeln("Access Denied.");
     document.writeln("Not Allowed");
 }
-if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/account_profile.html"){
+/*if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/account_profile.html"){
     document.writeln("Access Denied.");
     document.writeln("Not Allowed");
-}
+}*/
 else{
     console.log("secure login");
 }
