@@ -59,20 +59,13 @@ function jobPrice(){
         _rate.value = 'GH¢' + _wd;
         _locked.checked == true;
         console.log(_wd);
-    }else if(jp.value === "Software Development"){
+    }
+    else if(jp.value === "Software Development"){
         _rate.value = 'GH¢' + _sof;
         _locked.checked == true;
-        console.log(_wd);
+        console.log(_sof);
     }
     else{
-        _locked.checked == true;
-        const _go = jp.selectedOptions[0];
-        const _sd = jp.selectedOptions[1];
-        const _gos = _go.value;
-        const _sad = _sd.value;
-        const extragovalue = _go.dataset.extraValue;
-        const extrasdvalue = _sad.dataset.extraValue;
-        _rate.value = _wd + _dm;
         console.log(_rate);
         console.error("something went wrong");
     }
