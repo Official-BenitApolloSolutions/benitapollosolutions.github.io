@@ -1,4 +1,3 @@
-"use strict"
  (function() {  
              emailjs.init({ 
              publicKey: "D1y25vk5Im7SPLYnC", }); 
