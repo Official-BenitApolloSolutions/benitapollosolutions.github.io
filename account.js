@@ -1,13 +1,16 @@
-'use strict'
-let user;
-let currentUrl = window.location.href;
+'use strict';
 
-window.onload = history.replaceState({}, '', currentUrl);
+let user = '';
 
 if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/institutelogin.html"){
     document.writeln("Access Denied.");
     document.writeln("Not Allowed");
-}else{
+}
+else if(window.document.referrer !== "https:/\/www.benitapollosolutions.com/account_profile.html"){
+    document.writeln("Access Denied.");
+    document.writeln("Not Allowed");
+}
+else{
     console.log("secure login");
 }
 
