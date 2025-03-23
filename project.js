@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
  (function() {  
              emailjs.init({ 
              publicKey: "D1y25vk5Im7SPLYnC", }); 
@@ -6,12 +6,12 @@
              
           window.onload = function() {
           
-          let studyform = document.getElementById('study-form');
+          let formproject = document.getElementById('form-project');
           
-    if(studyform.addEventListener){
+    if(formproject.addEventListener){
         // start of control
         
-         studyform.addEventListener('submit', function(event) {
+         formproject.addEventListener('submit', function(event) {
                 event.preventDefault();
                 // date
                 emailjs.sendForm('service_qdmoeeb', 'template_vka0rx7', this)
