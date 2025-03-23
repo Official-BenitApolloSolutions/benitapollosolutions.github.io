@@ -58,18 +58,21 @@ function jobPrice(){
         rate.value = 'GH¢' + _dm;
         _locked.checked = true;
         rate.disabled = true;
+        rate.placeholder = "GH¢3700"
        console.log(_dm)
     }
     else if(jp.value === "Website Development"){
         rate.value = 'GH¢' + _wd;
         _locked.checked = true;
         rate.disabled = true;
+        rate.placeholder = 'GH¢3000'
         console.log(_wd);
     }
     else if(jp.value === "Software Development"){
         rate.value = 'GH¢' + _sof;
         _locked.checked = true;
         rate.disabled = true;
+        rate.placeholder = 'Gh¢7000'
         console.log(_sof);
     }
     else{
