@@ -93,7 +93,8 @@
                        <td>
                                <div class="text-bg-light rounded-circle p-2" style="width:100px; height:100px; margin:3px; position:relative;">
                                    <p class="lead"><center><i class="bi bi-journals"></i></center><center class="text-uppercase">Class</center> </p>
-                   <span class="badge" style="position: absolute;top:79%;left:50%; background:#40E0D0"><i class="bi bi-plus"></i></span>                
+                   <span class="badge" style="position: absolute;top:79%;left:50%; background:#40E0D0"><i class="bi bi-plus" data-bs-toggle="offcanvas"
+                   data-bs-target="#avail-program"></i></span>                
                                </div>
                        </td>
                    </tr>
@@ -132,30 +133,28 @@
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
           </div>
           <div class="offcanvas-body">
-              <p class="lead">Current Rate: Ghs25 /hr</p>
               <form>
                   <label>Adjust Rate</label>
-                  <input type="number" class="form-control mb-2" placeholder="adjust rate">
+                  <input type="number" class="form-control mb-2" placeholder="Current Rate: GH¢25/hr">
                   <input type="submit" class="btn btn-primary" value="Change Rate">
               </form>
           </div>
       </div>
-      <div class="offcanvas offcanvas-end">
+      
+      <!-- Programs -->
+      <div class="offcanvas offcanvas-end" id="avail-program">
           <div class="offcanvas-header">
               <h3 class="offcanvas-title">Program</h3>
-              <button class="btn-close" type="button" data-bs-toggle="offcanvas"></button>
+              <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
           </div>
           <div class="offcanvas-body">
-              <div class="list-group">
-                  <ul class="list-group">
+                  <ul class="list-group mb-5">
                   <li class="list-group-item">STEM / Robotics</li>
                   <li class="list-group-item">Computing</li>
                   <li class="list-group-item">Elective ICT</li>
                   <li class="list-group-item">Core ICT</li>
               </ul>
-              </div>
-              <div class="container">
-                  <table class="table">
+              <table class="table table-striped">
                       <tr>
                           <th>Course Code</th>
                           <th>
@@ -170,17 +169,16 @@
                       <tr>
                           <td>CS100</td>
                           <td>Computing</td>
-                          <td>Computer Systems A: Data Representation and Processing.</td>
+                          <td>Computer Systems A: Data Storage and Manipulation.</td>
                       </tr>
                       <tr>
                           <td>IT03</td>
                           <td>Core ICT</td>
-                          <td>Digital Technology </td>
+                          <td>Computer Systems and Information Security.</td>
                       </tr>
                   </table>
-              </div>
-          </div>
-      </div>
+         </div>
+    </div>
       <script src="https://www.benitapollosolutions.com/account.js"></script>
    </body>
 </html>      
