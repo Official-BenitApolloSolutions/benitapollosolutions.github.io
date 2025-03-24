@@ -175,25 +175,32 @@ function PayDay(){
       
     switch(new Date().getDay()){
     case 0:
-           pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + _febpay - 200;
+           pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break;
     case 1:
-       pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(fourthweek) + _febpay - 200;
+       pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break;
      case 2:
-     pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(fourthweek) + _febpay - 200;
+     pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break;
      case 3:
-        pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(fourthweek) + _febpay - 200;
+        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break; 
        case 4:
-        pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(fourthweek) + _febpay - 200;
+        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break;
        case 5:
-        pay_rate.textContent = Number(firstweek) + Number(secondweek) + Number(thirdweek) + Number(fourthweek) + _febpay - 200;
+        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break;
        case 6:
-        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) + _febpay - 200;
+        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
        break; 
   default:
         window.alert("Have a great day today!");
@@ -214,7 +221,7 @@ PayDay();
         let curmonth = today.getMonth() + 1;
         
         for(let i=0; i < nodeList.length; i++){
-            nodeList[i].innerHTML = curmonth + "" + today.getYear();
+            nodeList[i].innerHTML = curmonth + " " + today.getYear();
         }
         
         for(let n=0; n < _jobnode.length; n++){
