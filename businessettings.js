@@ -137,7 +137,7 @@ const PayRate = function(){
 
 function TotalPaymentDue(){
     for(let k=0; k < curList.length; k++){
-            curList[k].textContent = "GHS";
+            curList[k].textContent = "GH¢";
             
         };
         
