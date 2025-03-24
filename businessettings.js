@@ -142,7 +142,8 @@ function TotalPaymentDue(){
         };
         
         for(let i=0; i < payList.length; i++){
-            payList[i].textContent = PayRate() + 150;
+            payList[i].textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _febpay - 200;
             
         };
 }
