@@ -143,7 +143,7 @@ function TotalPaymentDue(){
         
         for(let i=0; i < payList.length; i++){
             payList[i].textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
             
         };
 }
@@ -177,31 +177,31 @@ function PayDay(){
     switch(new Date().getDay()){
     case 0:
            pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break;
     case 1:
        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break;
      case 2:
      pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break;
      case 3:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break; 
        case 4:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break;
        case 5:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break;
        case 6:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 200;
+Number(fourthweek.textContent) + _febpay - 500;
        break; 
   default:
         window.alert("Have a great day today!");
