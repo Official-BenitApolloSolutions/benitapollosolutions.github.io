@@ -40,6 +40,8 @@ signinEmail.addEventListener('click', (e) => {
     // The signed-in user info.
     const user = result.user;
     // IdP data available using getAdditionalUserInfo(result)
+    alert(user.displayName);
+    window.open("https:/\/www.benitapollosolutions.com/home.html","Benit Apollo Solutions",true);
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -49,6 +51,7 @@ signinEmail.addEventListener('click', (e) => {
     const email = error.customData.email;
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
+    alert(errorMessage);
     // ...
   });
     
