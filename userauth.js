@@ -26,7 +26,9 @@ const app = initializeApp(firebaseConfig);
   const provider = new GoogleAuthProvider(app);
 const auth = getAuth(app);
 
-signin-email.addEventListener('click', (e) => {
+let signinEmail = document.getElementById('signin-email');
+
+signinEmail.addEventListener('click', (e) => {
     signInWithRedirect(auth, provider);
     
     getRedirectResult(auth)
