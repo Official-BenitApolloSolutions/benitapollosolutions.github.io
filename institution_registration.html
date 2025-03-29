@@ -10,12 +10,12 @@
          <script src="https://www.benitapollosolutions.com/settings.js"></script>
     </head>
     <body>
-        <div class="container">
-        <div class="shadow-lg m-4 p-4 rounded">
+        <div class="container mt-5 mb-5">
+        <div class="shadow-lg p-4 rounded">
             <h1 class="dispay-2">Register an account</h1>
             <span class="text-muted">Fill out the details </span><hr>
             <div id="alertstatus"></div>
-            <form name="regform" class="was-validated">
+            <form name="regform" class="was-validated" autocomplete="off">
                 <div class="mt-2 mb-3">
                     <label for="fullname" class="form-label">
                         Institute:
@@ -73,10 +73,22 @@
                                    <button class="btn btn-danger" data-bs-dismiss="modal" type="button">close</button>
                                </div>
                             </div>
-                        </div>
+                        </div>                
                     </div>
-                    <p>Already have an account? <a href="https://www.benitapollosolutions.com/institutelogin.html" class="form-link text-decoration-none">Login</a></p>
             </form>
+            <hr>
+                  <div class="text-bg-light" style="width:20px;height:20px;position: absolute;bottom:-36%;left:50%">
+                        <p class="text-muted">Or</p>  
+        </div>
+        <button class="btn btn-danger d-flex mx-auto mt-4" id="register-email">Register with email instead </button>
+        <!-- end of window -->
+        </div>
+        <!--<div class="container mt-3">
+            <p class="text-muted text-center">signin instead</p>
+        </div>-->
+        <div class="cotainer mt-4">
+            <div class="text-bg-white shadow-lg rounded p-3">
+          <p class="h6 text-center mt-2">Already have an account? <a href="https://www.benitapollosolutions.com/institutelogin.html" class="form-link text-decoration-none">Login</a></p>  
         </div>
         </div>
     </body>
