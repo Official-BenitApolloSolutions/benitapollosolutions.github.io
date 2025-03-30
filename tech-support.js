@@ -23,7 +23,7 @@
   const submitmessage = document.getElementById("submit");
   submitmessage.addEventListener('click', function(e){
       e.preventDefault();      
-      let username = comfirm("enter username");
+      let username = confirm("enter username");
       
       const id = push(child(ref(db), 'messages')).key;
       
