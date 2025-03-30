@@ -3,7 +3,7 @@
   
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
   import { getAnalytics } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
-  import { getDatabase, ref, set, get, child, push, onValue } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
+  import { getDatabase, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
    
   const firebaseConfig = {
     apiKey: "AIzaSyDRgs9CNgehCvqMLL4o_m-Kpa5ycMPUpt8",
@@ -23,13 +23,26 @@
   const submitmessage = document.getElementById("submit");
   submitmessage.addEventListener('click', function(e){
       e.preventDefault();      
-      let username = "marilyn monroe";
+      let username = comfirm("enter username");
       
       const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
           username: username,
           message: document.getElementById("message").value
-      });
+      }); document.getElementById("message").value = "";
       alert("message sent successfully!");
+      
+  });
+  
+  const newMsg = ref(db, 'messages/');
+  onChildAdded(newMsg, (data) =>{
+      if(data.val().name !== username){
+          let divData = "<p class='text-start'>" + data.val().message + "" + "</p>";
+          let dm1 = document.getElementById("bodyContent");
+          dm1.insertAdjacentHTML('beforebegin',divData);
+      }else{
+          let divData = "<p class='text-end'>" + data.val().message + "" + "</p>";
+      let dm1 = document.getElementById("bodyContent");    dm1.insertAdjacentHTML('beforebegin',divData);
+      }
   });
