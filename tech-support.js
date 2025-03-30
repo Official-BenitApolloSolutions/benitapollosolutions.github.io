@@ -23,7 +23,7 @@
   const submitmessage = document.getElementById("submit");
   submitmessage.addEventListener('click', function(e){
       e.preventDefault();
-      let message = document.getElementById("message");
+      let message = document.getElementById("message").value;      
       let username = "marilyn monroe";
       
       const id = push(child(ref(db), 'messages')).key;
