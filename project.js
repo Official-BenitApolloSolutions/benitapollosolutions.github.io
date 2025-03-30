@@ -87,6 +87,7 @@ function jobPrice(){
     }
 }
 
+/*
 function supportMessage(){
     document.writeln("checking who is online... please wait");
     window.open("https:/\/www.benitapollosolutions.com/techsupport.html","Message",true);
@@ -95,4 +96,4 @@ function supportMessage(){
 const message = document.getElementById("tech-message");
 if(message.addEventListener){
     message.addEventListener('click',supportMessage);
-}
+}*/
