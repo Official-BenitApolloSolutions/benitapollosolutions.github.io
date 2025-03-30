@@ -24,9 +24,9 @@
   submitmessage.addEventListener('click', function(e){
       e.preventDefault();
       let message = document.getElementById("message");
-      let username = "john doe";
+      let username = "marilyn monroe";
       
-      const id = push(child(ref(db), 'messages')).keys;
+      const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
           username: username,

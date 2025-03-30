@@ -97,7 +97,7 @@
                 <ul type="circle">
                 <li class="h4 mt-2"><span class="badge bg-success">A.I assistant</span></li>
                 <li class="h4"><span class="badge bg-warning">start support?</span></li>
-                <li class="h4"><span class="badge bg-primary" id="tech-message" data-bs-toggle="collapse" data-bs-target="#support-message">Message</span></li>
+                <li class="h4"><span class="badge bg-primary" data-bs-toggle="collapse" data-bs-target="#support-message">Message</span></li>
                 <li class="h4"><span class="badge rounded-pill" style="background:tomato">services</span></li>
                 </ul>
                <!-- <p class="text-start">User</p>
@@ -106,8 +106,10 @@
 
 <!-- tech support -->
         <div class="collapse" id="support-message">
-                    <textarea type="chat" class ="form-control mb-2" placeholder="send message" id="message"></textarea>
-                    <button class="btn btn-primary" id="submit">Send</button>
+            <form method="post">
+                <textarea type="chat" class ="form-control mb-2" placeholder="send message" id="message"></textarea>
+                    <button type="submit" class="btn btn-primary" id="submit">Send</button>
+            </form>
         </div>
         <!-- end of tech support -->
             </div>
