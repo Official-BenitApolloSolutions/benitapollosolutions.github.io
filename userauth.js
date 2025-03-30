@@ -40,7 +40,7 @@ signinEmail.addEventListener('click', (e) => {
     // The signed-in user info.
     const user = result.user;
     // IdP data available using getAdditionalUserInfo(result)
-    alert('Hello! ' + user.displayName);
+    alert(user.displayName);
     window.open("https:/\/www.benitapollosolutions.com/home.html","Benit Apollo Solutions",true);
     // ...
   }).catch((error) => {

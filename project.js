@@ -1,4 +1,4 @@
-//prevent abuse
+//start
 'use strict';
 
  (function() {  
@@ -21,10 +21,12 @@
                         console.log('SUCCESS!');                   
                         
 document.writeln("successfully sent a quote. Check your email for confirmation.");
-window.location.assign("https:/\/www.benitapollosolutions.com/success.html");
+window.open("https:/\/www.benitapollosolutions.com/success.html","Project Submitted",true);
             location.reload();        
                     }, (error) => {
-                        console.log('FAILED...', error);
+                       document.writeln("Unsuccessful retry!");
+                       location.reload();
+      console.log('FAILED...', error);
                     });
             });
         
@@ -59,24 +61,27 @@ function jobPrice(){
     if(jp.value === "Digital Marketing"){
         rate.value = 'GH¢' + _dm;
         _locked.checked = true;
-        rate.disabled = true;
-       console.log(_dm)
+        /*rate.disabled = true;*/
+       console.log(_dm);
+       console.log(rate);
     }
     else if(jp.value === "Website Development"){
         rate.value = 'GH¢' + _wd;
         _locked.checked = true;
-        rate.disabled = true;
+        /*rate.disabled = true;*/
         console.log(_wd);
+        console.log(rate);
     }
     else if(jp.value === "Software Development"){
         rate.value = 'GH¢' + _sof;
         _locked.checked = true;
-        rate.disabled = true;
+        /*rate.disabled = true;*/
         console.log(_sof);
+        console.log(rate);
     }
     else{
         _locked.checked = false;
-        rate.disabled = false;
+        /*rate.disabled = false;*/
         console.log(rate);
         console.error("something went wrong");
     }
