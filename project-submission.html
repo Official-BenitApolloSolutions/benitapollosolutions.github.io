@@ -82,6 +82,13 @@
                 <button class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
             <div class="offcanvas-body">
+                <form class="d-flex mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">?</span>
+                        <input type="text" class="form-control me-auto" placeholder="search">
+                        <button class="btn btn-primary">info</button>
+                    </div>
+                </form>
                 <small class="text-secondary">Info:</small>
                 <span class="badge bg-success rounded-pill">online</span>
                 <span class="badge bg-danger rounded-pill">offline</span>
@@ -90,12 +97,19 @@
                 <ul type="circle">
                 <li class="h4 mt-2"><span class="badge bg-success">A.I assistant</span></li>
                 <li class="h4"><span class="badge bg-warning">start support?</span></li>
-                <li class="h4"><span class="badge bg-primary" id="tech-message">Message</span></li>
+                <li class="h4"><span class="badge bg-primary" id="tech-message" data-bs-toggle="collapse" data-bs-target="#support-message">Message</span></li>
                 <li class="h4"><span class="badge rounded-pill" style="background:tomato">services</span></li>
                 </ul>
                <!-- <p class="text-start">User</p>
                 <p class="text-end">com1</p>-->
 <dotlottie-player src="https://lottie.host/79ab7f98-33ba-4f8d-bece-ebe1b18d1cd3/gl3rVxEgKu.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+
+<!-- tech support -->
+        <div class="collapse" id="support-message">
+                    <textarea type="chat" class ="form-control mb-2" placeholder="send message" id="message"></textarea>
+                    <button class="btn btn-primary" id="submit">Send</button>
+        </div>
+        <!-- end of tech support -->
             </div>
         </div>
         <div class="offcanvas offcanvas-start" id="ai-project">
@@ -106,5 +120,6 @@
                 <p class="lead">Ready?</p>
             </div>
         </div>
+        <script src="https://www.benitapollosolutions.com/tech-support.js"></script>
     </body>
 </html>
