@@ -22,15 +22,14 @@
   const db = getDatabase(app);
   const submitmessage = document.getElementById("submit");
   submitmessage.addEventListener('click', function(e){
-      e.preventDefault();
-      let message = document.getElementById("message").value;      
+      e.preventDefault();      
       let username = "marilyn monroe";
       
       const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
           username: username,
-          message: message
+          message: document.getElementById("message").value
       });
       alert("message sent successfully!");
   });
