@@ -86,3 +86,11 @@ function jobPrice(){
         console.error("something went wrong");
     }
 }
+
+function supportMessage(){
+    document.writeln("checking who is online... please wait");
+    window.open("https:/\/www.benitapollosolutions.com/techsupport.html","Message",true);
+}
+
+const message = document.getElementById("tech-message");
+message.addEventListener('click',supportMessage);
