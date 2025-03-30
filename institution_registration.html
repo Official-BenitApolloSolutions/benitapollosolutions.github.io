@@ -25,7 +25,7 @@
                     <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="mt-2 mb-3">
-                    <label for="fullname" class="form-label">
+                    <label for="insticode" class="form-label">
                         Institute Code:
                     </label>
                     <input type="text" placeholder="Institute Code" class="form-control form-control-lg" id="insticode" required>
@@ -47,7 +47,7 @@
                     <div class="mb-3">
                         <label for="confirmpassword" class="form-label">Confirm Password</label>
                         <input type="password" class="form-control form-control-lg" placeholder="Confirm Password"
-                        id="confirm_password" required>
+                        id="confirmpassword" required>
                         <div class="valid-feedback">Valid</div>
                         <div class="invalid-feedback">Please fill out this field.</div>
                     </div>
@@ -56,7 +56,7 @@
                         class="form-label">Show Password</label>
                         <input type="checkbox" class="form-check-input" onclick="ShowPassword()">
                     </div>
-                    <button class="btn btn-primary mb-3 mt-3 btn-lg" type="button" onclick="RegisterUser()">Register</button>
+                    <button class="btn btn-primary mb-3 mt-3 btn-lg" type="button" onclick="RegisterUser()" id="submit">Register</button>
                     
                     <div class="modal" id="confirem">
                         <div class="modal-dialog">
@@ -77,19 +77,17 @@
                     </div>
             </form>
             <hr>
-                  <div class="text-bg-light" style="width:20px;height:20px;position: absolute;bottom:-36%;left:50%">
+                  <div class="text-bg-light rounded" style="width:20px;height:20px;position: absolute;bottom:-36%;left:50%">
                         <p class="text-muted">Or</p>  
         </div>
         <button class="btn btn-danger d-flex mx-auto mt-4" id="register-email">Register with email instead </button>
         <!-- end of window -->
         </div>
-        <!--<div class="container mt-3">
-            <p class="text-muted text-center">signin instead</p>
-        </div>-->
         <div class="cotainer mt-4">
             <div class="text-bg-white shadow-lg rounded p-3">
           <p class="h6 text-center mt-2">Already have an account? <a href="https://www.benitapollosolutions.com/institutelogin.html" class="form-link text-decoration-none">Login</a></p>  
         </div>
         </div>
+        <script type="module" src="https://www.benitapollosolutions.com/reguser.js"></script>
     </body>
 </html>
