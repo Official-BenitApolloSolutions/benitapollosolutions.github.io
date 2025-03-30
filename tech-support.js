@@ -37,7 +37,7 @@
   
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
-      if(data.val().name !== username){
+      if(data.val().name !== "John Doe"){
           let divData = "<p class='text-start'>" + data.val().message + "" + "</p>";
           let dm1 = document.getElementById("bodyContent");
           dm1.insertAdjacentHTML('beforebegin',divData);
