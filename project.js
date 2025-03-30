@@ -93,4 +93,6 @@ function supportMessage(){
 }
 
 const message = document.getElementById("tech-message");
-message.addEventListener('click',supportMessage);
+if(message.addEventListener){
+    message.addEventListener('click',supportMessage);
+}
