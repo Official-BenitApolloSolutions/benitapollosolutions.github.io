@@ -44,9 +44,11 @@
           let divData = data.val().message + "<br>";
           let dm1 = document.getElementById("you");
           dm1.insertAdjacentHTML('beforebegin',divData);
+          console.log(localStorage.quser);
       }else{
           let divData = data.val().message + "<br>";
       let com1 = document.getElementById("com");
       com1.insertAdjacentHTML('beforebegin',divData);
+      console.log("com: " + localStorage.quser);
       }
   });
