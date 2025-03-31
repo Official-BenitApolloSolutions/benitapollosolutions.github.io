@@ -31,6 +31,7 @@ let notfound = 0;
 
 function botHelper(){
   console.log("i got executed");
+ document.querySelector("input").placeholder = '🤖';
 }
 
 function Senddata(){
