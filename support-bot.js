@@ -31,7 +31,7 @@ let notfound = 0;
 
 function botHelper(){
   console.log("i got executed");
- document.querySelector("input").placeholder = '🤖';
+ document.querySelector("#search").placeholder = '🤖';
 }
 
 function Senddata(){
@@ -39,4 +39,4 @@ function Senddata(){
      console.log("hello world!");
 }
 
-setTimeout(botHelper(),10000);
+setTimeout(botHelper(),1000000);
