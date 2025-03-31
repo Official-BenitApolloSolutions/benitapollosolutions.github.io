@@ -30,11 +30,12 @@ let notfound = 0;
 }
 
 function botHelper(){
-/* let placebot = document.getElementById("searchterms").placeholder;
-     console.log(placebot.placeholder = "hel");*/
-     console.log("hello hi haters, i make you no dey bed erh");
-    // console.error("something went on");
- 
+  console.log("i got executed");
+}
+
+function Senddata(){
+     alert("Hot wire🔥\n\nAgents are online");
+     console.log("hello world!");
 }
 
 setTimeout(botHelper(),10000);
