@@ -49,3 +49,7 @@
           console.log("user " + username);
       }
   });
+  
+  function reloadData(){
+      newMsg.remove();
+  }
