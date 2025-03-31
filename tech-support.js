@@ -25,6 +25,9 @@
       e.preventDefault();      
       let myName = prompt("enter username");
       let username = myName;
+      if(localStorage !== "undefined "){
+          localStorage.username = username;
+      }
       const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
@@ -37,12 +40,13 @@
   
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
-      if(data.val().name !== "John Doe"){
-          let divData = "<p class='text-start'>" + data.val().message + "" + "</p>";
-          let dm1 = document.getElementById("bodyContent");
+      if(data.val().name !== localStorage.username){
+          let divData = data.val().message + "";
+          let dm1 = document.getElementById("you");
           dm1.insertAdjacentHTML('beforebegin',divData);
       }else{
-          let divData = "<p class='text-end'>" + data.val().message + "" + "</p>";
-      let dm1 = document.getElementById("bodyContent");    dm1.insertAdjacentHTML('beforebegin',divData);
+          let divData = data.val().message + "";
+      let com1 = document.getElementById("com");
+      com1.insertAdjacentHTML('beforebegin',divData);
       }
   });
