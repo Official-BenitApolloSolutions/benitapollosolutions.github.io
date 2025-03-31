@@ -51,5 +51,6 @@
   });
   
   function reloadData(){
+    const newMsg = ref(db, 'messages/');
       newMsg.remove();
   }
