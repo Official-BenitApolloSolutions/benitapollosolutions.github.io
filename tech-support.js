@@ -1,6 +1,5 @@
 'use strict';
 
-  
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
   import { getAnalytics } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
   import { getDatabase, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
@@ -15,19 +14,17 @@
     appId: "1:522121797709:web:7bc423e6d79cff3081bc04",
     measurementId: "G-NJ6LJQ4RCP"
   };
-
+  
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const db = getDatabase(app);
   const submitmessage = document.getElementById("submit");
+  
+   /* user */
+  let username = "John Doe";
   submitmessage.addEventListener('click', function(e){
       e.preventDefault();      
-      let myName = prompt("enter username");
-      let username = myName;
-      if(localStorage !== "undefined "){
-          localStorage.quser = username;
-      }
       const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
@@ -40,15 +37,15 @@
   
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
-      if(data.val().name !== localStorage.quser){
+      if(data.val().name !== username){
+      let divData = data.val().message + "<br>";
+      let com1 = document.getElementById("com");
+      com1.insertAdjacentHTML('beforebegin',divData);
+      console.log("com: " + username);
+      }else{
           let divData = data.val().message + "<br>";
           let dm1 = document.getElementById("you");
           dm1.insertAdjacentHTML('beforebegin',divData);
-          console.log(localStorage.quser);
-      }else{
-          let divData = data.val().message + "<br>";
-      let com1 = document.getElementById("com");
-      com1.insertAdjacentHTML('beforebegin',divData);
-      console.log("com: " + localStorage.quser);
+          console.log("user " + username);
       }
   });
