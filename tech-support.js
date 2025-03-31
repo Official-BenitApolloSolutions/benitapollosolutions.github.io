@@ -37,7 +37,7 @@
   
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
-      if(data.val().name !== username){
+      if(data.val().username !== username){
       let divData = data.val().message + "<br>";
       let com1 = document.getElementById("com");
       com1.insertAdjacentHTML('beforebegin',divData);

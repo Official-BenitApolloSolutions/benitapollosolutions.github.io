@@ -67,7 +67,7 @@ function MyFunction(){
   
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
-      if(data.val().name === "ADMIN"){
+      if(data.val().username === "ADMIN"){
       let divData = data.val().message + "<br>";
       let com1 = document.getElementById("com");
       com1.insertAdjacentHTML('beforebegin',divData);
