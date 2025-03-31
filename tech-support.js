@@ -50,7 +50,4 @@
       }
   });
   
-  function reloadData(){
-   document.getElementById("com").value = "";
- document.getElementById("you").value = ""
-  }
+  export { db };
