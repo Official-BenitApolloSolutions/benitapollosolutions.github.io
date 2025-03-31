@@ -14,7 +14,8 @@
         <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script src="https://www.benitapollosolutions.com/main.js"></script>
+       <!-- <script src="https://www.benitapollosolutions.com/support-bot.js"></script>-->
+       <script src="support-bot.js"></script>
         <script src="https://www.benitapollosolutions.com/site.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
@@ -121,8 +122,14 @@
                 <form class="d-flex mb-3">
                     <div class="input-group">
                         <span class="input-group-text">?</span>
-                        <input type="text" class="form-control me-auto" placeholder="search">
-                        <button class="btn btn-primary">info</button>
+                        <input type="text" class="form-control me-auto" placeholder="search" list="searchquery" id="searchterms" onchange="searchHelper()">
+                        <datalist id="searchquery">
+                            <option>Education</option>
+                            <option>Health</option>
+                            <option>Shop</option>
+                            <option>invoice number </option>
+                        </datalist>
+                        <button class="btn btn-primary" onclick="searchHelper()">info</button>
                     </div>
                 </form>
                 <small class="text-muted">Info:</small>
@@ -134,7 +141,7 @@
                 <li class="h4 mt-2"><span class="badge bg-success">A.I assistant</span></li>
                 <li class="h4"><span class="badge bg-warning">start support?</span></li>
                 <li class="h4"><span class="badge bg-primary" data-bs-toggle="collapse" data-bs-target="#support-message">Message</span></li>
-                <li class="h4"><span class="badge rounded-pill" style="background:tomato" id="services">services</span></li>
+                <li class="h4"><span class="badge rounded-pill" style="background:tomato" id="services" onclick="location.href='https://www.benitapollosolutions.com/basservices.html'">services</span></li>
                 </ul>
                <!-- <p class="text-start">User</p>
                 <p class="text-end">com1</p>-->
@@ -143,7 +150,7 @@
 <!-- tech support -->
         <div class="collapse" id="support-message">
             <div class="text-bg-secondary p-3 mb-2 rounded">
-                <p class="text-end"><span onclick="relieveData()"><i class="bi bi-arrow-clockwise"></i></span></p>
+                <p class="text-end"><span onclick="resendData()"><i class="bi bi-arrow-clockwise"></i></span></p>
     <p class="text-start"><span class="badge bg-success" id="com"><i class="bi bi-robot"></i></span></p>
         <p class="text-end"><span class="badge bg-primary" id="you">You</span></p>
 </div>

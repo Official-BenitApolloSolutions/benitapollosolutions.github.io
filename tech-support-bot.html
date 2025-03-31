@@ -1,0 +1,53 @@
+<div class="p-3 text-bg-primary rounded-circle" id="tech_support">
+                <h1 class="text-center" data-bs-toggle="offcanvas" data-bs-target="#tech-support"><i class="bi bi-robot"></i></h1>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end text-bg-light" id="tech-support">
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title"><i class="bi bi-robot"></i> Tech Support <span class="badge bg-info">offline</span></h3>
+                <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form class="d-flex mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text">?</span>
+                        <input type="text" class="form-control me-auto" placeholder="search">
+                        <datalist id="searchquery">
+                            <option>Education</option>
+                            <option>Health</option>
+                            <option>Shop</option>
+                            <option>invoice number </option>
+                        </datalist>
+                        <button class="btn btn-primary">info</button>
+                    </div>
+                </form>
+                <small class="text-muted">Info:</small>
+                <span class="badge bg-success rounded-pill">online</span>
+                <span class="badge bg-danger rounded-pill">offline</span>
+                <span class="badge bg-dark rounded-pill">start a.i. project🔥 </span>
+                <span class="badge bg-info rounded-pill">network</span><hr>
+                <ul type="circle">
+                <li class="h4 mt-2"><span class="badge bg-success">A.I assistant</span></li>
+                <li class="h4"><span class="badge bg-warning">start support?</span></li>
+                <li class="h4"><span class="badge bg-primary" data-bs-toggle="collapse" data-bs-target="#support-message">Message</span></li>
+                <li class="h4"><span class="badge rounded-pill" style="background:tomato" id="services">services</span></li>
+                </ul>
+               <!-- <p class="text-start">User</p>
+                <p class="text-end">com1</p>-->
+<dotlottie-player src="https://lottie.host/79ab7f98-33ba-4f8d-bece-ebe1b18d1cd3/gl3rVxEgKu.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+
+<!-- tech support -->
+        <div class="collapse" id="support-message">
+            <div class="text-bg-secondary p-3 mb-2 rounded">
+                <p class="text-end"><span onclick="reloadData()"><i class="bi bi-arrow-clockwise"></i></span></p>
+    <p class="text-start"><span class="badge bg-success" id="com"><i class="bi bi-robot"></i></span></p>
+        <p class="text-end"><span class="badge bg-primary" id="you">You</span></p>
+</div>
+            <form method="post">
+                <textarea type="chat" class ="form-control mb-2" placeholder="send message" id="message"></textarea>
+                    <button type="submit" class="btn btn-primary" id="adminsubmit">Send</button>
+            </form>
+        </div>
+        <!-- end of tech support -->
+            </div>
+        </div>

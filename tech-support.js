@@ -50,10 +50,11 @@
       }
   });
   
-  function relieveData(){
+  function resendData(){
    /*let newMsg = ref(db, 'messages/');/
    db.ref('messages/').remove();
   newMsg.remove(); /document.getElementById("com").value = "";
  document.getElementById("you").value = ""*/
      alert("hello world");
+     console.log("hello world!");
   }
