@@ -51,8 +51,9 @@
   });
   
   function relieveData(){
- let newMsg = ref(db, 'messages/');
-  newMsg.remove(); /*document.getElementById("com").value = "";
+   /*let newMsg = ref(db, 'messages/');/
+   db.ref('messages/').remove();
+  newMsg.remove(); /document.getElementById("com").value = "";
  document.getElementById("you").value = ""*/
- console.log("hello world");
+     alert("hello world");
   }
