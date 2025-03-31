@@ -91,7 +91,7 @@ const openSuite = function(){
   }
   
  //search controller 
- const searchHelper = function (){
+ function searchHelper(){
  let searxh = document.getElementById("searchterms").value;
 let thesearxh = searxh.trim();
 let searchresults;
