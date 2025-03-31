@@ -58,8 +58,10 @@
                     <input name="name" type="email" id="email" class="form-control mb-3" placeholder="Enter email" required>
                     <label class="form-label" for="telnumber">Phone Number</label>
                     <input type="tel" placeholder="Enter phone number" name="telephone" class="form-control" id="telnumber" size="10" maxlength="10" required><hr>
-                    <label class="form-label">Additional Files</label>
-                    <input class="form-control mb-4" type="file" value=""><hr>
+                    <label class="form-label">Additional Files: </label>
+                    <button class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#upload-file">Attach Files</button>
+                 <hr>
                     <div class="form-check form-switch">
                        <input type="checkbox" class="form-check-input" id="locked" onclick="Budget()">
                     </div>
@@ -107,7 +109,7 @@
 <!-- tech support -->
         <div class="collapse" id="support-message">
             <div class="text-bg-secondary p-3 mb-2 rounded">
-                <p class="text-end"><span onclick="reloadData()"><i class="bi bi-arrow-clockwise"></i></span></p>
+                <p class="text-end"><span onclick="resendData()"><i class="bi bi-arrow-clockwise"></i></span></p>
     <p class="text-start"><span class="badge bg-success" id="com"><i class="bi bi-robot"></i></span></p>
         <p class="text-end"><span class="badge bg-primary" id="you">You</span></p>
 </div>
@@ -125,6 +127,23 @@
             </div>
             <div class="offcanvas-body">
                 <p class="lead">Ready?</p>
+            </div>
+        </div>
+        <div class="modal" id="upload-file">
+            <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h3 class="modal-title">Upload File</h3>
+                       <button class="btn-close" data-bs-dismiss="modal"></button>
+                   </div>
+                   <div class="modal-body">
+                       <small class="text-muted">upload additional files, logos, gallery etc.</small>
+                       <input class="form-control mt-2 mb-4" type="file" value="">
+                   </div>
+                   <div class="modal-footer">
+                       <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                   </div>
+               </div>
             </div>
         </div>
         <script type="module"  src="https://www.benitapollosolutions.com/tech-support.js"></script>

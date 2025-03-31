@@ -55,6 +55,6 @@
    db.ref('messages/').remove();
   newMsg.remove(); /document.getElementById("com").value = "";
  document.getElementById("you").value = ""*/
-     alert("hello world");
+     alert("Hot wire🔥");
      console.log("hello world!");
   }
