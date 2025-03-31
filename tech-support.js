@@ -51,6 +51,6 @@
   });
   
   function reloadData(){
-    const newMsg = ref(db, 'messages/');
-      newMsg.remove();
+   document.getElementById("com").value = "";
+ document.getElementById("you").value = ""
   }
