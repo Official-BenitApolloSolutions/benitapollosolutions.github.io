@@ -2,7 +2,7 @@
 
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
   import { getAnalytics } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
-  import { getDatabase, ref, set, get, child, push, remove, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
+  import { getDatabase, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
    
   const firebaseConfig = {
     apiKey: "AIzaSyDRgs9CNgehCvqMLL4o_m-Kpa5ycMPUpt8",
@@ -50,11 +50,7 @@
       }
   });
   
-  function resendData(){
-   /*let newMsg = ref(db, 'messages/');/
-   db.ref('messages/').remove();
-  newMsg.remove(); /document.getElementById("com").value = "";
- document.getElementById("you").value = ""*/
+function resendData(){
      alert("Hot wire🔥");
      console.log("hello world!");
-  }
+}
