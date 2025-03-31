@@ -26,7 +26,7 @@
       let myName = prompt("enter username");
       let username = myName;
       if(localStorage !== "undefined "){
-          localStorage.username = username;
+          localStorage.quser = username;
       }
       const id = push(child(ref(db), 'messages')).key;
       
@@ -40,7 +40,7 @@
   
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
-      if(data.val().name !== localStorage.username){
+      if(data.val().name !== localStorage.quser){
           let divData = data.val().message + "<br>";
           let dm1 = document.getElementById("you");
           dm1.insertAdjacentHTML('beforebegin',divData);
