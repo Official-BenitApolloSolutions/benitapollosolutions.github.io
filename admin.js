@@ -20,13 +20,17 @@
   const analytics = getAnalytics(app);
   const db = getDatabase(app);
   const submitmessage = document.getElementById("adminsubmit");
+  const statusonlinebtn = document.getElementById("statusonlinebtn");
+  const statusofflinebtn = document.getElementById("statusofflinebtn");
+  const updatebtn = document.getElementById("updatebtn");
+  const deletebtn = document.getElementById("deletebtn");
   
   /* admin user */
    const username = "ADMIN";
+   let supportstatusnode = document.querySelectorAll(".support-status");
+   const id = push(child(ref(db), 'messages')).key;
   submitmessage.addEventListener('click', function(e){
-      e.preventDefault();   
-      
-      const id = push(child(ref(db), 'messages')).key;
+      e.preventDefault(); 
       
       set(ref(db, 'messages/' + id),{
           username: username,
@@ -34,19 +38,47 @@
       })
       .then(()=>{
           document.getElementById("message").value = "";
-      alert("message updated successfully!");
+      alert("message sent successfully!");
       })
       .catch((error)=>{
           console.error("something went wrong");
       }); 
       
-  }); 
+  });
+  
+  /* update technical support status */  statusonlinebtn.addEventListener('click', function(e){
+      e.preventDefault(); 
+      
+      set(ref(db, 'technicalstatus/' + id),{
+          sopstatus: "Online"
+      })
+      .then(()=>{
+      alert("status updated successfully! 🔥");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+      
+  });
+  
+  statusofflinebtn.addEventListener('click', function(e){
+      e.preventDefault(); 
+      
+      update(ref(db, 'technicalstatus/' + id),{
+          sopstatus: "Offline"
+      })
+      .then(()=>{
+      alert("status updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+      
+  });
   
   /* update data */
   updatebtn.addEventListener('click', function(e){
       e.preventDefault();   
-      
-      const id = push(child(ref(db), 'messages')).key;
       
       update(ref(db, 'messages/' + id),{
           username: username,
@@ -64,9 +96,7 @@
   
   /* delete data */
   deletebtn.addEventListener('click', function(e){
-      e.preventDefault();   
-      
-      const id = push(child(ref(db), 'messages')).key;
+      e.preventDefault();
       
       remove(ref(db, 'messages/' + id))
    .then(()=>{
@@ -82,13 +112,24 @@
   /* retrieved data */
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
+  if(data.val().sopstatus !== "Offline"){
+  for(x=0;x<supportstatusnode.length;x++){
+      supportstatusnode[x].textContent = "Online";
+  }
+      }else{
+         for(x=0;x<supportstatusnode.length;x++){
+             supportstatusnode[x].textContent = "Offline";
+         }
+      }
+      
+      /* retrieval section */
       if(data.val().username === "ADMIN"){
-      let divData = data.val().message + "<br>";
+      let divData = "<span class='badge bg-success p-2 mb-2'>" + data.val().message + "</span><br>";
       let com1 = document.getElementById("com");
       com1.insertAdjacentHTML('beforebegin',divData);
       console.log("com: " + username);
       }else{
-          let divData = data.val().message + "<br>";
+          let divData = "<span class='badge bg-primary p-2 mb-2'>" + data.val().message + "</span><br>";
           let dm1 = document.getElementById("you");
           dm1.insertAdjacentHTML('beforebegin',divData);
           console.log("user: " + username);

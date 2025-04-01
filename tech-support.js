@@ -22,9 +22,10 @@
   const submitmessage = document.getElementById("submit");
   
    /* user */
-  let username = "John Doe";
+ // let username = "John Doe";
   submitmessage.addEventListener('click', function(e){
-      e.preventDefault();      
+      e.preventDefault(); 
+      let username = prompt("what is your username");     
       const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
@@ -38,12 +39,12 @@
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
       if(data.val().username !== username){
-      let divData = data.val().message + "<br>";
+      let divData = "<span class='badge bg-success p-2 mb-2'>" + data.val().message + "</span><br>";
       let com1 = document.getElementById("com");
       com1.insertAdjacentHTML('beforebegin',divData);
       console.log("com: " + username);
       }else{
-          let divData = data.val().message + "<br>";
+          let divData = "<span class='badge bg-primary p-2 mb-2'>" + data.val().message + "</span><br>";
           let dm1 = document.getElementById("you");
           dm1.insertAdjacentHTML('beforebegin',divData);
           console.log("user " + username);

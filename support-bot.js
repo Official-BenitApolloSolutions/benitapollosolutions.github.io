@@ -30,16 +30,10 @@ let notfound = 0;
 }
 
 function botHelper(){
-let counter = 100;
-  console.log("i got executed");
-  for(x=0; x<counter; x++){
-      if(counter%2==0){
-          document.querySelector("#search").placeholder = '🤖';
-      }else{
-          document.querySelector("#search").placeholder = '🕵️';
-      }
-  }
- counter--;
+let platform = document.getElementById("platform");
+if(platform !== null){
+    platform.textContent = navigator.platform;
+}
 }
 
 function Senddata(){
@@ -47,4 +41,4 @@ function Senddata(){
      console.log("hello world!");
 }
 
-//setInterval(botHelper(),900000);
+setInterval(botHelper(),900000);
