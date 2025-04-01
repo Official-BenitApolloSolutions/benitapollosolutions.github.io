@@ -31,11 +31,55 @@
       set(ref(db, 'messages/' + id),{
           username: username,
           message: document.getElementById("message").value
-      }); document.getElementById("message").value = "";
-      alert("message sent successfully!");
+      })
+      .then(()=>{
+          document.getElementById("message").value = "";
+      alert("message updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+      
+  }); 
+  
+  /* update data */
+  updatebtn.addEventListener('click', function(e){
+      e.preventDefault();   
+      
+      const id = push(child(ref(db), 'messages')).key;
+      
+      update(ref(db, 'messages/' + id),{
+          username: username,
+          message: document.getElementById("message").value
+      })
+      .then(()=>{
+          document.getElementById("message").value = "";
+      alert("message updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
       
   });
   
+  /* delete data */
+  deletebtn.addEventListener('click', function(e){
+      e.preventDefault();   
+      
+      const id = push(child(ref(db), 'messages')).key;
+      
+      remove(ref(db, 'messages/' + id))
+   .then(()=>{
+          document.getElementById("message").value = "";
+      alert("message deleted successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+      
+  });
+  
+  /* retrieved data */
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
       if(data.val().username === "ADMIN"){
@@ -51,26 +95,5 @@
       }
   });
   
-  updatebtn.addEventListener('click', function(e){
-      e.preventDefault();   
-      
-      const id = push(child(ref(db), 'messages')).key;
-      
-      update(ref(db, 'messages/' + id),{
-          username: username,
-          message: document.getElementById("message").value
-      }); document.getElementById("message").value = "";
-      alert("message updated successfully!");
-      
-  });
   
-  deletebtn.addEventListener('click', function(e){
-      e.preventDefault();   
-      
-      const id = push(child(ref(db), 'messages')).key;
-      
-      remove(ref(db, 'messages/' + id));
-   
-      alert("message deleted successfully!");
-      
-  });
+  
