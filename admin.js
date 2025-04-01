@@ -2,7 +2,7 @@
 
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
   import { getAnalytics } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-analytics.js";
-  import { getDatabase, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
+  import { getDatabase, ref, set, get, child, push, update, remove, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.5.0/firebase-database.js";
    
   const firebaseConfig = {
     apiKey: "AIzaSyDRgs9CNgehCvqMLL4o_m-Kpa5ycMPUpt8",
@@ -49,4 +49,28 @@
           dm1.insertAdjacentHTML('beforebegin',divData);
           console.log("user: " + username);
       }
+  });
+  
+  updatebtn.addEventListener('click', function(e){
+      e.preventDefault();   
+      
+      const id = push(child(ref(db), 'messages')).key;
+      
+      update(ref(db, 'messages/' + id),{
+          username: username,
+          message: document.getElementById("message").value
+      }); document.getElementById("message").value = "";
+      alert("message updated successfully!");
+      
+  });
+  
+  deletebtn.addEventListener('click', function(e){
+      e.preventDefault();   
+      
+      const id = push(child(ref(db), 'messages')).key;
+      
+      remove(ref(db, 'messages/' + id));
+   
+      alert("message deleted successfully!");
+      
   });

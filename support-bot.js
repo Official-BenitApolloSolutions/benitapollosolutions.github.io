@@ -30,8 +30,16 @@ let notfound = 0;
 }
 
 function botHelper(){
+let counter = 100;
   console.log("i got executed");
- document.querySelector("#search").placeholder = '🤖';
+  for(x=0; x<counter; x++){
+      if(counter%2==0){
+          document.querySelector("#search").placeholder = '🤖';
+      }else{
+          document.querySelector("#search").placeholder = '🕵️';
+      }
+  }
+ counter--;
 }
 
 function Senddata(){
@@ -39,4 +47,4 @@ function Senddata(){
      console.log("hello world!");
 }
 
-setTimeout(botHelper(),1000000);
+//setInterval(botHelper(),900000);
