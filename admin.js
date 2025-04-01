@@ -20,14 +20,13 @@
   const analytics = getAnalytics(app);
   const db = getDatabase(app);
   const submitmessage = document.getElementById("adminsubmit");
-  const statusonlinebtn = document.getElementById("statusonlinebtn");
-  const statusofflinebtn = document.getElementById("statusofflinebtn");
+  const statusbtn = document.getElementById("statusbtn");
   const updatebtn = document.getElementById("updatebtn");
   const deletebtn = document.getElementById("deletebtn");
   
   /* admin user */
    const username = "ADMIN";
-   let supportstatusnode = document.querySelectorAll(".support-status");
+   let supportstatus = document.getElementById("support-status");
    const id = push(child(ref(db), 'messages')).key;
   submitmessage.addEventListener('click', function(e){
       e.preventDefault(); 
@@ -46,29 +45,14 @@
       
   });
   
-  /* update technical support status */  statusonlinebtn.addEventListener('click', function(e){
-      e.preventDefault(); 
-      
-      set(ref(db, 'technicalstatus/' + id),{
-          sopstatus: "Online"
-      })
-      .then(()=>{
-      alert("status updated successfully! 🔥");
-      })
-      .catch((error)=>{
-          console.error("something went wrong");
-      }); 
-      
-  });
-  
-  statusofflinebtn.addEventListener('click', function(e){
+  /* update technical support status */  statusbtn.addEventListener('click', function(e){
       e.preventDefault(); 
       
       update(ref(db, 'technicalstatus/' + id),{
-          sopstatus: "Offline"
+          sopstatus: document.getElementById("message").value
       })
       .then(()=>{
-      alert("status updated successfully!");
+      alert("status updated successfully! 🔥");
       })
       .catch((error)=>{
           console.error("something went wrong");
@@ -113,13 +97,9 @@
   const newMsg = ref(db, 'messages/');
   onChildAdded(newMsg, (data) =>{
   if(data.val().sopstatus !== "Offline"){
-  for(x=0;x<supportstatusnode.length;x++){
-      supportstatusnode[x].textContent = "Online";
-  }
+      supportstatus.textContent = "Online";
       }else{
-         for(x=0;x<supportstatusnode.length;x++){
-             supportstatusnode[x].textContent = "Offline";
-         }
+                     supportstatus.textContent = "Offline";
       }
       
       /* retrieval section */

@@ -26,10 +26,11 @@
   submitmessage.addEventListener('click', function(e){
       e.preventDefault(); 
       let username = prompt("what is your username");     
+      let myName = username;
       const id = push(child(ref(db), 'messages')).key;
       
       set(ref(db, 'messages/' + id),{
-          username: username,
+          username: myName,
           message: document.getElementById("message").value
       }); document.getElementById("message").value = "";
       alert("message sent successfully!");
