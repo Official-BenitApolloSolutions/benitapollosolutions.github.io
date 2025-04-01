@@ -16,3 +16,20 @@
         top: 100vh;
     }
 }*/
+
+#ai-bot{
+    background-color: black;
+    -webkit-animation-name:recordr;
+           -webkit-animation-duration:85s;
+           -webkit-animation-iteration-count: infinite;
+           -o-animation-iteration-count: 8;
+           -o-animation-name:recordr;
+           -o-animation-duration:55s;
+    }
+        @-webkit-keyframes recordr{
+            0%{ background-color: red;}
+            40%{ background-color: black;}
+            80%{ background-color: blue;}
+            100% {background-color: green;}
+        }
+       
