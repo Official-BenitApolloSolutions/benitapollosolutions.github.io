@@ -42,8 +42,8 @@ let quartertm = document.getElementById("quarter-year");
  
 let today = new Date();
 
-febsum.textContent = "380";
-let _febpay = 380;
+febsum.textContent = "0";
+let _febpay = 0;
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
@@ -107,7 +107,7 @@ function Showtimetable(){
 
 const PayRate = function(){
   let total = 0;
-   let toq = _febpay + MyschoolSession + 150;
+   let toq = MyschoolSession;
    if(typeof(localStorage) !== "undefined"){
        let totalpaid = localStorage.getItem("Newbalance");
         total = toq - totalpaid 
@@ -143,13 +143,13 @@ function TotalPaymentDue(){
         
         for(let i=0; i < payList.length; i++){
             payList[i].textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
             
         };
 }
 
 TotalPaymentDue();
-
+/*
 function PayDay(){
 //session payment
       switch(getWeekofMonth(today)){
@@ -173,43 +173,42 @@ function PayDay(){
            console.log(getWeekofMonth(today));
            break;
       }
-      
+  */    
     switch(new Date().getDay()){
     case 0:
            pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break;
     case 1:
        pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break;
      case 2:
      pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break;
      case 3:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break; 
        case 4:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break;
        case 5:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break;
        case 6:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _febpay - 500;
+Number(fourthweek.textContent);
        break; 
   default:
         window.alert("Have a great day today!");
         break;
- }
 }
 
-PayDay();
+//PayDay();
         
 //season
 
