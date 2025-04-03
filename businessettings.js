@@ -148,8 +148,6 @@ Number(fourthweek.textContent) + _arearpay;
 
 TotalPaymentDue();
 
-
-/*
 function PayDay(){
 //session payment
       switch(getWeekofMonth(today)){
@@ -207,10 +205,10 @@ Number(fourthweek.textContent) + _arearpay;
   default:
         window.alert("Have a great day today!");
         break;
+ }
 }
-*/
 
-//PayDay();
+PayDay();
         
 //season
 
