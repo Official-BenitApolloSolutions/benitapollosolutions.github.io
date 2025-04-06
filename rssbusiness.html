@@ -24,6 +24,7 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://bit.ly/basonlinegh">BAS</a>
+            <span class="navbar-text">QuickBooks</span>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu" type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="mainmenu">
                 <ul class="navbar-nav me-auto">
@@ -396,17 +397,26 @@
     <!--<script type="module" src="https://www.benitapollosolutions.com/helperfunctionsm.js"></script>-->
     <div class="offcanvas offcanvas-bottom text-bg-dark" id="invoice-now">
         <div class="offcanvas-header">
-            <h3 class="offcanvas-title">Invoice Update </h3>
+            <h3 class="offcanvas-title" style="font-variant:small-caps">Invoice Update &nbsp; <small><i class="bi bi-calendar3"></i> Quarter period</small></h3>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
         </div>
         <div class="offcanvas-body">
-            <p>Cash Payment: Ghs200<br>Date: March 10, 2025<br>
-            Cash Payment: GH¢300 <br> March 25, 2025 <br>
-            Balance: Ghs<span class="pay-rate"></span></p>
+            <p><i class="bi bi-cash"></i> Cash Payment: Ghs200<br><i class="bi bi-calendar-day"></i> Date: March 10, 2025</p>
+            <p>
+            <i class="bi bi-cash"></i> Cash Payment: GH¢300 <br> <i class="bi bi-calendar-day"></i> Date: March 25, 2025 
+            </p><hr>
+            <p><i class="bi bi-cash-stack"></i> Balance: Ghs<span class="pay-rate"></span></p>
             <div class="btn-group">
-                <button class="btn btn-primary">View</button>
+                <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#invoice">View</button>
                 <button class="btn btn-success">Download</button>
             </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas- fullscreen" id="invoice">
+        <div class="offcanvas-content">
+           <div class="offcanvas-header">
+               <h3>Invoice <span class="badge rounded-pill">Quarter</span></h3>
+           </div> 
         </div>
     </div>
 </body>
