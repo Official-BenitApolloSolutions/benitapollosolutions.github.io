@@ -22,6 +22,7 @@ let payList = document.querySelectorAll(".pay-rate");
 let pay_rate = document.getElementById("payrate");
 
 let payment_date = document.getElementById("payment-date");
+
 //session charges
 let firstweek = document.getElementById("first-week");
 let secondweek = document.getElementById("second-week");
@@ -42,8 +43,9 @@ let quartertm = document.getElementById("quarter-year");
  
 let today = new Date();
 
-arrearsum.textContent = "480";
-let _arearpay = 480;
+//initials 
+arrearsum.textContent = "280";
+let _arearpay = 480 - 200;
 let sesspanweek = 4;
 let parthr = 2;
 let sespsat = 25;
@@ -54,14 +56,14 @@ let sessionrate = sesspanweek * sessat;
 
 let workmonth = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","International Women's Day","Workers Day"];
+let celebrities = ["Independence Day","Christmas","Easter","Farmers Day","International Women's Day","Workers Day","Islamic calendar holidays","Hindi","other holidays"];
 
 const moment = window.moment;
 
-let _firstweek = "2025-03-01T01:03:00";
-let _secondweek = "2025-03-08T01:03:00";
-let _thirdweek = "2025-03-15T01:03:00";
-let _fourthweek = "2025-03-22T01:03:00";
+let _firstweek = "2025-04-01T01:03:00";
+let _secondweek = "2025-04-08T01:03:00";
+let _thirdweek = "2025-04-15T01:03:00";
+let _fourthweek = "2025-04-22T01:03:00";
 
 function getWeekofMonth(_date) {
     return moment(_date).week() - moment(_date).startOf('month').week() + 1;
@@ -72,6 +74,27 @@ const secondw = moment(_secondweek);
 const thirdw = moment(_thirdweek);
 const fourthw = moment(_fourthweek);
 
+//Period
+function TotalPaymentDue(){
+//locales 
+    for(let k=0; k < curList.length; k++){
+            curList[k].textContent = "GH¢";
+            
+        };
+       
+       //monthly period    
+        for(let i=0; i < payList.length; i++){
+            payList[i].textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
+Number(fourthweek.textContent) + _arearpay;
+            console.log("Period " + payList.length);
+        };
+        
+}
+
+//start page 
+TotalPaymentDue();
+
+//plug-ins
 if(paymentbtn.addEventListener){
     paymentbtn.addEventListener("click", pay, false);
 }
@@ -86,7 +109,7 @@ if(postnotification.addEventListener){
 
 function ShowNotifications(){
     institute.textContent = "Royal Secondary School";
-    for(let i=0; i < totalnots.length; i++){
+    for(let i=0;i<totalnots.length; i++){
             totalnots[i].textContent = NumberOfNotifications();
             console.log(NumberOfNotifications())
         }
@@ -133,23 +156,8 @@ const PayRate = function(){
 
 }
 
-function TotalPaymentDue(){
-    for(let k=0; k < curList.length; k++){
-            curList[k].textContent = "GH¢";
-            
-        };
-        
-        for(let i=0; i < payList.length; i++){
-            payList[i].textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
-Number(fourthweek.textContent) + _arearpay;
-            
-        };
-}
-
-TotalPaymentDue();
-
-function PayDay(){
 //session payment
+function PayDay(){
       switch(getWeekofMonth(today)){
          case getWeekofMonth(firstw):
           firstweek.textContent = MyschoolSession;
@@ -172,6 +180,7 @@ function PayDay(){
            break;
       }
   
+  //balances
     switch(new Date().getDay()){
      case 0:
            pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
@@ -197,10 +206,14 @@ Number(fourthweek.textContent) + _arearpay;
        case 5:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
 Number(fourthweek.textContent) + _arearpay;
+       //Period 
+        TotalPaymentDue();
        break;
        case 6:
         pay_rate.textContent = Number(firstweek.textContent) + Number(secondweek.textContent) + Number(thirdweek.textContent) +
 Number(fourthweek.textContent) + _arearpay;
+       //Period 
+        TotalPaymentDue();
        break; 
   default:
         window.alert("Have a great day today!");
