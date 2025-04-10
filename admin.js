@@ -26,6 +26,7 @@
   
   /* admin user */
    const username = "ADMIN";
+   const clientele= document.getElementById("clientele");
    let supportstatus = document.getElementById("support-status");
    const id = push(child(ref(db), 'messages')).key;
   submitmessage.addEventListener('click', function(e){
@@ -116,5 +117,9 @@
       }
   });
   
-  
+  //load clientele 
+  clientele.addEventListener('click',(e)=>{
+      document.writeln("loading clientele");
+      window.open("https:/\/www.benitapollosolutions.com/dashboard.html",true);
+  },false);
   
