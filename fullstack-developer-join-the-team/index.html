@@ -28,8 +28,12 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script async src="./js/app.js"></script>
+      <script defer src="./js/index.js"></script>
+      <noscript>Your browser does not support javascript</noscript>
    </head>
    <body>
       <!--header section start -->
@@ -227,9 +231,9 @@
       </div>
       <!--works section end -->
       <!--contact section start -->
-      <div class="contact_section layout_padding">
+      <div class="contact_section layout_padding" id="join-team">
          <div class="container">
-            <h1 class="work_taital">Get In Touch</h1>
+            <h1 class="work_taital">Join The Team</h1>
          </div>
       </div>
       <div class="contact_section_2">
@@ -239,21 +243,23 @@
                   <div><img src="images/img-10.png" class="image_10"></div>
                </div>
                <div class="col-md-6">
-                  <div class="email_text">
-                     <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Name" name="Email">
+                  <form method="post" id="contact-form">
+                     <div class="email_text">
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Name" name="from_name">
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Email" name="from_email">
+                        </div>
+                        <div class="form-group">
+                           <input type="text" class="email-bt" placeholder="Phone Number" name="phone">
+                        </div>
+                        <div class="form-group">
+                           <textarea class="massage-bt" placeholder="Tech Stack [Example Front-end, Backend, Mobile app developement etc.]" rows="5" id="comment" name="message"></textarea>
+                        </div>
+                        <div class="send_btn"><input type="submit" value="SEND" style="background-color: lightblue; color: white; border: 1px whitesmoke; width: 150px; height: 45px;"></div>
                      </div>
-                     <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Email" name="Email">
-                     </div>
-                     <div class="form-group">
-                        <input type="text" class="email-bt" placeholder="Phone Number" name="Email">
-                     </div>
-                     <div class="form-group">
-                        <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="Massage"></textarea>
-                     </div>
-                     <div class="send_btn"><a href="#">SEND</a></div>
-                  </div>
+                  </form>
                </div>
             </div>
          </div>
@@ -307,7 +313,7 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <!-- javascript --> 
-      <script src="js/owl.carousel.js"></script>
+      <!-- <script src="js/owl.carousel.js"></script> -->
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
       <script type="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2//2.0.0-beta.2.4/owl.carousel.min.js"></script>
       <script>
