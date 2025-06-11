@@ -16,10 +16,10 @@
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
-@import url(css/font-awesome.min.css);
+/*@import url(css/font-awesome.min.css);*/
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
-@import url(swiper.min.css);
+/*@import url(swiper.min.css);*/
 @import url(slick.css);
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
@@ -346,7 +346,7 @@ button {
     text-transform: uppercase;
     padding: 8px 15px;
 }
-.menu_main li:active {
+.menu_main li.active {
     background-color: #c9e5fb;
     color: #000 !important;
 }
