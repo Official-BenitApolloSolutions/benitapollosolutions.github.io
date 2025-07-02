@@ -16,16 +16,16 @@
          formproject.addEventListener('submit', function(event) {
                 event.preventDefault();
                 // date
-                emailjs.sendForm('service_xga0ihl', 'template_t8twf1m', this)
+                emailjs.sendForm('service_f8c1b5q', 'template_t8twf1m', this)
                     .then(() => {
                         console.log('SUCCESS!');                   
-                        
-document.writeln("successfully sent a quote. Check your email for confirmation.");
-window.open("https:/\/www.benitapollosolutions.com/success.html","Project Submitted",true);
-            location.reload();        
+                        document.writeln("successfully sent a quote. Check your email for confirmation.");
+                        window.location.assign("https://www.benitapollosolutions.com/success.html");
+                        location.reload();        
                     }, (error) => {
                        document.writeln("Unsuccessful retry!");
-                       location.reload();
+                       document.writeln(error);
+                       // location.reload();
       console.log('FAILED...', error);
                     });
             });
