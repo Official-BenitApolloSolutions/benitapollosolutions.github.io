@@ -3,7 +3,7 @@
 
  (function() {  
              emailjs.init({ 
-             publicKey: "D1y25vk5Im7SPLYnC", }); 
+             publicKey: "UZxRIO87B2gXO7tyZ", }); 
              })();
              
           window.onload = function() {
@@ -16,7 +16,7 @@
          formproject.addEventListener('submit', function(event) {
                 event.preventDefault();
                 // date
-                emailjs.sendForm('service_qdmoeeb', 'template_vka0rx7', this)
+                emailjs.sendForm('service_xga0ihl', 'template_t8twf1m', this)
                     .then(() => {
                         console.log('SUCCESS!');                   
                         
