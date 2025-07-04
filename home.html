@@ -51,21 +51,23 @@
             </ul>
             <div class="tab-content">
                 <div class="container tab-pane active" id="bassol">
-                    <p id="user"></p>
+                    <!-- <p id="user"></p> -->
                     <div class="container">
                             <p> Hardware &amp; Software Solutions. <br> Solve business challenges with Information Technology. A smart investment.</p>
                             <div class= "btn-group">
-                                <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#businesssolution">Solution</button>
-                                <div class="btn-group">
-                                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Integrated Systems</button>
-                                    <div class="dropdown-menu">
+                                <div class="dropdown">
+                                    <div class="btn-group">
+                                      <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#businesssolution">Solution</button>
+                                      <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"><a class="text-decoration-none text-white" href="#businesssolution" data-bs-toggle="collapse">Integrated Systems</a></button>
+                                      <div class="dropdown-menu">
                                         <a class="dropdown-item" href="https://www.benitapollosolutions.com/demo.html">Demo</a>
                                         <a class="dropdown-item" href="javascript:void(0)" onClick="openSuite()">SaaS &amp; PaaS</a>
+                                      </div>
                                     </div>
                                 </div>
                             </div>
-                            <p class="collapse mt-2" id="businesssolution">Business automation and seamless support for the best sales streamlines lies in integrating the best technology.<br>
-                            <input type="button" class="btn btn-primary mt-2" value="View Solutions" data-bs-toggle="tooltip" title="Checkout all solutions" onclick="location.href='https://www.benitapollosolutions.com/solutions.html'"></p>
+                            <p class="collapse mt-3" id="businesssolution">Business automation and seamless support for the best sales streamlines lies in integrating the best technology. <br>
+                             <input type="button" class="btn btn-primary mt-2" value="View Solutions" data-bs-toggle="tooltip" title="Checkout all solutions" onclick="location.href='https://www.benitapollosolutions.com/solutions.html'"></p>
                     </div>
                 </div>
                 <div class="container mt-3 p-3 tab-pane fade" id="useraccount">
@@ -299,8 +301,8 @@
                 </div>
             </div>
         </div>
-        <!-- <footer class="mt-5">
-            <div class="container-fluid">
+        <footer class="mt-5">
+          <div class="container-fluid">
                 <div class="text-bg-dark p-3 rounded">
                     <div class="row">
                         <div class="col-md-3">
@@ -327,19 +329,14 @@
                             </div>
                         </div>
                         <div class="col-md-3">
+                            <img src="./images/bas/Blue.png" alt="Logo" class="img-fluid rounded mx-auto d-block">
                             <p class="text-center text-white">© 2025 Benit Apollo Solutions. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer> -->
-        <!--<script>
-$(window).load(function(){
-   setTimeout(function(){
-       $('#salutationmodal').modal('show');
-   }, 5000);
-});
-</script>-->
+          </div>
+        </footer> 
+        
     <script async type="text/javascript">      
         //search controller
         let mySearch = document.getElementById("searchterms");
@@ -362,5 +359,12 @@ $(window).load(function(){
         });
         
     </script>
+    <!--<script>
+$(window).load(function(){
+   setTimeout(function(){
+       $('#salutationmodal').modal('show');
+   }, 5000);
+});
+</script>-->
 </body>
 </html>
