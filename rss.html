@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="3600">
     <meta HTTP-EQUIV="expires" CONTENT="Tue, 20 Jan 2026 14:25:27 GMT">
     <title>BAS | RSS</title>
-     <link type="image/x-icon" rel="icon" href="https://www.benitapollosolutions.com/favicon.ico">
+     <link type="image/x-icon" rel="icon" href="https://benitapollosolutions.com/images/favicon_io/favicon.ico">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
@@ -15,15 +15,11 @@
             text-decoration: none;
         }
     </style>
-    
-    <script type="module" src="https://www.benitapollosolutions.com/businessettings.js"></script>
-    
-    <script src="rate.js"></script>
-    
+    <script type="module" src="https://benitapollosolutions.com/businessettings.js"></script>
+    <script src="./rate.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-    
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://bit.ly/basonlinegh">BAS</a>
@@ -31,7 +27,7 @@
             <div class="collapse navbar-collapse" id="mainmenu">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.benitapollosolutions.com/account_profile.html"><i class="bi bi-person-circle"></i> Account</a>
+                        <a class="nav-link" href="https://benitapollosolutions.com/account_profile.html"><i class="bi bi-person-circle"></i> Account</a>
                     </li>
                 </ul>
                 <form class="d-flex">
@@ -64,77 +60,77 @@
         <div class="bg-secondary p-3">
             <div class="table-responsive">
                 <table class="table table-striped">
-                 <tr>
                     <thead>
-                        <th>ID</th>
-                        <th>Business Name</th>
-                        <th>Year</th>
-                        <th>Currency </th>
-                        <th>Amount</th>
-                        <th>Term </th>
-                        <th>Address</th>
-                        <th>Contact</th>
-                        <th>Email</th>
-                        <th>Date</th>
-                        <th>&nbsp;</th>
-                        <th> Particulars </th>
-                        <th> Report</th>
-                        <th> Notification</th>
+                        <tr>
+                          <th>ID</th>
+                          <th>Business Name</th>
+                          <th>Year</th>
+                          <th>Currency </th>
+                          <th>Amount</th>
+                          <th>Term </th>
+                          <th>Address</th>
+                          <th>Contact</th>
+                          <th>Email</th>
+                          <th>Date</th>
+                          <th>&nbsp;</th>
+                          <th> Particulars </th>
+                          <th> Report</th>
+                          <th> Notification</th>
+                        </tr>
                     </thead>
-                </tr>
-                <tr>
                     <tbody>
-                    <td>BASB<span class="myYear"></span>RS</td>
-                    <td>The Royals Secondary School Ablekuma</td>
-                    <td><span class="jobYear"></span></td>
-                    <td><center>---</center></td>
-                    <td><button class="badge bg-success"
-        data-bs-toggle="offcanvas" data-bs-target="#arearsreport">archive</button></td>
-                    <td>1</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>12/24</td>
-                    <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails" class="btn btn-outline-success">Details</button></td>
-                     <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
-                    <td><button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button></td>
-             <td> &nbsp; </td>
-                </tr>
-                <tr>
-                    <td>BASB<span class="myYear"></span>RS</td>
-                    <td>The Royals Secondary School Ablekuma</td>
-                    <td><span class="jobYear"></span></td>
-                    <td><span class="currency"></span></td>
-                    <td><span class="pay-rate"></span></td>
-                    <td>2 </td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td><span id="schoolday"></span></td>
-                    <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails1" class="btn btn-outline-success">Details</button></td>
-                      <td> <button class="btn btn-outline-info" id="timetable">Timetable</button> </td> 
-                    <td> &nbsp; <!--<button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button> --></td>
-                    <td> <button type="button" class="btn btn-primary"                  data-bs-toggle="modal"                   data-bs-target="#notifications"><i class="bi bi-bell"></i> <span class="badge bg-success total-nots">0</span></button></td>
-                </tr>
-                <tr>
-                    <td>BASB<span class="myYear"></span>RS</td>
-                    <td>The Royals Secondary School Ablekuma</td>
-                    <td><span class="jobYear"></span></td>
-                    <td>&nbsp;</td>
-                    <td><center>---</center></td>
-                    <td>3</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td><button data-bs-toggle="offcanvas" data-bs-target="#relDetails" class="btn btn-outline-success">Details</button></td>
-                     <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
-                     <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                </tbody>
+                        <tr>
+                        <td>BASB<span class="myYear"></span>RS</td>
+                        <td>The Royals Secondary School Ablekuma</td>
+                        <td><span class="jobYear"></span></td>
+                        <td class="text-center">---</td>
+                        <td><button class="badge bg-success" data-bs-toggle="offcanvas" data-bs-target="#arearsreport">archive</button></td>
+                        <td>1</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>12/24</td>
+                        <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails" class="btn btn-outline-success">Details</button></td>
+                        <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
+                        <td><button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button></td>
+                <td> &nbsp; </td>
+                        </tr>
+                        <tr>
+                        <td>BASB<span class="myYear"></span>RS</td>
+                        <td>The Royals Secondary School Ablekuma</td>
+                        <td><span class="jobYear"></span></td>
+                        <td><span class="currency"></span></td>
+                        <td><span class="pay-rate"></span></td>
+                        <td>2 </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><span id="schoolday"></span></td>
+                        <td><button data-bs-toggle="offcanvas" data-bs-target="#gigDetails1" class="btn btn-outline-success">Details</button></td>
+                        <td> <button class="btn btn-outline-info" id="timetable">Timetable</button> </td> 
+                        <td> &nbsp; <!--<button data-bs-toggle="offcanvas" data-bs-target="#arearsreport" class="btn btn-outline-danger">Report</button> --></td>
+                        <td> <button type="button" class="btn btn-primary"                  data-bs-toggle="modal"                   data-bs-target="#notifications"><i class="bi bi-bell"></i> <span class="badge bg-success total-nots">0</span></button></td>
+                        </tr>
+                        <tr>
+                        <td>BASB<span class="myYear"></span>RS</td>
+                        <td>The Royals Secondary School Ablekuma</td>
+                        <td><span class="jobYear"></span></td>
+                        <td>&nbsp;</td>
+                        <td class="text-center">---</td>
+                        <td>3</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td><button data-bs-toggle="offcanvas" data-bs-target="#relDetails" class="btn btn-outline-success">Details</button></td>
+                        <td> <button class="btn btn-outline-info" disabled>Timetable</button> </td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
+        </div>
     </div>
     
     <!-- call-to-action -->
@@ -378,6 +374,7 @@
             </div>
         </div>
     </footer>
-    <script src="helperfunctionsm.js"></script>
-</body>
+    <script src="./helperfunctionsm.js"></script>
+    <noscript>Your browser does not support javacript</noscript>
+  </body>
 </html>
