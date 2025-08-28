@@ -2,10 +2,10 @@
 let counter = 1;
 let count;
 const changeMode = function (){
-    counter++;
+counter++;
 const htmlBody = document.querySelector('html');
-    const themehelper = document.querySelector('#mainnav');
-    const searchbtn = document.querySelector('#searchbtn');
+const themehelper = document.querySelector('#mainnav');
+const searchbtn = document.querySelector('#searchbtn');
  //   let visionbanner =  document.querySelector('#visionbanner');
     let settingscontrolsa = document.querySelector('#settingscontrolsa');
     let settingscontrolsb = document.querySelector("#settingscontrolsb");
