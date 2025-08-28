@@ -1,5 +1,5 @@
 function moveToUrl(){
-    window.location.assign("./dashboard/index.html");
+    window.location.assign("./coding-bootcamp/pricing/index.html");
 }
 
 function codingBootcamp(){
