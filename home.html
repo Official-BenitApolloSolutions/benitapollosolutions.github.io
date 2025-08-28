@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Bas for Business</title>
         <meta name="charset" name="utf-8">
+        <title>Bas for Business</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="refresh" content="3600">
         <meta name="author" content="Mr. Bernard O. Dwamena">
@@ -29,7 +29,8 @@
         <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="canonical" href="https://benitapollosolutions.com/index.html">
         <!-- <link rel="stylesheet" href="https://benitapollosolutions.com/css/site.css"> -->
-        <link rel="stylesheet" href="css/site.css">
+        <link rel="stylesheet" href="./css/site.css">
+        <script  type="module" src="./js/functions.js"></script>
     </head>
     <body style="height: 1500px">
         <div class="container mt-3 mb-3">
@@ -154,7 +155,7 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" id="searchterms" placeholder="software, service, invoice.." list="searchquery" data-bs-toggle="tooltip" title="search for service or products">
+                        <input class="form-control me-2" type="search" id="searchterms" placeholder="Search..." list="searchquery" data-bs-toggle="tooltip" title="search for service or products">
                         <datalist id="searchquery">
                             <option>Education</option>
                             <option>Health</option>
@@ -236,20 +237,23 @@
                                         <th scope="col">Event</th>
                                         <th scope="col">Date</th>
                                         <th scope="col">Location</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
                                         <td>Coding Bootcamp</td>
-                                        <td>2025-03-15</td>
+                                        <td><time datetime="2025-09-15T13:10">2025-09-15</time></td>
                                         <td>Online</td>
+                                        <td><button class="btn btn-primary" id="coding-bootcamp">Register</button></td> 
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Tech Conference 2025</td>
                                         <td>2025-11-20</td>
                                         <td>Accra, Ghana</td>
+                                        <td>&nbsp;</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -367,5 +371,5 @@ $(window).load(function(){
    }, 5000);
 });
 </script>-->
-</body>
+    </body>
 </html>
