@@ -1,9 +1,8 @@
-import  { codingBootcamp } from "./index.js";
+import  { codingBootcamp, joinTheTeam } from "./index.js";
 
 const _codingBootcamp = document.getElementById("coding-bootcamp");
 _codingBootcamp.addEventListener('click', codingBootcamp, false);
 
-function joinTheTeam() {
-    document.writeln("<h1>Join the Team</h1>");
-    window.open('./fullstack-developer-join-the-team/index.html#join-team', '_blank');
-}
+const _joinTheTeam = document.getElementById("join-the-team");
+_joinTheTeam.addEventListener('click', joinTheTeam, false);
+

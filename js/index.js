@@ -7,4 +7,9 @@ function codingBootcamp(){
     moveToUrl();
 }
 
-export { codingBootcamp }
+function joinTheTeam() {
+    document.writeln("Loading...");
+    window.open('./fullstack-developer-join-the-team/index.html#join-team', '_blank');
+}
+
+export { codingBootcamp, joinTheTeam }
