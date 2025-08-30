@@ -1,5 +1,5 @@
 function moveToUrl(){
-    window.open("./coding-bootcamp/pricing/index.html", "_blank");
+    window.open("./coding-bootcamp/pricing/index.html?utm_source=homepage", "_blank");
 }
 
 function codingBootcamp(){
@@ -8,7 +8,6 @@ function codingBootcamp(){
 }
 
 function joinTheTeam() {
-    document.writeln("Loading...");
     window.open('./fullstack-developer-join-the-team/index.html#join-team', '_blank');
 }
 
