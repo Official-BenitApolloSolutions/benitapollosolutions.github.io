@@ -25,6 +25,8 @@
       .bd-mode-toggle .bi{width:1em;height:1em}
       .bd-mode-toggle .dropdown-menu .active .bi{display:block!important}
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -252,6 +254,31 @@
         </div>
       </footer>
     </div>
+    <!-- Notification -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <!-- Modal content -->
+              <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">Notice</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Portal will be open on <strong><time datetime="2025-09-10T00:00:00Z"></time>September 10, 2025</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- End of Notification -->
     <script src="./assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
+    <script>
+      var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+        keyboard: false
+      });
+      window.onload = function() {
+        myModal.show();
+      };
+    </script>
+    <script src="./assets/js/notification.js"></script>
   </body>
 </html>
