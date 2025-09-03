@@ -21,8 +21,8 @@ function togglePricingInfo() {
   if (data.country !== 'GH' && data.country !== 'US') {
     // Update pricing information for non-US visitors
     const nonUsPricing = {
-      platinum: '€21.51',
-      deluxe: '€28.68',
+      platinum: '€28.68',
+      deluxe: '€21.51',
       gold: '€35.85'
     };
     document.getElementById('platinum-price').innerText = nonUsPricing.platinum;
@@ -35,8 +35,8 @@ function togglePricingInfo() {
     //   monthly: '₵10',
     //   yearly: '₵100',
     //   lifetime: '₵1000'
-         platinum: '₵300',
-         deluxe: '₵400',
+         platinum: '₵400',
+         deluxe: '₵300',
          gold: '₵500'
     };
     document.getElementById('platinum-price').innerText = ghPricing.platinum;
@@ -47,8 +47,8 @@ function togglePricingInfo() {
 
     // Update pricing information for other visitors
     const otherPricing = {
-      platinum: '$24.99',
-      deluxe: '$33.32',
+      platinum: '$33.32',
+      deluxe: '$24.99',
       gold: '$41.65'
     };
     document.getElementById('platinum-price').innerText = otherPricing.platinum;
