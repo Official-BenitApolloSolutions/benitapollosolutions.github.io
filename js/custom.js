@@ -4,7 +4,7 @@ fetch('https://api.country.is/')
   .then(response => response.json())
   .then(data => {
     document.getElementById('country').innerText = `Visitor's country: ${data.country}`;
-    window.data = data; // Make data accessible globally
+    window.data = data; 
     togglePricingInfo();
   })
   .catch(error => console.error('Error fetching country data:', error));
@@ -18,7 +18,7 @@ function togglePricingInfo() {
 //   const pricingInfo = document.getElementById('pricing');
 //   const currency = document.getElementById('currency').value;
 //   pricingInfo.style.display = pricingInfo.style.display === 'none' ? 'block' : 'none';
-  if (data.country !== 'GH' && data.country !== 'US') {
+  if (data.country !== 'GH' && data.country !== 'US' && data.country === 'UK')  {
     // Update pricing information for non-US visitors
     const nonUsPricing = {
       platinum: '€28.68',
