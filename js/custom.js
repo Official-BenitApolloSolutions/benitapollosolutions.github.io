@@ -2,8 +2,10 @@ import {loadUrl} from './index.js';
 
 const communityLink = document.getElementById('community');
 if (communityLink) {
-    communityLink.addEventListener('click', loadUrl);
+    communityLink.addEventListener('dblclick', loadUrl);
 }
+
+communityLink.style.cursor = 'pointer';
 
 fetch('https://api.country.is/')
   .then(response => response.json())
