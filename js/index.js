@@ -11,4 +11,8 @@ function joinTheTeam() {
     window.open('./fullstack-developer-join-the-team/index.html#join-team', '_blank');
 }
 
-export { codingBootcamp, joinTheTeam }
+function loadUrl() {
+    window.open('/community/sign-in/index.html', '_blank');
+}
+
+export { codingBootcamp, joinTheTeam, loadUrl }
