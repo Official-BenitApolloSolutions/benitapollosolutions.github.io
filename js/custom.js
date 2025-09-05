@@ -1,10 +1,4 @@
-// 'use strict';
-
-// Fetch visitor's country data from the API
-const countryCode = "IE";
-const flagUrl = `https://flagcdn.com/256x192/${countryCode.toLowerCase()}.png`;
-console.log(flagUrl);
-
+'use strict';
 
 fetch('https://api.country.is/')
   .then(response => response.json())
