@@ -12,7 +12,7 @@ function joinTheTeam() {
 }
 
 function loadUrl() {
-    window.open('/community/sign-in/index.html', '_blank');
+    // window.open('/community/sign-in/index.html', '_blank');
 }
 
 export { codingBootcamp, joinTheTeam, loadUrl }
