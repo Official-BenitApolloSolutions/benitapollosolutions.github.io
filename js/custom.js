@@ -19,15 +19,9 @@ fetch('https://api.country.is/')
   })
   .catch(error => console.error('Error fetching country data:', error));
 
-function toggleCountryInfo() {
-  const countryInfo = document.getElementById('country');
-  countryInfo.style.display = countryInfo.style.display === 'none' ? 'block' : 'none';
-}
-
-function togglePricingInfo() {
-//   const pricingInfo = document.getElementById('pricing');
-//   const currency = document.getElementById('currency').value;
-//   pricingInfo.style.display = pricingInfo.style.display === 'none' ? 'block' : 'none';
+(function() {
+'use strict';
+ 
   if (data.country !== 'GH' && data.country !== 'US' && data.country === 'UK')  {
     // Update pricing information for non-US visitors
     const nonUsPricing = {
@@ -86,5 +80,5 @@ function togglePricingInfo() {
     document.getElementById('deluxe-price').innerText = otherPricing.deluxe;
     document.getElementById('gold-price').innerText = otherPricing.gold;
   }
-}
+})();
 
