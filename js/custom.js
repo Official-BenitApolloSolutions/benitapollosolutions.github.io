@@ -1,11 +1,4 @@
-import {loadUrl} from './index.js';
-
-const communityLink = document.getElementById('community');
-if (communityLink) {
-    communityLink.addEventListener('dblclick', loadUrl);
-}
-
-communityLink.style.cursor = 'pointer';
+'use strict';
 
 fetch('https://api.country.is/')
   .then(response => response.json())
@@ -19,7 +12,6 @@ fetch('https://api.country.is/')
   .catch(error => console.error('Error fetching country data:', error));
 
 const togglePricingInfo = function() {
-'use strict';
  
   if (data.country !== 'GH' && data.country !== 'US' && data.country === 'UK')  {
     // Update pricing information for non-US visitors
