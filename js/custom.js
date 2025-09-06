@@ -15,7 +15,6 @@ fetch('https://api.country.is/')
              </svg> ${data.country}`;
               // ${data.countryInfo.flag ? `<img src="${data.countryInfo.flag}" alt="Flag" style="width:20px; height:auto; vertical-align:middle; margin-left:5px;">` : ''}`;
     window.data = data;
-    togglePricingInfo();
   })
   .catch(error => console.error('Error fetching country data:', error));
 
