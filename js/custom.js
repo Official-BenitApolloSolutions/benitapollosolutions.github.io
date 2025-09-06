@@ -25,9 +25,6 @@ const togglePricingInfo = function() {
       deluxe: '€10.64',
       gold: '€21.27'
     };
-    document.getElementById('module-platinum-price').innerText = moduleNonUsPricing.platinum;
-    document.getElementById('module-deluxe-price').innerText = moduleNonUsPricing.deluxe;
-    document.getElementById('module-gold-price').innerText = moduleNonUsPricing.gold;
     document.getElementById('platinum-price').innerText = nonUsPricing.platinum;
     document.getElementById('deluxe-price').innerText = nonUsPricing.deluxe;
     document.getElementById('gold-price').innerText = nonUsPricing.gold;
@@ -47,9 +44,6 @@ const togglePricingInfo = function() {
       deluxe: '₵150',
       gold: '₵300'
     }
-    document.getElementById('module-platinum-price').innerText = ghModulePricing.platinum;
-    document.getElementById('module-deluxe-price').innerText = ghModulePricing.deluxe;
-    document.getElementById('module-gold-price').innerText = ghModulePricing.gold;
     document.getElementById('platinum-price').innerText = ghPricing.platinum;
     document.getElementById('deluxe-price').innerText = ghPricing.deluxe;
     document.getElementById('gold-price').innerText = ghPricing.gold;
