@@ -39,6 +39,28 @@
         <!-- <link rel="stylesheet" href="/css/site.css"> -->
         <link rel="stylesheet" href="/css/site.css">
         <script  type="module" src="/js/functions.js"></script>
+        <style>
+            body {
+                font-family: 'Open Sans', sans-serif;
+            }
+            #mainnav a:hover {
+                background-color: #0d6efd;
+                color: white;
+            }
+            #visionbanner {
+                background-image: url('./images/bas/vision-banner-bg.png');
+                background-size: cover;
+                background-position: center;
+                color: white;
+            }
+            #events .content-details {
+                background-image: url('./images/bas/events-bg.png');
+                background-size: cover;
+                background-position: center;
+                color: black;
+            }
+
+        </style>
     </head>
     <body style="height: 1500px">
         <div class="container mt-3 mb-3">
@@ -115,16 +137,24 @@
                                 <h6>Locale</h6>
                             </div>
                             <div class="col">
-                                <p><span class="spinner-grow spinner-grow-sm text-bg-dark"></span>loading</p>
+                                <img id="flag" src="" alt="Country Flag" width="32" height="24" class="rounded">
+                                <p id="locale"><span class="spinner-grow spinner-grow-sm text-bg-dark"></span>loading</p>
                             </div>
                         </div>
-                        <p class="mb-3">select your locale</p>
+                        <div class="row">
+                            <div class="col">
+                                <p id="country"><span class="spinner-grow spinner-grow-sm text-bg-dark"></span>loading</p>
+                            </div>
+                            <div class="col">
+                                <p id="country-details"><span class="spinner-grow spinner-grow-sm text-bg-dark"></span>loading</p>
+                                <button class="btn btn-primary" onclick="location.reload()" data-bs-toggle="tooltip" title="Refresh locale">Refresh</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" id="mainnav">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark mt-4 sticky-top" id="mainnav">
             <div class="container-fluid">
                 <a href="javascript:void(0)" class="navbar-brand">BAS</a>
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
@@ -187,7 +217,7 @@
                         <img src="./images/bas-carousel-img06.png" class="d-block w-100 h-75" alt="Benit Apollo Solutions">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Benit Apollo Solutions</h5>
-                            <p>Empowering businesses through technology.</p>
+                            <p class="text-white">Empowering businesses through technology.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -364,5 +394,15 @@ $(window).load(function(){
    }, 5000);
 });
 </script>-->
-    </body>
+    <script>
+        //tooltip initialization
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
+    <script src="./assets/js/color-modes.js"></script>
+    <script src="./assets/js/search.js"></script>
+    <script src="./js/custom.js"></script>
+   </body>
 </html>
