@@ -13,8 +13,21 @@ fetch('https://api.country.is/')
     }
     if(location.href === 'https://benitapollosolutions.com/home.html' || location.href === 'https://www.benitapollosolutions.com/home.html' || location.href === 'https://benitapollosolutions.com/' || location.href === 'https://www.benitapollosolutions.com/') {
       document.getElementById('locale').innerText = data.city + ', ' + data.country;
-      updateFlag();
-      countryDetails();
+      const flagUrl = `https://flagcdn.com/256x192/${countryCode.toLowerCase()}.png`;
+    // console.log(flagUrl)
+      document.getElementById('flag').src = flagUrl;
+      const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const tzArr = userTimeZone.split("/");
+      const userRegion = tzArr[0];
+      console.log(`Region: ${userRegion}`);
+      console.log(`Time Zone: ${userTimeZone}`);
+      document.getElementById('locale').innerText = `${userRegion}, ${userTimeZone}`;
+      navigator.geolocation.getCurrentPosition(position => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        console.log(`Latitude: ${lat}, Longitude: ${lon}`);
+        document.getElementById('country-details').innerText = `IP: ${data.ip} | Latitude: ${lat} | Longitude: ${lon} | Region: ${userRegion} | Time Zone: ${userTimeZone}`;
+      });
     }
     window.data = data;
   })
@@ -40,29 +53,29 @@ fetch('https://api.country.is/')
     }
   })();
   // user
-  const updateFlag = function () {
-    const countryCode = data.country;
-    const flagUrl = `https://flagcdn.com/256x192/${countryCode.toLowerCase()}.png`;
-    // console.log(flagUrl)
-    document.getElementById('flag').src = flagUrl;
-  };
+  // const updateFlag = function () {
+  //   const countryCode = data.country;
+  //   const flagUrl = `https://flagcdn.com/256x192/${countryCode.toLowerCase()}.png`;
+  //   // console.log(flagUrl)
+  //   document.getElementById('flag').src = flagUrl;
+  // };
 
-  const countryDetails = function() {
-    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const tzArr = userTimeZone.split("/");
-    const userRegion = tzArr[0];
-    console.log(`Region: ${userRegion}`);
-    console.log(`Time Zone: ${userTimeZone}`);
-    document.getElementById('locale').innerText = `${userRegion}, ${userTimeZone}`;
-    navigator.geolocation.getCurrentPosition(position => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-      console.log(`Latitude: ${lat}, Longitude: ${lon}`);
-      document.getElementById('country-details').innerText = `IP: ${data.ip} | Latitude: ${lat} | Longitude: ${lon} | Region: ${userRegion} | Time Zone: ${userTimeZone}`;
-    });
+  // const countryDetails = function() {
+  //   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  //   const tzArr = userTimeZone.split("/");
+  //   const userRegion = tzArr[0];
+  //   console.log(`Region: ${userRegion}`);
+  //   console.log(`Time Zone: ${userTimeZone}`);
+  //   document.getElementById('locale').innerText = `${userRegion}, ${userTimeZone}`;
+  //   navigator.geolocation.getCurrentPosition(position => {
+  //     const lat = position.coords.latitude;
+  //     const lon = position.coords.longitude;
+  //     console.log(`Latitude: ${lat}, Longitude: ${lon}`);
+  //     document.getElementById('country-details').innerText = `IP: ${data.ip} | Latitude: ${lat} | Longitude: ${lon} | Region: ${userRegion} | Time Zone: ${userTimeZone}`;
+  //   });
 
-    // document.getElementById('country-details').innerText = `IP: ${data.ip} | Latitude: ${data.latitude} | Longitude: ${data.longitude} | Region: ${userRegion} | Time Zone: ${userTimeZone}`;
-  }
+  //   // document.getElementById('country-details').innerText = `IP: ${data.ip} | Latitude: ${data.latitude} | Longitude: ${data.longitude} | Region: ${userRegion} | Time Zone: ${userTimeZone}`;
+  // }
 
 const togglePricingInfo = function() {
  
