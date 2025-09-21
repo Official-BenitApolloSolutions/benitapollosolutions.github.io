@@ -117,7 +117,7 @@
                 <h4 class="my-0 fw-normal">Deluxe</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title"><span id="deluxe-price">300</span><small class="text-body-secondary fw-light">/mo</small></h1>
+                <h1 class="card-title pricing-card-title"><span class="deluxe-price">300</span><small class="text-body-secondary fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>10 users included</li>
                   <li>2 GB of storage</li>
@@ -125,7 +125,7 @@
                   <li>Help center access</li>
                   <li>25% discount</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-outline-primary" id="deluxe-signup">Sign up for free</button>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary" data-bs-toggle="modal" data-bs-target="#deluxeModal">Sign up for free</button>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@
                 <h4 class="my-0 fw-normal">Platinum</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title"><span id="platinum-price">400</span><small class="text-body-secondary fw-light">/mo</small></h1>
+                <h1 class="card-title pricing-card-title"><span class="platinum-price">400</span><small class="text-body-secondary fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>20 users included</li>
                   <li>10 GB of storage</li>
@@ -143,7 +143,7 @@
                   <li>Help center access</li>
                   <li>50% discount</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary" disabled>Get started</button>
+                <button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#platinumModal">Get started</button>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@
                 <h4 class="my-0 fw-normal">Gold</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title"><span id="gold-price">500</span><small class="text-body-secondary fw-light">/mo</small></h1>
+                <h1 class="card-title pricing-card-title"><span class="gold-price">500</span><small class="text-body-secondary fw-light">/mo</small></h1>
                 <ul class="list-unstyled mt-3 mb-4">
                   <li>30 users included</li>
                   <li>15 GB of storage</li>
@@ -161,7 +161,7 @@
                   <li>Help center access</li>
                   <li>75% discount</li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-primary" disabled>Contact us</button>
+                <button type="button" class="w-100 btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#goldModal">Contact us</button>
               </div>
             </div>
           </div>
@@ -277,12 +277,85 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>Portal will be open for registration on <strong><time datetime="2025-09-15T00:00:00Z"></time>September 15, 2025</strong>.</p>
+                <!-- <p>Portal will be open for registration on <strong><time datetime="2025-09-15T00:00:00Z"></time>September 15, 2025</strong>.</p> -->
+                <p>Next cohort will commence on <strong><time datetime="2025-09-23T00:00:00Z">September 23, 2025</time></strong>. Registration is ongoing.</p>
               </div>
             </div>
           </div>
         </div>
     <!-- End of Notification -->
+    <!-- Deluxe Modal -->
+    <div class="modal fade" id="deluxeModal" tabindex="-1" aria-labelledby="deluxeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="deluxeModalLabel">Deluxe Plan Signup</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Thank you for signing up! Continue with our trusted payment processor <strong>Flutterwave</strong>.</h4>
+            <p class="mt-3">By signing up, you agree to our <a href="/business/terms-and-conditions.html">Terms of Service</a> and <a href="/business/privacy-policy.html">Privacy Policy</a>.</p>
+            <small>Your payment information is securely processed by Flutterwave. Privacy is our priority. Price: <span class="deluxe-price"></span>/month</small>
+            <div class="mt-4">
+              <img src="/images/bas/payments/flutterwave-logo-freelogovectors.net_.png" alt="Flutterwave Logo" style="max-width: 150px;">
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+              <!-- <span class="text-danger">Note: </span>&nbsp;<small>Please ensure you complete the payment process to finalize your registration.</small> -->
+              <button class="btn btn-success mt-2" id="deluxe-signup">Continue to checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Deluxe Modal -->
+     <!-- Platinum Modal -->
+    <div class="modal fade" id="platinumModal" tabindex="-1" aria-labelledby="platinumModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="platinumModalLabel">Platinum Plan Signup</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Thank you for signing up! Continue with our trusted payment processor <strong>Flutterwave</strong>.</h4>
+            <p class="mt-3">By signing up, you agree to our <a href="/business/terms-and-conditions.html">Terms of Service</a> and <a href="/business/privacy-policy.html">Privacy Policy</a>.</p>
+            <small>Your payment information is securely processed by Flutterwave. Privacy is our priority. Price: <span class="platinum-price"></span>/month</small>
+            <div class="mt-4">
+              <img src="/images/bas/payments/flutterwave-logo-freelogovectors.net_.png" alt="Flutterwave Logo" style="max-width: 150px;">
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+              <!-- <span class="text-danger">Note: </span>&nbsp;<small>Please ensure you complete the payment process to finalize your registration.</small> -->
+              <button class="btn btn-success mt-2" id="platinum-signup">Continue to checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Platinum Modal -->
+      <!-- Gold Modal -->
+    <div class="modal fade" id="goldModal" tabindex="-1" aria-labelledby="goldModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="goldModalLabel">Gold Plan Signup</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>Thank you for signing up! Continue with our trusted payment processor <strong>Flutterwave</strong>.</h4>
+            <p class="mt-3">By signing up, you agree to our <a href="/business/terms-and-conditions.html">Terms of Service</a> and <a href="/business/privacy-policy.html">Privacy Policy</a>.</p>
+            <small>Your payment information is securely processed by Flutterwave. Privacy is our priority. Price: <span class="gold-price"></span>/month</small>
+            <div class="mt-4">
+              <img src="/images/bas/payments/flutterwave-logo-freelogovectors.net_.png" alt="Flutterwave Logo" style="max-width: 150px;">
+            </div>
+            <div class="mt-2 d-flex justify-content-center">
+              <!-- <span class="text-danger">Note: </span>&nbsp;<small>Please ensure you complete the payment process to finalize your registration.</small> -->
+              <button class="btn btn-outline-primary mt-2" id="gold-signup">Continue to checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Gold Modal -->
     <script src="./assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
     <script src="./assets/js/notification.js"></script>
     <script type="module" src="../../js/custom.js"></script>

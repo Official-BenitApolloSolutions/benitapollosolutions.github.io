@@ -53,9 +53,9 @@ const togglePricingInfo = function() {
       deluxe: '€10.64',
       gold: '€21.27'
     };
-    document.getElementById('platinum-price').innerText = nonUsPricing.platinum;
-    document.getElementById('deluxe-price').innerText = nonUsPricing.deluxe;
-    document.getElementById('gold-price').innerText = nonUsPricing.gold;
+    document.querySelectorAll('.platinum-price').forEach(el => el.innerText = nonUsPricing.platinum);
+    document.querySelectorAll('.deluxe-price').forEach(el => el.innerText = nonUsPricing.deluxe);
+    document.querySelectorAll('.gold-price').forEach(el => el.innerText = nonUsPricing.gold);
   }
   else if (data.country === 'GH') {
     // Update pricing information for Ghanaian visitors
@@ -72,9 +72,9 @@ const togglePricingInfo = function() {
       deluxe: '₵150',
       gold: '₵300'
     }
-    document.getElementById('platinum-price').innerText = ghPricing.platinum;
-    document.getElementById('deluxe-price').innerText = ghPricing.deluxe;
-    document.getElementById('gold-price').innerText = ghPricing.gold;
+    document.querySelectorAll('.platinum-price').forEach(el => el.innerText = ghPricing.platinum);
+    document.querySelectorAll('.deluxe-price').forEach(el => el.innerText = ghPricing.deluxe);
+    document.querySelectorAll('.gold-price').forEach(el => el.innerText = ghPricing.gold);
   }
   else {
 
@@ -89,9 +89,9 @@ const togglePricingInfo = function() {
       deluxe: '$24.99',
       gold: '$41.65'
     }
-    document.getElementById('platinum-price').innerText = otherPricing.platinum;
-    document.getElementById('deluxe-price').innerText = otherPricing.deluxe;
-    document.getElementById('gold-price').innerText = otherPricing.gold;
+    document.querySelectorAll('.platinum-price').forEach(el => el.innerText = otherPricing.platinum);
+    document.querySelectorAll('.deluxe-price').forEach(el => el.innerText = otherPricing.deluxe);
+    document.querySelectorAll('.gold-price').forEach(el => el.innerText = otherPricing.gold);
   }
 }
 
