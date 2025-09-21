@@ -5,7 +5,7 @@ function moveToUrl(){
 function codingBootcamp(){
     document.writeln("Loading...");
     moveToUrl();
-    return false;
+    window.location.reload();
 }
 
 function joinTheTeam() {
