@@ -8,17 +8,38 @@ fetch('https://api.country.is/')
              </svg> ${data.country}`;
             //  document.getElementById('locale').innerText = data.city + ', ' + data.country;
     window.data = data;
-    updateFlag();
     countryDetails();
     togglePricingInfo();
   })
   .catch(error => console.error('Error fetching country data:', error));
 
+  (()=>{
+    const year = new Date().getFullYear();
+    document.getElementById('year').innerText = year;
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      document.getElementById('locale').innerText = 'Localhost';
+    }
+    if (location.hostname === 'benitapollosolutions.com' || location.hostname === 'www.benitapollosolutions.com') {
+      const programmingBootcampLink = document.getElementById('programming-bootcamp');
+      if (programmingBootcampLink) {
+        programmingBootcampLink.href = 'https://codebest.com/coding-bootcamp/pricing/index.html';
+      }
+    }
+    if(location.href.indexOf('utm_source=homepage') !== -1) {
+      const pricingSection = document.getElementById('pricing-section');  
+      if (pricingSection) {
+        pricingSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    if(location.href === 'https://benitapollosolutions.com/home.html' || location.href === 'https://www.benitapollosolutions.com/home.html') {
+      updateFlag();
+    }
+  })();
   // user
   const updateFlag = function () {
     const countryCode = data.country;
     const flagUrl = `https://flagcdn.com/256x192/${countryCode.toLowerCase()}.png`;
-    console.log(flagUrl)
+    // console.log(flagUrl)
     document.getElementById('flag').src = flagUrl;
   };
 
