@@ -9,7 +9,7 @@ function initDeluxeSignup() {
 function initPlatinumSignup() {
     const platinumSignupButton = document.getElementById('platinum-signup');
     platinumSignupButton.addEventListener('click', function() {
-        let userConfirmed = confirm('You are about to be redirected to our trusted payment partner - Flutterwave. Do you want to proceed?');
+        const userConfirmed = confirm('You are about to be redirected to our trusted payment partner - Flutterwave. Do you want to proceed?');
         if (!userConfirmed) {
             return; // User cancelled the action
         }
