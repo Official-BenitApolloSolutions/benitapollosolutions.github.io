@@ -1,12 +1,15 @@
-function initDeluxeSignup() {
+const initDeluxeSignup = () => {
     const deluxeSignupButton = document.getElementById('deluxe-signup');
     deluxeSignupButton.addEventListener('click', function() {
-        alert('Confirm Deluxe plan signup with our trusted payment partner - Flutterwave!');
+        const userConfirmed = confirm('You are about to be redirected to our trusted payment partner - Flutterwave. Do you want to proceed?');
+        if (!userConfirmed) {
+            return; // User cancelled the action
+        }
         window.location.href = 'https://flutterwave.com/pay/p2airnhpnffq'; // deluxe plan
     });
 }
 
-function initPlatinumSignup() {
+const initPlatinumSignup = () => {
     const platinumSignupButton = document.getElementById('platinum-signup');
     platinumSignupButton.addEventListener('click', function() {
         const userConfirmed = confirm('You are about to be redirected to our trusted payment partner - Flutterwave. Do you want to proceed?');
@@ -17,10 +20,13 @@ function initPlatinumSignup() {
     });
 }
 
-function initGoldSignup() {
+const initGoldSignup = () => {
     const goldSignupButton = document.getElementById('gold-signup');
     goldSignupButton.addEventListener('click', function() {
-        alert('Confirm Gold plan signup with our trusted payment partner - Flutterwave!');
+        const userConfirmed = confirm('You are about to be redirected to our trusted payment partner - Flutterwave. Do you want to proceed?');
+        if (!userConfirmed) {
+            return; // User cancelled the action
+        }
         window.location.href = 'https://flutterwave.com/pay/a5h3aouwbevr'; // gold plan
     });
 }
