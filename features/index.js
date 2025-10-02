@@ -5,8 +5,8 @@ const getStartedFunction = () => {
         if (!userConfirmed) {
             return; // User cancelled the action
         }
-        window.open('https://flutterwave.com/donate/zchgr8kgmfgv', '_blank'); // open in new tab
-        });
+        window.location.href = 'https://flutterwave.com/donate/zchgr8kgmfgv'; // checkout page
+    });
 }
 
 export { getStartedFunction };
