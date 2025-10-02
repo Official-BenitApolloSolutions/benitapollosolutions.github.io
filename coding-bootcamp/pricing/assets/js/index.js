@@ -6,6 +6,7 @@ const initDeluxeSignup = () => {
             return; // User cancelled the action
         }
         window.location.href = 'https://flutterwave.com/pay/auq6xwf5c847'; // deluxe plan
+        window.open(window.location.href, '_blank'); // open in new tab
     });
 }
 
@@ -17,6 +18,7 @@ const initPlatinumSignup = () => {
             return; // User cancelled the action
         }
         window.location.href = 'https://flutterwave.com/pay/cva7cloerwo5'; // platinum plan
+        window.open(window.location.href, '_blank'); // open in new tab
     });
 }
 
@@ -28,6 +30,7 @@ const initGoldSignup = () => {
             return; // User cancelled the action
         }
         window.location.href = 'https://flutterwave.com/pay/t9dcyrft6byh'; // gold plan
+        window.open(window.location.href, '_blank'); // open in new tab
     });
 }
 export { initDeluxeSignup, initPlatinumSignup, initGoldSignup };
