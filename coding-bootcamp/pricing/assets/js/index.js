@@ -5,8 +5,8 @@ const initDeluxeSignup = () => {
         if (!userConfirmed) {
             return; // User cancelled the action
         }
-        window.location.href = 'https://flutterwave.com/pay/auq6xwf5c847'; // deluxe plan
-        window.open(window.location.href, '_blank'); // open in new tab
+        // window.location.href = 'https://flutterwave.com/pay/auq6xwf5c847'; // deluxe plan
+        window.open('https://flutterwave.com/pay/auq6xwf5c847', '_blank'); // open in new tab
     });
 }
 
@@ -17,8 +17,8 @@ const initPlatinumSignup = () => {
         if (!userConfirmed) {
             return; // User cancelled the action
         }
-        window.location.href = 'https://flutterwave.com/pay/cva7cloerwo5'; // platinum plan
-        window.open(window.location.href, '_blank'); // open in new tab
+        // window.location.href = 'https://flutterwave.com/pay/cva7cloerwo5'; // platinum plan
+        window.open('https://flutterwave.com/pay/cva7cloerwo5', '_blank'); // open in new tab
     });
 }
 
@@ -29,8 +29,8 @@ const initGoldSignup = () => {
         if (!userConfirmed) {
             return; // User cancelled the action
         }
-        window.location.href = 'https://flutterwave.com/pay/t9dcyrft6byh'; // gold plan
-        window.open(window.location.href, '_blank'); // open in new tab
+        // window.location.href = 'https://flutterwave.com/pay/t9dcyrft6byh'; // gold plan
+        window.open('https://flutterwave.com/pay/t9dcyrft6byh', '_blank'); // open in new tab
     });
 }
 export { initDeluxeSignup, initPlatinumSignup, initGoldSignup };
