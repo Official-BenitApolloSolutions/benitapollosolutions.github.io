@@ -12,7 +12,7 @@ fetch('https://api.country.is/')
         if (data.country !== 'GH' && data.country !== 'US' && data.country === 'UK')  {
           // Update pricing information for non-US visitors
           const nonUsPricing = {
-            platinum: '€28.68',
+            platinum: '€30.42',
             deluxe: '€21.51',
             gold: '€35.85'
           };
@@ -31,7 +31,7 @@ fetch('https://api.country.is/')
           //   monthly: '₵10',
           //   yearly: '₵100',
           //   lifetime: '₵1000'
-              platinum: '₵400',
+              platinum: '₵450',
               deluxe: '₵300',
               gold: '₵500'
           };
@@ -48,14 +48,14 @@ fetch('https://api.country.is/')
 
           // Update pricing information for other visitors
           const otherPricing = {
-            platinum: '$33.32',
+            platinum: '$35.73',
             deluxe: '$24.99',
             gold: '$41.65'
           };
           const moduleOtherPricing = {
-            platinum: '$33.32',
-            deluxe: '$24.99',
-            gold: '$41.65'
+            platinum: '$19.06',
+            deluxe: '$11.91',
+            gold: '$23.82' //kwasia stop editing here
           }
           document.querySelectorAll('.platinum-price').forEach(el => el.innerText = otherPricing.platinum);
           document.querySelectorAll('.deluxe-price').forEach(el => el.innerText = otherPricing.deluxe);
