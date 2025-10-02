@@ -1,3 +1,5 @@
+import { getStartedFunction } from './index.js';
+
 function countdown(endDate) {
   const timer = setInterval(() => {
     const now = new Date().getTime();
@@ -20,6 +22,10 @@ function countdown(endDate) {
 
 const endDate = new Date("September 23, 2025 13:00:00").getTime();
 countdown(endDate);
+
+document.addEventListener('DOMContentLoaded', function() {
+    getStartedFunction();
+});
 
 // fetch('https://ipapi.co/json/')
 //   .then(response => response.json())

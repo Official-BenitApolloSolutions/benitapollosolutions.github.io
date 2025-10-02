@@ -355,7 +355,7 @@
             <p class="text-body-secondary">Explore our featured projects and discover how Codebest Coding Bootcamp can help your business thrive in the digital age. From custom software development to comprehensive IT consulting, we have the expertise and experience to deliver results that exceed expectations.</p>
             <p class="text-body-secondary">For more information on our projects and services, please <a href="https://benitapollosolutions.com/contact.html">contact us</a>.</p>
             <p class="text-body-secondary">Codebest Coding Bootcamp is dedicated to driving innovation and delivering exceptional technology solutions that empower businesses to succeed in a rapidly evolving digital landscape.</p>
-            <a href="#" class="btn btn-primary btn-lg">View details</a>
+            <a data-bs-toggle="modal" href="#welcomeModal" class="btn btn-primary btn-lg">View details</a>
           </div>
           <div class="col">
             <div class="row row-cols-1 row-cols-sm-2 g-4">
@@ -400,12 +400,31 @@
         </div>
       </div>
     </main>
+    <!-- Notifications -->
+     <div class="modal fade" id="welcomeModal">
+       <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Welcome to Codebest Coding Bootcamp</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Thank you for visiting our Coding Bootcamp page. We are excited to have you here!</p>
+              <p>Explore our course modules, create an account, and discover the various features we offer to enhance your learning experience.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <a id="getStartedButton" class="btn btn-primary">Get Started</a>
+            </div>
+          </div>
+       </div>
+     </div>
     <footer class="container py-5">
       <p class="text-center text-body-secondary">© 2025 BAS-Codebest. All rights reserved.</p>
       <p class="text-center text-body-secondary">Codebest Coding Bootcamp is a project of benitapollosolutions.</p>
       <p class="text-center text-body-secondary">For more information, visit our <a href="https://www.benitapollosolutions.com/home.html#events" target="_blank">event page</a>.</p>
     </footer>
-    <script src="./custom.js"></script>
+    <script type="module" src="./custom.js"></script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js" class="astro-vvvwv3sm"></script>
   </body>
 </html>
